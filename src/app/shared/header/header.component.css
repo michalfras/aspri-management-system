@@ -1,0 +1,20 @@
+.header {
+  position: relative;
+  height: 40vh;
+  background-image: url("/images/general/bar.webp");
+  background-size: cover;
+  background-position: center;
+}
+.title {
+  height: 100px;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  color: white;
+}
+.theme-toggle-wrapper {
+  transform: scale(1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}

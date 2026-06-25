@@ -1,0 +1,7 @@
+.app {
+  margin: 0 auto;
+  min-height: 100svh;
+  max-width: 800px;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}

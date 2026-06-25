@@ -1,0 +1,49 @@
+<div class="nav-bar">
+  @if(!UiService.isCartModalOpen()){
+  <button
+    class="back-btn"
+    [class.search-active]="UiService.isSearchBarOpen()"
+    routerLink="/"
+  >
+    <svg viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m4.5 15.75 7.5-7.5 7.5 7.5"
+      />
+    </svg>
+  </button>
+  <div
+    class="cart-btn-container"
+    [class.search-active]="UiService.isSearchBarOpen()"
+  >
+    <app-order-button [inMenu]="true"></app-order-button>
+  </div>
+  <app-search-bar></app-search-bar>
+  }
+</div>
+
+<div class="food">
+  <h1>{{ "BUTTONS.FOOD-MENU.BUTTON" | translate }}</h1>
+</div>
+
+<app-item-section [category]="'food'"></app-item-section>
+
+<div class="drink">
+  <h1>{{ "BUTTONS.DRINK-MENU.BUTTON" | translate }}</h1>
+</div>
+
+<app-item-section [category]="'drink'"></app-item-section>
+
+<div class="alcohol">
+  <h1>{{ "BUTTONS.ALCOHOL-MENU.BUTTON" | translate }}</h1>
+</div>
+
+<app-item-section [category]="'alcohol'"></app-item-section>
+
+<app-alergens></app-alergens>
+
+<div class="footer">{{ "GENERAL.DISCLAIMER" | translate }}</div>
+
+<app-cart-modal></app-cart-modal>
+<app-choice-modal [isInMenuComponent]="true"></app-choice-modal>

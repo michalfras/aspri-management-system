@@ -1,0 +1,48 @@
+<div class="btns-container">
+  <button
+    class="flag-btn"
+    (click)="changeLang('pl')"
+    [class.active]="lang.lang() === 'pl'"
+  >
+    <img
+      src="/images/general/flaga-polski.webp"
+      [alt]="'FLAGS.PL' | translate"
+    />
+  </button>
+  <button
+    class="flag-btn"
+    (click)="changeLang('en')"
+    [class.active]="lang.lang() === 'en'"
+  >
+    <img src="/images/general/flaga-ang.jpeg" [alt]="'FLAGS.ANG' | translate" />
+  </button>
+  <button
+    class="flag-btn"
+    (click)="changeLang('ger')"
+    [class.active]="lang.lang() === 'ger'"
+  >
+    <img
+      src="/images/general/flaga-niemiec.avif"
+      [alt]="'FLAGS.GER' | translate"
+    />
+  </button>
+  <button
+    class="flag-btn"
+    (click)="changeLang('jpn')"
+    [class.active]="lang.lang() === 'jpn'"
+  >
+    <img
+      src="/images/general/japonia-flaga.webp"
+      [alt]="'FLAGS.JPN' | translate"
+    /></button
+  ><button
+    class="flag-btn"
+    (click)="changeLang('ukr')"
+    [class.active]="lang.lang() === 'ukr'"
+  >
+    <img
+      src="/images/general/flaga-ukrainy.webp"
+      [alt]="'FLAGS.UKR' | translate"
+    />
+  </button>
+</div>

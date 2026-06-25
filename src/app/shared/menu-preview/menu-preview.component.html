@@ -1,0 +1,32 @@
+<div class="menu-btn-wrapper">
+  <button class="menu-btn" (click)="showMenu(categoryName)">
+    <span class="btn-text">
+      @if(categoryName=== 'food'){<i class="fa-solid fa-utensils"></i> }
+      @if(categoryName === "drink"){<i class="fa-solid fa-mug-hot"></i>}
+      @if(categoryName === "alcohol"){<i
+        class="fa-solid fa-champagne-glasses"
+      ></i
+      >} {{ btnLabel[categoryName] | translate }}</span
+    ><span>
+      <svg viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 15.75 7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+
+<div class="menu-scroll">
+  <app-item-card *ngFor="let item of popularItems" [product]="item">
+  </app-item-card>
+  @if (popularItems.length> 0){
+  <div class="last-card" (click)="showMenu(categoryName)">
+    <div class="text-wrapper">
+      <p>{{ "GENERAL.SHOW-MORE" | translate }}</p>
+    </div>
+  </div>
+  }
+</div>

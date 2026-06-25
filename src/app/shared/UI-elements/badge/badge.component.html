@@ -1,0 +1,23 @@
+@if(badgeName === "favourite"){
+<div class="badge favourite">
+  <p><i class="fa-solid fa-fire"></i> {{ badgeText | translate }}</p>
+</div>
+} @if(badgeName === "hot"){
+<div class="badge hot">
+  <p><i class="fa-solid fa-pepper-hot"></i> {{ badgeText | translate }}</p>
+</div>
+} @if(badgeName === "kids"){
+<div class="badge kids">
+  <p>
+    <i class="fa-regular fa-face-laugh-beam"></i> {{ badgeText | translate }}
+  </p>
+</div>
+} @if(badgeName === "vegetarian"){
+<div class="badge vegetarian">
+  <p><i class="fa-solid fa-seedling"></i> {{ badgeText | translate }}</p>
+</div>
+} @if(badgeName === "beer"){
+<div class="badge beer">
+  <p><i class="fa-solid fa-beer-mug-empty"></i> {{ badgeText | translate }}</p>
+</div>
+}

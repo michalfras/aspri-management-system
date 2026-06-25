@@ -1,0 +1,35 @@
+.badge {
+  white-space: nowrap;
+
+  padding: 1px 4px;
+  min-width: 70px;
+  text-align: center;
+
+  font-size: 0.7em;
+  font-weight: bold;
+  text-shadow: none;
+  background-color: white;
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
+}
+.favourite {
+  color: rgb(0, 0, 0);
+}
+.favourite i {
+  color: rgb(161, 0, 0);
+}
+.hot {
+  color: rgb(139, 9, 9);
+}
+.kids {
+  color: rgb(13, 53, 163);
+}
+.vegetarian {
+  color: rgb(0, 95, 6);
+}
+.beer {
+  color: black;
+}
+.beer i {
+  color: var(--accent-color);
+}

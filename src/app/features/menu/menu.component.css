@@ -1,0 +1,69 @@
+.nav-bar {
+  min-height: 10vh;
+  position: sticky;
+  top: 0;
+  padding: 20px 10px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+
+  overflow-x: hidden;
+  z-index: 1;
+}
+.cart-btn-container {
+  flex-basis: 100%;
+  margin: 0 10px;
+
+  transition: 0.3s;
+}
+.cart-btn-container.search-active,
+.back-btn.search-active {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.back-btn {
+  height: 7vh;
+  min-height: 40px;
+  aspect-ratio: 1/1;
+
+  border: none;
+  border-radius: 50px;
+  background-color: var(--menu-section-navbar-color);
+  box-shadow: 7px 10px 7px var(--menu-navbar-shadow);
+
+  transition: 0.3s;
+}
+
+.arrow-icon {
+  transform: rotate(270deg) translateY(-3px);
+  stroke-width: 2.5;
+  width: 26px;
+  height: 26px;
+  stroke: var(--main-font-color);
+  fill: none;
+}
+
+.food,
+.drink,
+.alcohol {
+  scroll-margin-top: 8vh;
+  text-align: center;
+  padding: 5% 0;
+}
+.footer {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 0.6em;
+  border-top: 1px solid var(--separator-text);
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .back-btn {
+    height: 50px;
+  }
+  .nav-bar {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+}

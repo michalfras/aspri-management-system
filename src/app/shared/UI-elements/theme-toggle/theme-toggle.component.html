@@ -1,0 +1,9 @@
+<div class="toggle-wrapper" [class.light]="isLightMode()">
+  <div class="toggle-bgc" (click)="toggleTheme()">
+    <div class="toggle-btn"></div>
+  </div>
+  <div class="theme-auto" (click)="setAutoTheme()">
+    <p>{{ "BUTTONS.STYLE-AUTO" | translate }}</p>
+    <div class="auto-btn" [class.clicked]="isAutoMode()"></div>
+  </div>
+</div>

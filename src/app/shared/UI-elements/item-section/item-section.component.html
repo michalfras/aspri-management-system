@@ -1,0 +1,38 @@
+<div class="content-container">
+  @for (subcategory of menuService.groupedMenuProducts()[category] | keyvalue :
+  keepOriginalOrder; track subcategory.key) {
+  <h3 class="subcategory-name">
+    {{ `CATEGORY.${subcategory.key.toUpperCase()}` | translate }}
+  </h3>
+  @for (product of subcategory.value; track product.id) {
+  <div class="product" (click)="UiService.forcePopup(product)">
+    <div class="product-label">
+      <div class="product-name">
+        <p>{{ product.nameKey | translate }}</p>
+      </div>
+      @if (product.showInfoInMenu){
+      <div class="product-info">( {{ product.infoKey | translate }} )</div>
+      }
+      <p>
+        <span class="product-short">{{
+          product.shortInfoKey | translate
+        }}</span>
+      </p>
+      <p class="product-price">
+        {{ product.price }},-<span class="badge-wrapper">
+          <app-badge [badgeName]="product.badge"></app-badge>
+        </span>
+      </p>
+    </div>
+    <div class="price-section">
+      <button
+        class="add-button"
+        (click)="this.cartService.addToOrder(product); $event.stopPropagation()"
+      >
+        <span> <i class="fa-solid fa-plus"></i> </span>
+      </button>
+    </div>
+  </div>
+  }}
+</div>
+<!-- XXXX XXXX XXXX -->

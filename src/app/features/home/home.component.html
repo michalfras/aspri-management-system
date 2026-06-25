@@ -1,0 +1,13 @@
+<app-header></app-header>
+<app-language-flags></app-language-flags>
+<app-order-button></app-order-button>
+<app-menu-preview [categoryName]="'food'"></app-menu-preview>
+<app-menu-preview [categoryName]="'drink'"></app-menu-preview>
+<app-menu-preview [categoryName]="'alcohol'"></app-menu-preview>
+<app-alergens [inHome]="true"></app-alergens>
+<div class="footer">
+  @if(isItOwner()){ <span>*</span>} {{ "GENERAL.DISCLAIMER" | translate }}
+</div>
+
+<app-cart-modal></app-cart-modal>
+<app-choice-modal></app-choice-modal>

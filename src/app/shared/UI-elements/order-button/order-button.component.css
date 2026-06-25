@@ -1,0 +1,113 @@
+.order-container {
+  padding: 4vh 4vw 2vh 4vw;
+  border-bottom: 2px solid rgba(60, 60, 60, 0.29);
+}
+.in-menu.order-container,
+.active.order-container {
+  border-bottom: none;
+}
+.in-menu.order-container,
+.active {
+  padding: 0;
+}
+
+.order-button {
+  width: 100%;
+  height: 7vh;
+  min-height: 40px;
+  background-color: var(--main-color);
+  color: var(--main-font-color);
+
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 3px var(--button-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.in-menu .order-button {
+  background-color: var(--menu-section-navbar-color);
+  box-shadow: 4px 10px 7px var(--menu-navbar-shadow);
+}
+.button-text {
+  margin-left: 4vw;
+  font-size: 1.2rem;
+}
+.button-text i {
+  color: var(--accent-color);
+  margin-right: 5px;
+}
+
+.arrow-icon {
+  margin-right: 5vw;
+  stroke-width: 2.5;
+  width: 26px;
+  height: 26px;
+  stroke: var(--main-font-color);
+  fill: none;
+}
+.in-menu .arrow-icon {
+  margin-left: 5px;
+}
+.order-button:active {
+  background-color: rgb(25, 25, 25);
+}
+.active .arrows {
+  transform: rotate(180deg) translateX(20px);
+}
+
+.cart-qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 3vw;
+  height: 46px;
+  aspect-ratio: 1/1;
+  border: 3px solid var(--accent-color);
+  border-radius: 50px;
+}
+.cart-qty span {
+  font-size: 1.3em;
+  font-weight: bold;
+  transform: translateY(1px);
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .order-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 3vh 4vw;
+  }
+  .order-button {
+    height: 50px;
+  }
+  .button-text {
+    margin-left: 5vw;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .order-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px 50px;
+  }
+  .order-button {
+    min-height: 50px;
+  }
+  .button-text {
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+  .cart-qty {
+    margin-right: 20px;
+  }
+}

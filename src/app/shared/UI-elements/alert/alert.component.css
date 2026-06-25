@@ -1,0 +1,39 @@
+.alert-wrapper {
+  visibility: hidden;
+  position: fixed;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+.alert-wrapper.active {
+  visibility: visible;
+}
+.alert-content {
+  color: white;
+  opacity: 0;
+  transform: scale(0.5);
+  padding: 4px 30px;
+  min-width: 30%;
+  background-color: rgba(7, 70, 7, 0.895);
+  border: 1px solid rgb(66, 66, 66);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.alert-content.red {
+  background-color: rgba(169, 0, 0, 0.895);
+}
+.alert-content.blue {
+  background-color: rgba(30, 56, 253, 0.895);
+}
+.alert-content.green {
+  background-color: rgba(7, 70, 7, 0.895);
+}
+.alert-content.active {
+  opacity: 1;
+  transform: scale(1);
+}

@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="img-wrapper" (click)="UiService.forcePopup(product)">
+    <img
+      class="image"
+      [alt]="'ALT.ASPRI_LOGO' | translate"
+      [src]="
+        product.image
+          ? product.image
+          : themeService.isDarkMode()
+          ? '/images/general/aspri-logo-biale.webp'
+          : '/images/general/aspri-logo-czarne.webp'
+      "
+    />
+    <button
+      class="add-button"
+      (click)="cartService.addToOrder(product); $event.stopPropagation()"
+    >
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    @if(product.badge){
+    <div class="badge-wrapper">
+      <app-badge [badgeName]="product.badge"></app-badge>
+    </div>
+    }
+  </div>
+
+  <div class="product-info">
+    <span class="price">{{ product.price | number : "1.0-2" }},-</span>
+
+    <h3 class="name">{{ product.nameKey | translate }}</h3>
+
+    <p class="info" *ngIf="product.infoKey">
+      {{ product.shortInfoKey | translate }}
+    </p>
+  </div>
+</div>

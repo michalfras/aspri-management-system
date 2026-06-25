@@ -1,0 +1,647 @@
+{
+  "MENU": {
+    "PLACEK_WEGIERSKI": {
+      "NAME": "Placek po Węgiersku",
+      "SHORT": "( 1 )",
+      "INFO": "Chrupiący placek ziemniaczany podawany z aromatycznym gulaszem wieprzowym z cebulą, w sosie pomidorowym."
+    },
+    "SCHAB_NA_TRZY": {
+      "NAME": "Schab na Trzy Sposoby",
+      "SHORT": "( 1,3 )",
+      "INFO": "Trzy małe kotlety schabowe: klasyczny, z kapustą zasmażaną oraz z boczkiem i serem. Do wyboru frytki lub ziemniaczki ze skórką, podawane z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "KOTLET_DRWALA": {
+      "NAME": "Kotlet Drwala",
+      "SHORT": "( 1,3 )",
+      "INFO": "Klasyczny kotlet schabowy zapiekany z grillowanym boczkiem, papryką, cebulą i serem. Do wyboru frytki lub ziemniaczki ze skórką, podawany z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "ROLADKA_SCHABOWA": {
+      "NAME": "Roladka Schabowa",
+      "SHORT": "( 1,3 )",
+      "INFO": "Roladka schabowa z pieczarkami i cebulą. Do wyboru frytki lub ziemniaczki ze skórką, podawana z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "CORDON_BLEU": {
+      "NAME": "Cordon Bleu",
+      "SHORT": "( 1,3 )",
+      "INFO": "Klasyczny kotlet schabowy zapiekany z szynką, serem i musztardą. Do wyboru frytki lub ziemniaczki ze skórką, podawany z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "KOTLET_SCHABOWY": {
+      "NAME": "Kotlet Schabowy",
+      "SHORT": "( 1,3 )",
+      "INFO": "Tradycyjny panierowany kotlet schabowy smażony na złoty kolor. Do wyboru frytki lub ziemniaczki ze skórką, podawany z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "GRILLOWANY_FILET": {
+      "NAME": "Grillowany Filet z Kurczaka",
+      "INFO": "Soczysty filet z kurczaka z grilla zapiekany z pomidorami, bazylią i mozzarellą. Do wyboru frytki lub ziemniaczki ze skórką, podawany z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "FILET_ZE_SZPINAKIEM": {
+      "NAME": "Filet z Kurczaka w Omlecie",
+      "SHORT": "( 1,3 )",
+      "INFO": "Soczysty filet z kurczaka ze szpinakiem i suszonymi pomidorami, zawinięty w delikatny omlet. Do wyboru frytki lub ziemniaczki ze skórką, podawany z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "PIERS_W_SEZAMIE": {
+      "NAME": "Pierś Panierowana w Sezamie",
+      "SHORT": "( 1,3,11 )",
+      "INFO": "Soczysta pierś z kurczaka w chrupiącej panierce sezamowej. Do wyboru frytki lub ziemniaczki ze skórką, podawana z bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką",
+      "CHOICE_C": "Ziemniaki gotowane"
+    },
+    "SER_SMAZONY": {
+      "NAME": "Ser smażony z Żurawiną",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Panierowany ser smażony na złoty kolor, podawany z żurawiną. Serwowany z frytkami i bukietem surówek.",
+      "CHOICE_A": "Frytki",
+      "CHOICE_B": "Ziemniaczki ze skórką"
+    },
+    "SKRZYDELKA": {
+      "NAME": "Skrzydełka z Kurcząt",
+      "SHORT": "( 10 )",
+      "INFO": "Soczyste skrzydełka z kurczaka, chrupiące z zewnątrz i delikatne w środku, podawane na gorąco."
+    },
+    "NUGGETSY": {
+      "NAME": "Nuggetsy z Kurcząt",
+      "SHORT": "( 1,3 )",
+      "INFO": "Panierowane kawałki soczystego fileta z kurczaka, smażone na złoty kolor, chrupiące z zewnątrz i delikatne w środku."
+    },
+    "PLACKI_ZIEMNIACZANE": {
+      "NAME": "Placki Ziemniaczane ze śmietaną",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Tradycyjne, chrupiące placki ziemniaczane podawane na gorąco ze śmietaną."
+    },
+    "POKUSA": {
+      "NAME": "Pokusa",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Sałata lodowa, pomidor, ogórek zielony, papryka, jajko, ser feta, ser żółty, słonecznik, dressing jogurtowy, podawane z grzanką."
+    },
+    "MILANO": {
+      "NAME": "Milano",
+      "SHORT": "( 1,3 )",
+      "INFO": "Sałata lodowa, tuńczyk, pomidor, ogórek konserwowy, papryka, kukurydza, podawane z grzanką."
+    },
+    "ASPRI_SALAD": {
+      "NAME": "Aspri",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Sałata lodowa, kurczak, pomidor, zielony ogórek, czerwona cebula, kukurydza, ser feta, jajko, dressing jogurtowy, podawana z grzanką."
+    },
+    "PIEROGI_RUSKIE": {
+      "NAME": "Pierogi Ruskie",
+      "SHORT": "( 1,3 )",
+      "INFO": "Pierogi z farszem z ziemniaków i twarogu."
+    },
+    "PIEROGI_Z_MIESEM": {
+      "NAME": "Pierogi z Mięsem",
+      "SHORT": "( 1,3 )",
+      "INFO": "Pierogi z farszem z mięsa wieprzowego."
+    },
+    "ZUREK": {
+      "NAME": "Żurek",
+      "SHORT": "( 1,3,9 )",
+      "INFO": "Tradycyjna zupa na własnym zakwasie z jajkiem."
+    },
+    "POMIDOROWA": {
+      "NAME": "Pomidorowa z Makaronem",
+      "SHORT": "( 1,9 )",
+      "INFO": "Tradycyjna zupa pomidorowa z makaronem."
+    },
+    "FRYTKI": {
+      "NAME": "Frytki Classic",
+      "INFO": "Tradycyjne frytki ziemniaczane."
+    },
+    "KSIEZYCE": {
+      "NAME": "Ziemniaczki ze skórką"
+    },
+    "FRYTKI_Z_BATATOW": {
+      "NAME": "Frytki z Batatów",
+      "INFO": "Frytki z batatów (słodkich ziemniaków) smażone w głębokim tłuszczu."
+    },
+    "KRAZKI_CEBULOWE": {
+      "NAME": "Krążki Cebulowe",
+      "INFO": "Panierowane krążki cebuli smażone w głębokim tłuszczu."
+    },
+    "ZIEMNIAKI_GOTOWANE": {
+      "NAME": "Ziemniaki Gotowane"
+    },
+    "KAPUSTA_ZASMAZANA": {
+      "NAME": "Kapusta Zasmażana",
+      "INFO": "Kapusta kiszona duszona z cebulą, podsmażana na złoty kolor."
+    },
+    "BUKIET_SUROWEK": {
+      "NAME": "Bukiet Surówek",
+      "INFO": "Zestaw świeżych surówek z sezonowych warzyw."
+    },
+    "SUROWKA": {
+      "NAME": "Surówka",
+      "INFO": "Pojedyncza porcja sezonowej surówki"
+    },
+    "PIECZYWO": {
+      "NAME": "Pieczywo"
+    },
+    "SOSY": {
+      "NAME": "Sosy",
+      "INFO": "Sosy do dań: czosnkowy, ketchup, majonez, musztarda, śmietana.",
+      "CHOICE_A": "Czosnkowy",
+      "CHOICE_B": "Ketchup",
+      "CHOICE_C": "Majonez",
+      "CHOICE_D": "Musztarda",
+      "CHOICE_E": "Śmietana"
+    },
+    "MALINY_NA_GORACO": {
+      "NAME": "Maliny na Gorąco",
+      "INFO": "Ciepłe maliny podawane z lodami śmietankowymi i bitą śmietaną."
+    },
+    "PUCHAR_LODOWY": {
+      "NAME": "Puchar Lodowy",
+      "INFO": "Lody podawane z bitą śmietaną i polewą."
+    },
+    "COLA": {
+      "NAME": "Coca-Cola",
+      "SHORT": "250ml /1L",
+      "CHOICE_A": "Coca-Cola 250ml",
+      "CHOICE_B": "Coca-Cola 1L"
+    },
+    "FANTA": {
+      "NAME": "Fanta",
+      "SHORT": "250ml"
+    },
+    "SPRITE": {
+      "NAME": "Sprite",
+      "SHORT": "250ml"
+    },
+    "TONIC": {
+      "NAME": "Tonic",
+      "SHORT": "250ml"
+    },
+    "RED_BULL": {
+      "NAME": "Red Bull",
+      "SHORT": "250ml"
+    },
+    "WODA": {
+      "NAME": "Woda Niegazowana",
+      "SHORT": "300ml /1L",
+      "CHOICE_A": "300ml",
+      "CHOICE_B": "1L"
+    },
+    "WODA_GAZOWANA": {
+      "NAME": "Woda Gazowana",
+      "SHORT": "300ml"
+    },
+    "LEMONIADA": {
+      "NAME": "Lemoniada",
+      "SHORT": "300ml /1L",
+      "INFO": "O dostępne smaki zapytaj obsługę.",
+      "CHOICE_A": "300ml",
+      "CHOICE_B": "1L"
+    },
+    "SOK": {
+      "NAME": "Soki",
+      "SHORT": "300ml /1L",
+      "CHOICE_A": "Pomarańczowy 300ml",
+      "CHOICE_B": "Jabłkowy 300ml",
+      "CHOICE_C": "Ananasowy 300ml",
+      "CHOICE_D": "Porzeczkowy 300ml",
+      "CHOICE_E": "Bananowy 300ml",
+      "CHOICE_F": "Grejpfrutowy 300ml",
+      "CHOICE_G": "Pomarańczowy 1L",
+      "CHOICE_H": "Jabłkowy 1L",
+      "CHOICE_I": "Ananasowy 1L",
+      "CHOICE_J": "Porzeczkowy 1L",
+      "CHOICE_K": "Bananowy 1L",
+      "CHOICE_L": "Grejpfrutowy 1L"
+    },
+    "ESPRESSO": {
+      "NAME": "Espresso",
+      "CHOICE_A": "Espresso",
+      "CHOICE_B": "Espresso Doppio"
+    },
+    "BLACK_COFFE": {
+      "NAME": "Kawa Czarna"
+    },
+    "WHITE_COFFE": {
+      "NAME": "Kawa Biała"
+    },
+    "LATTE": {
+      "NAME": "Kawa Latte Macchiato"
+    },
+    "KAWA_MROZONA": {
+      "NAME": "Kawa Mrożona"
+    },
+    "HERBATA": {
+      "NAME": "Herbata Sir William's"
+    },
+    "HERBATA_OWOCOWA": {
+      "NAME": "Herbata Hello Spring",
+      "CHOICE_A": "Malina/ Truskawka, Limonka i Mięta",
+      "CHOICE_B": "Kiwi, Pomarańcz, Cytryna, Limonka i Mięta",
+      "CHOICE_C": "Jabłko, Bazylia, Imbir i Cynamon"
+    },
+    "APEROL_SPRITZ": {
+      "NAME": "Aperol Spritz",
+      "INFO": "Prosecco, Aperol, Woda Gazowana, Pomarańcza"
+    },
+    "HUGO": {
+      "NAME": "Hugo",
+      "INFO": "Prosecco, Wódka, Syrop z Czarnego Bzu, Woda Gazowana, Limonka"
+    },
+    "MIRABELKA": {
+      "NAME": "Mirabelka",
+      "INFO": "Wódka, Syrop Mirabelka, Sok z Cytryny, Lemoniada Cytrynowa"
+    },
+    "MANGO_MARGARITA": {
+      "NAME": "Mango Margarita",
+      "INFO": "Likier Triple Sec, Tequila, Sok z Limonki, Puree Mango"
+    },
+    "PORNSTAR": {
+      "NAME": "PornStar Martini",
+      "INFO": "Wódka, Puree Marakuja, Syrop Waniliowy, Sok z Cytryny, Prosecco"
+    },
+    "VERY_STRAWBERRY": {
+      "NAME": "Very Strawberry",
+      "INFO": "Wódka, Aperol, Puree Truskawkowe, Syrop Rabarbarowy, Sok z Cytryny, Lemoniada Cytrynowa"
+    },
+    "CUBAN_BEACH": {
+      "NAME": "Cuban Beach",
+      "INFO": "Rum Jasny i Ciemny, Sok Ananasowy, Syrop Waniliowy, Puree z Marakui"
+    },
+    "MOJITO": {
+      "NAME": "Mojito",
+      "INFO": "Biały Rum, Limonka, Mięta, Cukier"
+    },
+    "JAGERBOMBA": {
+      "NAME": "JagerBomba",
+      "INFO": "Jägermeister, Red Bull"
+    },
+    "APEROL_0%": {
+      "NAME": "Aperol 0%"
+    },
+    "MOJITO_0%": {
+      "NAME": "Mojito 0%"
+    },
+    "KAMIKAZE": {
+      "NAME": "Kamikaze x4",
+      "INFO": "Wódka Wyborowa, Syrop Blue Curaçao, Sok z Cytryny"
+    },
+    "BLUE_FLAME": {
+      "NAME": "Blue Flame x4",
+      "INFO": "Wódka, Puree z Marakui, Syrop Grenadyna, Syrop Blue Curaçao"
+    },
+    "MANGO_TANGO": {
+      "NAME": "Mango Tango x4",
+      "INFO": "Wódka, Likier Brzoskwiniowy, Syrop Mango, Sok z Cytryny"
+    },
+    "WSCIEKLY_PIES": {
+      "NAME": "Wściekły Pies",
+      "INFO": "Wódka, Syrop Malinowy, Tabasco"
+    },
+    "FINLANDIA": {
+      "NAME": "Finlandia",
+      "SHORT": "40ml / 0.5L",
+      "CHOICE_A": "40ml",
+      "CHOICE_B": "0.5L"
+    },
+    "WYBOROWA": {
+      "NAME": "Wyborowa",
+      "SHORT": "40ml / 0.5L",
+      "CHOICE_A": "40ml",
+      "CHOICE_B": "0.5L"
+    },
+
+    "BIALY_BOCIAN": {
+      "NAME": "Biały Bocian",
+      "SHORT": "40ml / 0.5L",
+      "CHOICE_A": "40ml",
+      "CHOICE_B": "0.5L"
+    },
+    "SIERRA": {
+      "NAME": "Sierra",
+      "SHORT": "40ml"
+    },
+    "METAXA_5": {
+      "NAME": "Metaxa 5*",
+      "SHORT": "50ml"
+    },
+    "METAXA_7": {
+      "NAME": "Metaxa 7*",
+      "SHORT": "50ml"
+    },
+    "STOCK84": {
+      "NAME": "Stock84",
+      "SHORT": "50ml"
+    },
+    "NAPOLEON_1804": {
+      "NAME": "Napoleon 1804",
+      "SHORT": "50ml"
+    },
+    "JACK_DANIELS": {
+      "NAME": "Jack Daniel's",
+      "SHORT": "50ml"
+    },
+    "JOHNNIE_WALKER_BLACK": {
+      "NAME": "Johnnie Walker Black",
+      "SHORT": "50ml"
+    },
+    "JOHNNIE_WALKER_RED": {
+      "NAME": "Johnnie Walker Red",
+      "SHORT": "50ml"
+    },
+    "CHIVAS_REGAL": {
+      "NAME": "Chivas Regal",
+      "SHORT": "50ml"
+    },
+    "BALLANTINES": {
+      "NAME": "Ballantine's",
+      "SHORT": "50ml"
+    },
+    "JAMESON": {
+      "NAME": "Jameson",
+      "SHORT": "50ml"
+    },
+    "JAGERMEISTER": {
+      "NAME": "Jagermeister",
+      "SHORT": "50ml"
+    },
+    "MALIBU": {
+      "NAME": "Malibu",
+      "SHORT": "50ml"
+    },
+    "BACARDI_BLACK": {
+      "NAME": "Bacardi Black",
+      "SHORT": "50ml"
+    },
+    "BACARDI_WHITE": {
+      "NAME": "Bacardi White",
+      "SHORT": "50ml"
+    },
+    "HENNESSY": {
+      "NAME": "Hennessy",
+      "SHORT": "50ml"
+    },
+    "MARTELL": {
+      "NAME": "Martell VS",
+      "SHORT": "50ml"
+    },
+    "TYSKIE_GRONIE_LANE": {
+      "NAME": "Tyskie Gronie",
+      "SHORT": "0.3L / 0.5L",
+      "CHOICE_A": "0.3L",
+      "CHOICE_B": "0.5L"
+    },
+    "KSIAZECE_PSZENICZNE_LANE": {
+      "NAME": "Książęce Pszeniczne",
+      "SHORT": "0.3L / 0.5L",
+      "CHOICE_A": "0.3L",
+      "CHOICE_B": "0.5L"
+    },
+    "PIWO_KSIAZECE": {
+      "NAME": "Książęce",
+      "SHORT": "0.5L",
+      "CHOICE_A": "Książęce Pszeniczne",
+      "CHOICE_B": "Książęce Czerwony Lager",
+      "CHOICE_C": "Książęce Ciemne Łagodne"
+    },
+    "LECH_PREMIUM": {
+      "NAME": "Lech Premium",
+      "SHORT": "0.5L"
+    },
+    "ZYWIEC": {
+      "NAME": "Żywiec",
+      "SHORT": "0.5L"
+    },
+    "HEINEKEN": {
+      "NAME": "Heineken",
+      "SHORT": "0.5L"
+    },
+    "WARKA_STRONG": {
+      "NAME": "Warka Strong",
+      "SHORT": "0.5L"
+    },
+    "LECH_FREE": {
+      "NAME": "Lech Free",
+      "SHORT": "0.5L"
+    },
+    "KSIAZECE_FREE": {
+      "NAME": "Książęce Free",
+      "SHORT": "0.5L"
+    },
+    "LECH_FREE_SMAKOWY": {
+      "NAME": "Lech Free Smakowy",
+      "SHORT": "0.5L",
+      "INFO": "O smaki zapytaj Obsługę"
+    },
+    "KOKO": {
+      "NAME": "Koko",
+      "INFO": "250ml Piwa, Sok Porzeczkowy, Syrop Kokosowy",
+      "CHOICE_A": "Małe",
+      "CHOICE_B": "Duże"
+    },
+    "KIBA": {
+      "NAME": "Kiba",
+      "INFO": "250ml Piwa, Sok Bananowy, Syrop Malinowy",
+      "CHOICE_A": "Małe",
+      "CHOICE_B": "Duże"
+    },
+    "LAGUNA": {
+      "NAME": "Laguna",
+      "INFO": "250ml Piwa, Sok Pomarańczowy, Syrop Blue Curaçao",
+      "CHOICE_A": "Małe",
+      "CHOICE_B": "Duże"
+    },
+    "ANANASOWE": {
+      "NAME": "Ananasowe",
+      "INFO": "250ml Piwa, Sok Ananasowy, Syrop Waniliowy",
+      "CHOICE_A": "Małe",
+      "CHOICE_B": "Duże"
+    },
+    "SPRITE_PIWO_INACZEJ": {
+      "NAME": "Sprite",
+      "INFO": "250ml Piwa, Sprite, Cytryna",
+      "CHOICE_A": "Małe",
+      "CHOICE_B": "Duże"
+    },
+    "MARTINI_ASTI": {
+      "NAME": "Martini Asti",
+      "SHORT": "750ml",
+      "INFO": "Wino Musujące, Półsłodkie"
+    },
+    "PAPARUDA_NEGRA": {
+      "NAME": "Paparuđa Feteasca Neagra",
+      "SHORT": "Wino Czerwone Wytrawne, Rumunia",
+      "INFO": "Wino wytrawne produkowane w 100% z winogron szczepu Feteasca Neagra. W kieliszku zachwyca rubinową barwą. W nosie dominują nuty fiołków i suszonych wiśni, które przeplatają się z niuansami tytoniu. W ustach soczyste, lekkie, z wyczuwalnymi jagodowymi akcentami i aksamitnym finiszem.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "PAPARUDA_MERLOT": {
+      "NAME": "Paparuđa Merlot",
+      "SHORT": "Wino Czerwone Półwytrawne, Rumunia",
+      "INFO": "W niezwykle aromatycznym bukiecie wyróżniają się nuty śliwek i owoców leśnych, które idealnie łączą się z akcentami korzennymi, waniliowymi oraz niuansami pieprzu. Dzięki subtelnej słodyczy i dobrze zbalansowanej kwasowości stanowi doskonały wybór zarówno na co dzień, jak i na wyjątkowe okazje.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "DORNFELDER": {
+      "NAME": "Dornfelder Lieblich",
+      "SHORT": "Wino Czerwone Półsłodkie, Niemcy",
+      "INFO": "Wino zachwyca intensywnym aromatem dojrzałych owoców, takich jak czarne porzeczki, wiśnie i jagody, z delikatnym akcentem przypraw. Jest to wino o łagodnym charakterze, które doskonale komponuje się z deserami, serami pleśniowymi, lekkimi mięsami, a także solo. Idealne dla miłośników delikatnie słodkich, pełnych smaku win.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "SCHWARZE_MADCHENTRAUBE": {
+      "NAME": "Schwarze Mädchentraube",
+      "SHORT": "Wino Czerwone Słodkie, Niemcy",
+      "INFO": "Wyróżnia się intensywnymi nutami dojrzałych owoców, takich jak czarne porzeczki, śliwki i wiśnie, z subtelnym akcentem kwiatowym. Jego słodycz jest idealnie zbalansowana, co sprawia, że jest doskonałym wyborem do deserów, ciast czekoladowych, serów pleśniowych oraz jako towarzysz chwil relaksu.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "PINOT_GRIGIO_ANTONIO_FACCHIN": {
+      "NAME": "Pinot Grigio Antonio Facchin",
+      "SHORT": "Wino Białe Wytrawne, Włochy ; 750ml",
+      "INFO": "Świeże i lekkie wino o delikatnym aromacie cytrusów, zielonego jabłka i białych kwiatów. W ustach rześkie, dobrze zbalansowane, z przyjemną kwasowością i czystym, orzeźwiającym finiszem. Idealne do sałatek, ryb i lekkich dań."
+    },
+    "PAPARUDA_CHARDONNAY": {
+      "NAME": "Paparuđa Chardonnay",
+      "SHORT": "Wino Białe Wytrawne, Rumunia",
+      "INFO": "Wino o charakterystycznym aromacie przypraw korzennych, z nutami dojrzałych żółtych i egzotycznych owoców, jagód oraz winogron. W tle pojawiają się akcenty kandyzowanych owoców, trawy i delikatnych przypraw, które nadają mu złożony charakter.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "PAPARUDA_FETEASCA_REGALA": {
+      "NAME": "Paparuđa Feteasca Regală",
+      "SHORT": "Wino Białe Półwytrawne, Rumunia",
+      "INFO": "Świeże, lekkie wino o wyraźnie owocowym charakterze. W aromacie dominują jasne owoce, takie jak gruszka i jabłko, z subtelną nutą owoców egzotycznych. W smaku gładkie i harmonijne, z delikatną słodyczą oraz przyjemnym, orzeźwiającym finiszem.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "SANTA_CRUZ_WHITE_VERDEJO": {
+      "NAME": "Santa Cruz White Verdejo PFI",
+      "SHORT": "Wino Białe Półsłodkie, Hiszpania",
+      "INFO": "Wino przyjemne i delikatne, z wyraźnymi nutami tropikalnych owoców, takich jak ananas i mango. Świeżości dodają akcenty zielonego jabłka. W smaku lekkie, naturalnie słodkie, świeże i harmonijne, o wyraźnym owocowym charakterze i dobrej, typowej dla Verdejo kwasowości.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "TALERZ_ROZMAITOSCI": {
+      "NAME": "Talerz Rozmaitości",
+      "INFO": "Frytki, Frytki z Batatów, Ziemniaczki ze Skórką, Krążki Cebulowe, Nuggetsy z Kurcząt, Skrzydełka z Kurcząt, Sosy."
+    }
+  },
+
+  "FLAGS": {
+    "ANG": "Flaga Angli",
+    "PL": "Polska Flaga",
+    "GER": "Flaga Niemiec",
+    "JPN": "Flaga Japoni",
+    "UKR": "Flaga Ukrainy"
+  },
+
+  "BUTTONS": {
+    "STYLE-AUTO": "Auto",
+    "SHOW-CART.BUTTON": "Moje Zamówienie",
+    "CLOSE-CART.BUTTON": "Ukryj Moje Zamówienie",
+    "FOOD-MENU.BUTTON": "Menu",
+    "DRINK-MENU.BUTTON": "Napoje",
+    "ALCOHOL-MENU.BUTTON": "Alkohole"
+  },
+
+  "CATEGORY": {
+    "MAIN-DISHES": "Dania Głowne",
+    "SALADS": "Sałatki",
+    "DUMPLINGS": "Pierogi",
+    "SOUPS": "Zupy",
+    "DISHES": "Dania",
+    "DESSERTS": "Desery",
+    "SIDES": "Dodatki",
+    "SAUCES": "Sosy",
+    "HOT-DRINKS": "Gorące Napoje",
+    "COLD-DRINKS": "Zimne Napoje",
+    "DRINKS": "Napoje",
+    "COCKTAILS": "Drinki",
+    "MOCKTAILS": "Drinki Bezalkoholowe",
+    "SHOTS": "Shoty",
+    "VODKA": "Wódka",
+    "TEQUILA": "Tequila",
+    "BRANDY": "Brandy",
+    "WHISKEY": "Whiskey",
+    "LIQUEUR": "Likiery",
+    "RUM": "Rum",
+    "COGNAC": "Cognac",
+    "DRAFT-BEER": "Piwo Lane",
+    "BOTTLED-BEER": "Piwo w Butelce",
+    "BEER-SPECIALS": "Piwo Inaczej",
+    "SPARKLING-WINE": "Wino Musujące",
+    "RED-WINE": "Wino Czerwone",
+    "WHITE-WINE": "Wino Białe"
+  },
+
+  "GENERAL": {
+    "PRICE": "Cena",
+    "QUANTITY": "Ilość",
+    "SELECTED": "Wybrano",
+    "CHOOSE-STYLE": "Wybierz Styl",
+    "SHOW-MORE": "Pokaż więcej",
+    "ADDED": "Dodano do zamówienia",
+    "DELETE-ALL": "Usunąć wszystko?",
+    "ALL-DELETED": "Skasowano Wszystko",
+    "DELETED": "Usunięto",
+    "ADD-TO-ORDER": "Dodaj do Zamówienia",
+    "SELECT-OPTION": "Wybierz Opcje",
+    "EMPTY-ORDER": "Twoje zamówienie jest puste",
+    "ADD-MORE-PRODUCTS": "Dodaj Produkty Do Koszyka",
+    "SHOW-TO-WAITER": "Proszę pokazać zamówienie kelnerce",
+    "ADD-TRANSLATE": "Zostanie dodane tłumaczenie",
+    "SEARCH": "Szukaj",
+    "ALERGENS": "Alergeny",
+    "IMG": {
+      "ASPRI-LOGO": "Logo Restauracji"
+    },
+    "BADGE": {
+      "FAV": "Polecamy",
+      "HOT": "Pikantne",
+      "KIDS": "Wybór Dzieci",
+      "VEGETARIAN": "Wegetariańskie",
+      "BEER": "Do Piwa!"
+    },
+    "DISCLAIMER": "Zdjęcia mają charakter poglądowy. Zastrzegamy możliwość wystąpienia błędów oraz zmian w cenach, składnikach i dostępności dań. W przypadku rozbieżności obowiązuje oferta dostępna w lokalu."
+  },
+
+  "ALERGENS": {
+    "GLUTEN": "Zboża zawierające gluten",
+    "CRUSTACEANS": "Skorupiaki i produkty pochodne",
+    "EGGS": "Jaja i produkty pochodne",
+    "FISH": "Ryby i produkty pochodne",
+    "PEANUTS": "Orzeszki ziemne",
+    "SOY": "Soja i produkty pochodne",
+    "MILK": "Mleko i produkty pochodne",
+    "NUTS": "Orzechy",
+    "CELERY": "Seler i produkty pochodne",
+    "MUSTARD": "Gorczyca i produkty pochodne",
+    "SESAME": "Nasiona sezamu i produkty pochodne",
+    "SULFUR": "Dwutlenek siarki",
+    "LUPIN": "Łubin",
+    "MOLLUSCS": "Mięczaki"
+  },
+  "ALT": {
+    "ASPRI_LOGO": "Logo Restauracji Aspri",
+    "QR_SYMBOL": "Uniwersalny symbol kodu QR",
+    "LIGHT_MODE": "Jasny styl aplikacji",
+    "DARK_MODE": "Ciemny styl aplikacji"
+  }
+}

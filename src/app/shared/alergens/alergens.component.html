@@ -1,0 +1,49 @@
+<div class="alergens" [class.in-home]="inHome">
+  <h1 (click)="toggleAlergens()">{{ "GENERAL.ALERGENS" | translate }}</h1>
+</div>
+<div class="alergens-content" [class.active]="showAlergens">
+  <ul class="alergens-column" #alergens>
+    <li class="alergen">
+      <p><span>1.</span>{{ "ALERGENS.GLUTEN" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>2.</span>{{ "ALERGENS.CRUSTACEANS" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>3.</span>{{ "ALERGENS.EGGS" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>4.</span>{{ "ALERGENS.FISH" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>5.</span>{{ "ALERGENS.PEANUTS" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>6.</span>{{ "ALERGENS.SOY" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>7.</span>{{ "ALERGENS.MILK" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>8.</span>{{ "ALERGENS.NUTS" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>9.</span>{{ "ALERGENS.CELERY" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>10.</span>{{ "ALERGENS.MUSTARD" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>11.</span>{{ "ALERGENS.SESAME" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>12.</span>{{ "ALERGENS.SULFUR" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>13.</span>{{ "ALERGENS.LUPIN" | translate }}</p>
+    </li>
+    <li class="alergen">
+      <p><span>14.</span>{{ "ALERGENS.MOLLUSCS" | translate }}</p>
+    </li>
+  </ul>
+</div>

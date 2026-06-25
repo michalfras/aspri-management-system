@@ -1,0 +1,49 @@
+.access-wrapper {
+  background-color: rgb(12, 12, 12);
+  min-height: 100dvh;
+}
+.logo-wrapper {
+  text-align: center;
+}
+.logo {
+  margin: 10px;
+  height: 70px;
+}
+.access-info-wrapper {
+  margin: 0 10px;
+  border-radius: 20px;
+  background-color: rgb(36, 36, 36);
+}
+.access-info {
+  color: white;
+  display: flex;
+  padding: 20px 0;
+}
+.access-info img {
+  margin: auto 15px;
+  border-radius: 7px;
+  height: 25px;
+  width: 35px;
+  object-fit: cover;
+}
+.access-info div {
+  border-left: 2px solid gray;
+  padding: 0 15px;
+}
+.access-info div p:first-child {
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.access-info div p:last-child {
+  font-weight: lighter;
+  font-size: 0.7em;
+}
+.qr-wrapper {
+  margin-top: 10px;
+  text-align: center;
+}
+.qr-wrapper img {
+  height: 100px;
+  opacity: 0.5;
+}

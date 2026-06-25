@@ -1,0 +1,191 @@
+.blur-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.084);
+  backdrop-filter: blur(2px);
+
+  transition: 0.1s;
+  z-index: 1;
+}
+.blur-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.popup-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--choice-qty-modal-bgc);
+  width: 86dvw;
+  aspect-ratio: 3/2;
+  border: 1px solid rgb(35, 35, 35);
+  border-radius: 35px;
+
+  touch-action: manipulation;
+  user-select: none;
+  transform: scale(0.5);
+  transition: 0.3s;
+}
+.popup-window.active {
+  transform: scale(1);
+}
+h1 {
+  font-size: 1em;
+  padding: 2px 0;
+  opacity: 0.3;
+}
+p {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+p span {
+  font-size: 1.5em;
+}
+
+.qty-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4em;
+  width: 15em;
+  border: none;
+  border-radius: 60px;
+  background-color: var(--choice-add-button);
+  transition: 0.2s;
+}
+.qty-selector {
+  color: rgb(107, 107, 107);
+  font-size: 1.5em;
+  background-color: var(--choice-add-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border: 3px solid var(--cart-bgc);
+  border-radius: 50px;
+}
+.clicked {
+  animation: click 180ms ease;
+}
+@keyframes click {
+  0% {
+    color: rgb(107, 107, 107);
+    border: 3px solid rgb(56, 56, 56);
+    transform: scale(1);
+  }
+  50% {
+    color: var(--main-font-color);
+    border: 3px solid var(--main-font-color);
+    transform: scale(1.3);
+  }
+  100% {
+    color: rgb(107, 107, 107);
+    border: 3px solid rgb(56, 56, 56);
+    transform: scale(1);
+  }
+}
+
+.qty-counter {
+  font-size: 3em;
+}
+.delete-button {
+  background-color: transparent;
+  border: 3px solid rgb(255, 143, 143);
+  border-radius: 30px;
+  min-height: 4em;
+  aspect-ratio: 1/1;
+
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+.delete-button.for-sure {
+  opacity: 0;
+  pointer-events: none;
+}
+.delete-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(255, 143, 143);
+  transition: 0.3s;
+}
+
+.delete-button:active {
+  transform: scale(1.1) translateX(100%);
+  border: 3px solid rgb(255, 0, 0);
+}
+.delete-button svg:active {
+  stroke: rgb(255, 0, 0);
+}
+.decline-button {
+  opacity: 0;
+  pointer-events: none;
+
+  background-color: transparent;
+  border: 3px solid rgb(255, 143, 143);
+
+  border-radius: 30px;
+  min-height: 3.5em;
+  aspect-ratio: 1/1;
+
+  transform: translateX(-80%);
+  transition: 0.3s;
+}
+.decline-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.decline-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(255, 143, 143);
+  transition: 0.3s;
+}
+.decline-button:active {
+  transform: scale(1.1) translateX(-80%);
+  border: 3px solid rgb(255, 0, 0);
+}
+.decline-button svg:active {
+  stroke: rgb(255, 0, 0);
+}
+.confirm-button {
+  opacity: 0;
+  pointer-events: none;
+
+  background-color: transparent;
+  border: 3px solid rgb(56, 151, 47);
+
+  border-radius: 30px;
+  min-height: 3.5em;
+  aspect-ratio: 1/1;
+
+  transform: translateX(-15%);
+  transition: 0.3s;
+}
+.confirm-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.confirm-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(56, 151, 47);
+  transition: 0.3s;
+}
+.confirm-button:active {
+  transform: scale(1.1) translateX(-15%);
+  border: 3px solid rgb(11, 130, 0);
+}
+.confirm-button svg:active {
+  stroke: rgb(11, 130, 0);
+}

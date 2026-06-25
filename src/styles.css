@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bgc-color);
+  color: var(--main-font-color);
+  text-shadow: 0 2px 12px var(--text-shadow-color),
+    0 2px 12px var(--text-shadow-color);
+  font-family: "Inter", sans-serif;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+:root {
+  --main-font-color: rgb(0, 0, 0);
+  --text-shadow-color: transparent;
+  --bgc-color: rgb(246, 242, 235);
+  --main-color: rgb(252, 249, 244);
+  --choice-qty-modal-bgc: rgb(252, 249, 244);
+  --menu-section-navbar-color: rgb(241, 235, 227);
+  --accent-color: rgb(196, 156, 71);
+  --menu-section-shadow: rgb(105, 103, 93);
+  --menu-navbar-shadow: rgb(109, 109, 109);
+  --button-shadow: black;
+  --cart-bgc: rgb(252, 249, 244);
+  --cart-border: rgb(246, 242, 235);
+  --separator-text: rgb(224, 224, 224);
+  --search-shadow: rgb(82, 82, 82);
+  --choice-add-button: rgb(241, 235, 227);
+}
+.dark {
+  --main-font-color: white;
+  --text-shadow-color: black;
+  --bgc-color: rgb(21, 21, 21);
+  --main-color: rgb(47, 47, 47);
+  --choice-qty-modal-bgc: rgb(66, 66, 66);
+  --menu-section-navbar-color: rgb(31, 31, 31);
+  --accent-color: rgb(196, 156, 71);
+  --menu-section-shadow: rgb(14, 14, 14);
+  --menu-navbar-shadow: rgb(21, 21, 21);
+  --button-shadow: transparent;
+  --cart-bgc: rgb(56, 56, 56);
+  --cart-border: rgb(47, 47, 47);
+  --separator-text: rgba(95, 95, 95, 0.466);
+  --search-shadow: white;
+  --choice-add-button: rgb(47, 47, 47);
+}

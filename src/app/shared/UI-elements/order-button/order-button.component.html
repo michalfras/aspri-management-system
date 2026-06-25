@@ -1,0 +1,25 @@
+<div class="order-container" [class.active]="openCart" [class.in-menu]="inMenu">
+  <button class="order-button" (click)="showModal($event)">
+    <span class="button-text">
+      <span><i class="fa-solid fa-cart-shopping"></i> </span>
+      {{
+        UiService.isCartModalOpen()
+          ? ("BUTTONS.CLOSE-CART.BUTTON" | translate)
+          : ("BUTTONS.SHOW-CART.BUTTON" | translate)
+      }}
+    </span>
+
+    <span class="arrows" [class.hide]="cartService.cartItems().length > 0">
+      <svg viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 15.75 7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </span>
+    <div class="cart-qty" [class.hide]="cartService.cartItems().length === 0">
+      <span>{{ cartService.cartTotalQuantity() }}</span>
+    </div>
+  </button>
+</div>

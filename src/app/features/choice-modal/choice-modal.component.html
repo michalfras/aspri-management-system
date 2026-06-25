@@ -1,0 +1,98 @@
+@if(product(); as product){
+
+<div
+  class="blur-choice-mdl-wrapper"
+  (click)="closeModal()"
+  [class.active]="UiService.isChoiceModalOpen()"
+>
+  @if(product.badge){
+  <div class="badge-wrapper">
+    <app-badge [badgeName]="product.badge"></app-badge>
+  </div>
+  }
+
+  <button class="navigate-btns close" (click)="closeModal()">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  @if(isInMenuComponent){ @if(isNextProduct()){
+  <button
+    class="navigate-btns next"
+    (click)="nextProduct(); $event.stopPropagation()"
+  >
+    <i class="fa-solid fa-angle-right"></i></button
+  >} @if (isPreviousProduct()) {
+  <button
+    class="navigate-btns previous"
+    (click)="previousProduct(); $event.stopPropagation()"
+  >
+    <i class="fa-solid fa-angle-left"></i></button
+  >} } @if(product.badge){
+  <div class="badge-wrapper">
+    <app-badge [badgeName]="product.badge"></app-badge>
+  </div>
+  }
+  <div class="choice-mdl-window">
+    <div
+      class="choice-mdl-content"
+      (click)="$event.stopPropagation()"
+      [class.active]="UiService.isChoiceModalOpen()"
+      [class.switch-left]="animatePreviousPage"
+      [class.switch-right]="animateNextPage"
+    >
+      <div
+        class="img-wrapper"
+        [class.no-image]="!product.image"
+        [style.background-image]="
+          !product.image ? themeService.currentBackgroundLogo() : null
+        "
+      >
+        @if(UiService.isChoiceModalOpen() && product.image){
+        <img [src]="product.image" [alt]="product.nameKey | translate" />}
+      </div>
+
+      <div class="scrolled-content" #scrolledContent>
+        <p class="pdt-name">{{ product.nameKey | translate }}</p>
+        <p class="pdt-price">
+          {{ cartService.checkIfMultiplePrices(product) }}
+        </p>
+        <p class="pdt-info">{{ product.infoKey | translate }}</p>
+        <p class="pdt-short-info">{{ product.shortInfoKey | translate }}</p>
+        <div class="scroll-maker"></div>
+        <div class="options-wrapper" *ngIf="product.choices">
+          <label
+            class="option-btn"
+            *ngFor="let choice of product.choices"
+            [class.selected]="oneChoice.value === choice"
+          >
+            <span class="option-name">{{ choice.labelKey | translate }}</span>
+            <span class="option-price">{{ choice.price }},-</span
+            ><input
+              class="ch-btn-input"
+              type="radio"
+              [formControl]="oneChoice"
+              [value]="choice"
+            />
+          </label>
+        </div>
+      </div>
+      <div class="add-button-wrapper">
+        <button
+          class="add-button"
+          [class.disabled]="!oneChoice.value && product.choices"
+          (click)="addToCart()"
+        >
+          <ng-container
+            *ngIf="oneChoice.value || !product.choices; else choose"
+          >
+            {{ "GENERAL.ADD-TO-ORDER" | translate }}
+          </ng-container>
+
+          <ng-template #choose>
+            {{ "GENERAL.SELECT-OPTION" | translate }}
+          </ng-template>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+}

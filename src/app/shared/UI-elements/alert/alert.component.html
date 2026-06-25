@@ -1,0 +1,11 @@
+<div class="alert-wrapper" [class.active]="alertService.isAlertActive()">
+  <div
+    class="alert-content"
+    [class.active]="alertService.isAlertActive()"
+    [class.red]="alertService.alertColor() === 'red'"
+    [class.blue]="alertService.alertColor() === 'blue'"
+    [class.green]="alertService.alertColor() === 'green'"
+  >
+    {{ alertService.alertMessage() | translate }}
+  </div>
+</div>

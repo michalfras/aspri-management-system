@@ -1,0 +1,73 @@
+<div class="welcome" [class.close]="closeWelcomeScreen">
+  <img
+    src="images/general/aspri-logo-biale.webp"
+    [alt]="'GENERAL.IMG.ASPRI-LOGO' | translate"
+    class="aspri-logo"
+    (animationend)="nextStep()"
+  />
+  <div class="wheel" [class.visible]="isWheelVisible">
+    <div class="track">
+      <div class="item1" #slot1>
+        {{ text1 }}
+      </div>
+
+      <div class="item2 active" #slot2>
+        {{ text2 }}
+      </div>
+
+      <div class="item3" #slot3>
+        {{ text3 }}
+      </div>
+
+      <div class="item4" #slot4>
+        {{ text4 }}
+      </div>
+      <div class="item5" #slot5>
+        {{ text5 }}
+      </div>
+    </div>
+  </div>
+  <div class="flags" [class.visible]="isWheelVisible" (click)="scrollDown()">
+    <app-language-flags></app-language-flags>
+  </div>
+
+  <h1
+    class="choose-style"
+    [class.visible]="languageService.lang() && step() > 0"
+  >
+    {{ "GENERAL.CHOOSE-STYLE" | translate }}:
+  </h1>
+
+  <div
+    class="select-style-wrapper"
+    [class.visible]="languageService.lang() && step() > 0"
+  >
+    <button
+      class="style light"
+      [class.glow]="themeService.theme() === 'light'"
+      (click)="selectStyle('light')"
+    >
+      <img
+        src="images/general/theme-light-style.webp"
+        [alt]="'ALT.LIGHT_MODE' | translate"
+      />
+    </button>
+    <button
+      class="style-auto"
+      [class.glow]="themeService.theme() === 'auto'"
+      (click)="selectStyle('auto')"
+    >
+      {{ "BUTTONS.STYLE-AUTO" | translate }}
+    </button>
+    <button
+      class="style dark"
+      [class.glow]="themeService.theme() === 'dark'"
+      (click)="selectStyle('dark')"
+    >
+      <img
+        src="images/general/theme-dark-style.webp"
+        [alt]="'ALT.DARK_MODE' | translate"
+      />
+    </button>
+  </div>
+</div>

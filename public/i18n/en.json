@@ -1,0 +1,643 @@
+{
+  "MENU": {
+    "PLACEK_WEGIERSKI": {
+      "NAME": "Hungarian-Style Potato Pancake",
+      "SHORT": "( 1 )",
+      "INFO": "Crispy potato pancake served with a flavorful pork goulash with onions in a tomato sauce."
+    },
+    "SCHAB_NA_TRZY": {
+      "NAME": " Three-Way Pork Loin",
+      "SHORT": "( 1,3 )",
+      "INFO": "Three small pork loin cutlets: classic, topped with braised cabbage, and topped with bacon and cheese. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "KOTLET_DRWALA": {
+      "NAME": "Lumberjack Cutlet",
+      "SHORT": "( 1,3 )",
+      "INFO": "Classic breaded pork cutlet baked with grilled bacon, bell pepper, onion and cheese. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "ROLADKA_SCHABOWA": {
+      "NAME": "Pork Loin Roll",
+      "SHORT": "( 1,3 )",
+      "INFO": "Pork loin roll stuffed with mushrooms and onion. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "CORDON_BLEU": {
+      "NAME": "Cordon Bleu",
+      "SHORT": "( 1,3 )",
+      "INFO": "Classic breaded pork cutlet baked with ham, cheese and mustard. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "KOTLET_SCHABOWY": {
+      "NAME": "Breaded Pork Cutlet",
+      "SHORT": "( 1,3 )",
+      "INFO": "Traditional breaded pork cutlet, fried until golden and crispy. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "GRILLOWANY_FILET": {
+      "NAME": "Grilled Chicken Fillet",
+      "INFO": "Juicy grilled chicken fillet baked with tomatoes, basil and mozzarella cheese. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "FILET_ZE_SZPINAKIEM": {
+      "NAME": "Chicken Fillet in an Omelette",
+      "SHORT": "( 1,3 )",
+      "INFO": "Juicy chicken fillet with spinach and sun-dried tomatoes, wrapped in a delicate omelette. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "PIERS_W_SEZAMIE": {
+      "NAME": "Sesame-Crusted Chicken Breast",
+      "SHORT": "( 1,3,11 )",
+      "INFO": "Juicy chicken breast coated in a crispy sesame crust. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes",
+      "CHOICE_C": "Boiled potatoes"
+    },
+    "SER_SMAZONY": {
+      "NAME": "Fried Cheese with Cranberry Sauce",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Golden-fried breaded cheese served with cranberry sauce. Accompanied by French fries and a selection of fresh salads.",
+      "CHOICE_A": "French fries",
+      "CHOICE_B": "Skin-on potatoes"
+    },
+    "SKRZYDELKA": {
+      "NAME": "Chicken Wings",
+      "SHORT": "( 10 )",
+      "INFO": "Juicy chicken wings, crispy on the outside and tender inside, served hot."
+    },
+    "NUGGETSY": {
+      "NAME": "Chicken Nuggets",
+      "SHORT": "( 1,3 )",
+      "INFO": "Breaded pieces of juicy chicken breast, fried until golden and crispy on the outside, tender on the inside"
+    },
+    "PLACKI_ZIEMNIACZANE": {
+      "NAME": "Potato Pancakes with Sour Cream",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Traditional crispy potato pancakes served hot with sour cream."
+    },
+    "POKUSA": {
+      "NAME": "Pokusa",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Iceberg lettuce, tomato, fresh cucumber, bell pepper, egg, feta cheese, yellow cheese, sunflower seeds, yogurt dressing, served with toast."
+    },
+    "MILANO": {
+      "NAME": "Milano",
+      "SHORT": "( 1,3 )",
+      "INFO": "Iceberg lettuce, tuna, tomato, pickled cucumber, bell pepper, sweetcorn, served with toast."
+    },
+    "ASPRI_SALAD": {
+      "NAME": "Aspri",
+      "SHORT": "( 1,3,7 )",
+      "INFO": "Iceberg lettuce, chicken, tomato, fresh cucumber, red onion, sweetcorn, feta cheese, egg, yogurt dressing, served with toast."
+    },
+    "PIEROGI_RUSKIE": {
+      "NAME": "Ruthenian Dumplings",
+      "SHORT": "( 1,3 )",
+      "INFO": "Traditional dumplings filled with potatoes and farmer's cheese."
+    },
+    "PIEROGI_Z_MIESEM": {
+      "NAME": "Meat Dumplings",
+      "SHORT": "( 1,3 )",
+      "INFO": "Traditional dumplings filled with pork."
+    },
+    "ZUREK": {
+      "NAME": "Polish Żurek Soup with Egg",
+      "SHORT": "( 1,3,9 )",
+      "INFO": "Traditional Polish sour soup made with house-made starter, served with egg."
+    },
+    "POMIDOROWA": {
+      "NAME": "Tomato Soup with Pasta",
+      "SHORT": "( 1,9 )",
+      "INFO": "Traditional tomato soup served with pasta."
+    },
+    "FRYTKI": {
+      "NAME": "Classic Fries",
+      "INFO": "Traditional potato fries."
+    },
+    "KSIEZYCE": {
+      "NAME": "Skin-on Potatoes"
+    },
+    "FRYTKI_Z_BATATOW": {
+      "NAME": "Sweet Potato Fries",
+      "INFO": "Deep-fried sweet potato fries."
+    },
+    "KRAZKI_CEBULOWE": {
+      "NAME": "Onion Rings",
+      "INFO": "Battered and deep-fried onion rings."
+    },
+    "ZIEMNIAKI_GOTOWANE": {
+      "NAME": "Boiled Potatoes"
+    },
+    "KAPUSTA_ZASMAZANA": {
+      "NAME": "Braised Sauerkraut",
+      "INFO": "Stewed sauerkraut with onion, lightly fried until golden."
+    },
+    "BUKIET_SUROWEK": {
+      "NAME": "Salad Selection",
+      "INFO": "A selection of fresh vegetable salads."
+    },
+    "SUROWKA": {
+      "NAME": "Seasonal Side Salad",
+      "INFO": "Single portion of seasonal salad."
+    },
+    "PIECZYWO": {
+      "NAME": "Bread"
+    },
+    "SOSY": {
+      "NAME": "Sauces",
+      "INFO": "Sauce selection: garlic, ketchup, mayonnaise, mustard, sour cream.",
+      "CHOICE_A": "Garlic Sauce",
+      "CHOICE_B": "Ketchup",
+      "CHOICE_C": "Mayonnaise",
+      "CHOICE_D": "Mustard",
+      "CHOICE_E": "Sour Cream"
+    },
+    "MALINY_NA_GORACO": {
+      "NAME": "Hot Raspberries",
+      "INFO": "Warm raspberries served with vanilla ice cream and whipped cream."
+    },
+    "PUCHAR_LODOWY": {
+      "NAME": "Ice Cream Sundae",
+      "INFO": "Ice cream served with whipped cream and sauce."
+    },
+    "COLA": {
+      "NAME": "Coca-Cola",
+      "SHORT": "250ml /1L",
+      "CHOICE_A": "Coca-Cola 250ml",
+      "CHOICE_B": "Coca-Cola 1L"
+    },
+    "FANTA": {
+      "NAME": "Fanta",
+      "SHORT": "250ml"
+    },
+    "SPRITE": {
+      "NAME": "Sprite",
+      "SHORT": "250ml"
+    },
+    "TONIC": {
+      "NAME": "Tonic",
+      "SHORT": "250ml"
+    },
+    "RED_BULL": {
+      "NAME": "Red Bull",
+      "SHORT": "250ml"
+    },
+    "WODA": {
+      "NAME": "Still Water",
+      "SHORT": "300ml /1L",
+      "CHOICE_A": "300ml",
+      "CHOICE_B": "1L"
+    },
+    "WODA_GAZOWANA": {
+      "NAME": "Sparkling Water",
+      "SHORT": "300ml"
+    },
+    "LEMONIADA": {
+      "NAME": "Lemonade",
+      "SHORT": "300ml /1L",
+      "INFO": "Ask staff about available flavors.",
+      "CHOICE_A": "300ml",
+      "CHOICE_B": "1L"
+    },
+    "SOK": {
+      "NAME": "Juices",
+      "SHORT": "300ml /1L",
+      "CHOICE_A": "Orange 300ml",
+      "CHOICE_B": "Apple 300ml",
+      "CHOICE_C": "Pineapple 300ml",
+      "CHOICE_D": "Blackcurrant 300ml",
+      "CHOICE_E": "Banana 300ml",
+      "CHOICE_F": "Grapefruit 300ml",
+      "CHOICE_G": "Orange 1L",
+      "CHOICE_H": "Apple 1L",
+      "CHOICE_I": "Pineapple 1L",
+      "CHOICE_J": "Blackcurrant 1L",
+      "CHOICE_K": "Banana 1L",
+      "CHOICE_L": "Grapefruit 1L"
+    },
+    "ESPRESSO": {
+      "NAME": "Espresso",
+      "CHOICE_A": "Espresso",
+      "CHOICE_B": "Espresso Doppio"
+    },
+    "BLACK_COFFE": {
+      "NAME": "Black Coffe"
+    },
+    "WHITE_COFFE": {
+      "NAME": "White Coffe"
+    },
+    "LATTE": {
+      "NAME": "Latte Macchiato"
+    },
+    "KAWA_MROZONA": {
+      "NAME": "Iced Coffee"
+    },
+    "HERBATA": {
+      "NAME": "Sir William’s Tea"
+    },
+    "HERBATA_OWOCOWA": {
+      "NAME": "Hello Spring Fruit Tea",
+      "CHOICE_A": "Raspberry or Strawberry, Lime and Mint",
+      "CHOICE_B": "Kiwi, Orange, Lemon, Lime and Mint",
+      "CHOICE_C": "Apple, Basil, Ginger and Cinnamon"
+    },
+    "APEROL_SPRITZ": {
+      "NAME": "Aperol Spritz",
+      "INFO": "Prosecco, Aperol, Sparkling Water, Orange"
+    },
+    "HUGO": {
+      "NAME": "Hugo",
+      "INFO": "Prosecco, Vodka, Elderflower Syrup, Sparkling Water, Lime"
+    },
+    "MIRABELKA": {
+      "NAME": "Mirabelka",
+      "INFO": "Vodka, Mirabelle Plum Syrup, Lemon Juice, Lemon Lemonade"
+    },
+    "MANGO_MARGARITA": {
+      "NAME": "Mango Margarita",
+      "INFO": "Triple Sec Liqueur, Tequila, Lime Juice, Mango Purée"
+    },
+    "PORNSTAR": {
+      "NAME": "PornStar Martini",
+      "INFO": "Vodka, Passion Fruit Purée, Vanilla Syrup, Lemon Juice, Prosecco"
+    },
+    "VERY_STRAWBERRY": {
+      "NAME": "Very Strawberry",
+      "INFO": "Vodka, Aperol, Strawberry Purée, Rhubarb Syrup, Lemon Juice, Lemon Lemonade"
+    },
+    "CUBAN_BEACH": {
+      "NAME": "Cuban Beach",
+      "INFO": "Light and Dark Rum, Pineapple Juice, Vanilla Syrup, Passion Fruit Purée"
+    },
+    "MOJITO": {
+      "NAME": "Mojito",
+      "INFO": "White Rum, Lime, Mint, Sugar"
+    },
+    "JAGERBOMBA": {
+      "NAME": "JagerBomba",
+      "INFO": "Jägermeister, Red Bull"
+    },
+    "APEROL_0%": {
+      "NAME": "Aperol 0%"
+    },
+    "MOJITO_0%": {
+      "NAME": "Mojito 0%"
+    },
+    "KAMIKAZE": {
+      "NAME": "Kamikaze x4",
+      "INFO": "Wyborowa Vodka, Blue Curaçao Syrup, Lemon Juice"
+    },
+    "BLUE_FLAME": {
+      "NAME": "Blue Flame x4",
+      "INFO": "Vodka, Passion Fruit Purée, Grenadine Syrup, Blue Curaçao Syrup"
+    },
+    "MANGO_TANGO": {
+      "NAME": "Mango Tango x4",
+      "INFO": "Vodka, Peach Liqueur, Mango Syrup, Lemon Juice"
+    },
+    "WSCIEKLY_PIES": {
+      "NAME": "Mad Dog",
+      "INFO": "Vodka, Raspberry Syrup, Tabasco"
+    },
+    "FINLANDIA": {
+      "NAME": "Finlandia",
+      "SHORT": "40ml / 0.5L",
+      "CHOICE_A": "40ml",
+      "CHOICE_B": "0.5L"
+    },
+    "WYBOROWA": {
+      "NAME": "Wyborowa",
+      "SHORT": "40ml / 0.5L",
+      "CHOICE_A": "40ml",
+      "CHOICE_B": "0.5L"
+    },
+    "BIALY_BOCIAN": {
+      "NAME": "Biały Bocian",
+      "SHORT": "40ml / 0.5L",
+      "CHOICE_A": "40ml",
+      "CHOICE_B": "0.5L"
+    },
+    "SIERRA": {
+      "NAME": "Sierra",
+      "SHORT": "40ml"
+    },
+    "METAXA_5": {
+      "NAME": "Metaxa 5*",
+      "SHORT": "50ml"
+    },
+    "METAXA_7": {
+      "NAME": "Metaxa 7*",
+      "SHORT": "50ml"
+    },
+    "STOCK84": {
+      "NAME": "Stock84",
+      "SHORT": "50ml"
+    },
+    "NAPOLEON_1804": {
+      "NAME": "Napoleon 1804",
+      "SHORT": "50ml"
+    },
+    "JACK_DANIELS": {
+      "NAME": "Jack Daniel's",
+      "SHORT": "50ml"
+    },
+    "JOHNNIE_WALKER_BLACK": {
+      "NAME": "Johnnie Walker Black",
+      "SHORT": "50ml"
+    },
+    "JOHNNIE_WALKER_RED": {
+      "NAME": "Johnnie Walker Red",
+      "SHORT": "50ml"
+    },
+    "CHIVAS_REGAL": {
+      "NAME": "Chivas Regal",
+      "SHORT": "50ml"
+    },
+    "BALLANTINES": {
+      "NAME": "Ballantine's",
+      "SHORT": "50ml"
+    },
+    "JAMESON": {
+      "NAME": "Jameson",
+      "SHORT": "50ml"
+    },
+    "JAGERMEISTER": {
+      "NAME": "Jagermeister",
+      "SHORT": "50ml"
+    },
+    "MALIBU": {
+      "NAME": "Malibu",
+      "SHORT": "50ml"
+    },
+    "BACARDI_BLACK": {
+      "NAME": "Bacardi Black",
+      "SHORT": "50ml"
+    },
+    "BACARDI_WHITE": {
+      "NAME": "Bacardi White",
+      "SHORT": "50ml"
+    },
+    "HENNESSY": {
+      "NAME": "Hennessy",
+      "SHORT": "50ml"
+    },
+    "MARTELL": {
+      "NAME": "Martell VS",
+      "SHORT": "50ml"
+    },
+    "TYSKIE_GRONIE_LANE": {
+      "NAME": "Tyskie Gronie",
+      "SHORT": "0.3L / 0.5L",
+      "CHOICE_A": "0.3L",
+      "CHOICE_B": "0.5L"
+    },
+    "KSIAZECE_PSZENICZNE_LANE": {
+      "NAME": "Książęce Pszeniczne",
+      "SHORT": "0.3L / 0.5L",
+      "CHOICE_A": "0.3L",
+      "CHOICE_B": "0.5L"
+    },
+    "PIWO_KSIAZECE": {
+      "NAME": "Książęce",
+      "SHORT": "0.5L",
+      "CHOICE_A": "Książęce Pszeniczne",
+      "CHOICE_B": "Książęce Czerwony Lager",
+      "CHOICE_C": "Książęce Ciemne Łagodne"
+    },
+    "LECH_PREMIUM": {
+      "NAME": "Lech Premium",
+      "SHORT": "0.5L"
+    },
+    "ZYWIEC": {
+      "NAME": "Żywiec",
+      "SHORT": "0.5L"
+    },
+    "HEINEKEN": {
+      "NAME": "Heineken",
+      "SHORT": "0.5L"
+    },
+    "WARKA_STRONG": {
+      "NAME": "Warka Strong",
+      "SHORT": "0.5L"
+    },
+    "LECH_FREE": {
+      "NAME": "Lech Free",
+      "SHORT": "0.5L"
+    },
+    "KSIAZECE_FREE": {
+      "NAME": "Książęce Free",
+      "SHORT": "0.5L"
+    },
+    "LECH_FREE_SMAKOWY": {
+      "NAME": "Lech Free flavored ",
+      "SHORT": "0.5L",
+      "INFO": "Ask Staff for flavors"
+    },
+    "KOKO": {
+      "NAME": "Koko",
+      "INFO": "250ml Beer, Blackcurrant Juice, Coconut Syrup",
+      "CHOICE_A": "Small",
+      "CHOICE_B": "Large"
+    },
+    "KIBA": {
+      "NAME": "Kiba",
+      "INFO": "250ml Beer, Banana Juice, Raspberry Syrup",
+      "CHOICE_A": "Small",
+      "CHOICE_B": "Large"
+    },
+    "LAGUNA": {
+      "NAME": "Laguna",
+      "INFO": "250ml Beer, Orange Juice, Blue Curaçao Syrup",
+      "CHOICE_A": "Small",
+      "CHOICE_B": "Large"
+    },
+    "ANANASOWE": {
+      "NAME": "Pineapple",
+      "INFO": "250ml Beer, Pineapple Juice, Vanilla Syrup",
+      "CHOICE_A": "Small",
+      "CHOICE_B": "Large"
+    },
+    "SPRITE_PIWO_INACZEJ": {
+      "NAME": "Sprite",
+      "INFO": "250ml Beer, Sprite, Lemon",
+      "CHOICE_A": "Small",
+      "CHOICE_B": "Large"
+    },
+    "MARTINI_ASTI": {
+      "NAME": "Martini Asti",
+      "SHORT": "750ml",
+      "INFO": "Sparkling Wine, Semi-Sweet"
+    },
+    "PAPARUDA_NEGRA": {
+      "NAME": "Paparuđa Feteasca Neagra",
+      "SHORT": "Dry Red Wine, Romania",
+      "INFO": "Dry wine made 100% from Feteasca Neagra grapes. In the glass it shows a ruby color. The nose reveals violet and dried cherry notes, intertwined with hints of tobacco. On the palate it is juicy and light, with berry accents and a smooth, velvety finish.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "PAPARUDA_MERLOT": {
+      "NAME": "Paparuđa Merlot",
+      "SHORT": "Medium Dry Red Wine, Romania",
+      "INFO": "An intensely aromatic bouquet reveals plum and forest fruit notes, perfectly combined with spicy, vanilla accents and hints of pepper. Thanks to its subtle sweetness and well-balanced acidity, it is an excellent choice both for everyday drinking and special occasions.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "DORNFELDER": {
+      "NAME": "Dornfelder Lieblich",
+      "SHORT": "Medium Sweet Red Wine, Germany",
+      "INFO": "This wine delights with an intense aroma of ripe fruits such as blackcurrants, cherries, and berries, with a subtle hint of spice. It has a smooth character and pairs perfectly with desserts, blue cheeses, light meats, or enjoyed on its own. Ideal for lovers of gently sweet, full-flavored wines.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "SCHWARZE_MADCHENTRAUBE": {
+      "NAME": "Schwarze Mädchentraube",
+      "SHORT": "Sweet Red Wine, Germany",
+      "INFO": "It features intense aromas of ripe fruits such as blackcurrants, plums, and cherries, with a subtle floral hint. Its sweetness is well balanced, making it an excellent choice for desserts, chocolate cakes, blue cheeses, or relaxing moments.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "PINOT_GRIGIO_ANTONIO_FACCHIN": {
+      "NAME": "Pinot Grigio Antonio Facchin",
+      "SHORT": " Dry White Wine, Italy ; 750ml",
+      "INFO": "Fresh and light wine with delicate aromas of citrus, green apple, and white flowers. On the palate it is crisp, well-balanced, with pleasant acidity and a clean, refreshing finish. Perfect with salads, fish, and light dishes."
+    },
+    "PAPARUDA_CHARDONNAY": {
+      "NAME": "Paparuđa Chardonnay",
+      "SHORT": "Dry White Wine, Romania",
+      "INFO": "A wine with a distinctive spicy aroma, featuring notes of ripe yellow and exotic fruits, berries, and grapes. Hints of candied fruit, grass, and subtle spice add complexity and depth.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "PAPARUDA_FETEASCA_REGALA": {
+      "NAME": "Paparuđa Feteasca Regală",
+      "SHORT": "Medium Dry White Wine, Romania",
+      "INFO": "A fresh, light wine with a distinct fruity character. The aroma is dominated by light fruits such as pear and apple, with subtle hints of exotic fruit. On the palate it is smooth and harmonious, with gentle sweetness and a refreshing finish.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "SANTA_CRUZ_WHITE_VERDEJO": {
+      "NAME": "Santa Cruz White Verdejo PFI",
+      "SHORT": "Medium Sweet White Wine, Spain",
+      "INFO": "A pleasant, delicate wine with tropical notes of pineapple and mango. Freshness is enhanced by hints of green apple. On the palate it is light, naturally sweet, fresh and harmonious, with a fruity character and good acidity typical of Verdejo.",
+      "CHOICE_A": "150ml",
+      "CHOICE_B": "750ml"
+    },
+    "TALERZ_ROZMAITOSCI": {
+      "NAME": "Variety Platter",
+      "INFO": "French Fries, Sweet Potato Fries, Potato Wedges, Onion Rings, Chicken Nuggets, Chicken Wings, and Dipping Sauces."
+    }
+  },
+
+  "FLAGS": {
+    "ANG": "Flag of England",
+    "PL": "Flag of Poland",
+    "GER": "Flag of Germany",
+    "JPN": "Flag of Japan",
+    "UKR": "Flag of Ukraine"
+  },
+
+  "BUTTONS": {
+    "STYLE-AUTO": "Auto",
+    "SHOW-CART.BUTTON": "My Order",
+    "CLOSE-CART.BUTTON": "Hide My Order",
+    "FOOD-MENU.BUTTON": "Food Menu",
+    "DRINK-MENU.BUTTON": "Drink Menu",
+    "ALCOHOL-MENU.BUTTON": "Alcohol Menu"
+  },
+  "CATEGORY": {
+    "MAIN-DISHES": "Main Dishes",
+    "SALADS": "Salads",
+    "DUMPLINGS": "Dumplings",
+    "SOUPS": "Soups",
+    "DISHES": "Dishes",
+    "DESSERTS": "Desserts",
+    "SIDES": "Sides",
+    "SAUCES": "Sauces",
+    "HOT-DRINKS": "Hot Drinks",
+    "COLD-DRINKS": "Cold Drinks",
+    "DRINKS": "Drinks",
+    "COCKTAILS": "Cocktails",
+    "MOCKTAILS": "Mocktails",
+    "SHOTS": "Shots",
+    "VODKA": "Vodka",
+    "TEQUILA": "Tequila",
+    "BRANDY": "Brandy",
+    "WHISKEY": "Whiskey",
+    "LIQUEUR": "Liqueur",
+    "RUM": "Rum",
+    "COGNAC": "Cognac",
+    "DRAFT-BEER": "Draft Beer",
+    "BOTTLED-BEER": "Bottled Beer",
+    "BEER-SPECIALS": "Beer Specials",
+    "SPARKLING-WINE": "Sparkling Wine",
+    "RED-WINE": "Red Wine",
+    "WHITE-WINE": "White Wine"
+  },
+
+  "GENERAL": {
+    "PRICE": "Price",
+    "QUANTITY": "Quantity",
+    "SELECTED": "Selected",
+    "CHOOSE-STYLE": "Choose Style",
+    "SHOW-MORE": "Show More",
+    "ADDED": "Added to Cart",
+    "DELETE-ALL": "Remove Everything?",
+    "ALL-DELETED": "Everything Removed",
+    "DELETED": "Removed",
+    "ADD-TO-ORDER": "Add to Cart",
+    "SELECT-OPTION": "Select Option",
+    "EMPTY-ORDER": "Your cart is empty",
+    "ADD-MORE-PRODUCTS": "Add Items to Your Cart",
+    "SHOW-TO-WAITER": "Please show your order to the waiter",
+    "ADD-TRANSLATE": "Translation will be added",
+    "SEARCH": "Search",
+    "ALERGENS": "Allergens",
+    "IMG": { "ASPRI-LOGO": "Restaurant Logo" },
+    "BADGE": {
+      "FAV": "Top!",
+      "HOT": "Spicy",
+      "KIDS": "Kids Choice",
+      "VEGETARIAN": "Vegetarian",
+      "BEER": "Beer Pick!"
+    },
+    "DISCLAIMER": "The photos are for illustrative purposes only. We reserve the right to make changes and correct errors regarding prices, ingredients, and item availability. In the event of any discrepancies, the offer available at the restaurant shall prevail."
+  },
+
+  "ALERGENS": {
+    "GLUTEN": "Cereals containing gluten",
+    "CRUSTACEANS": "Crustaceans and products thereof",
+    "EGGS": "Eggs and products thereof",
+    "FISH": "Fish and products thereof",
+    "PEANUTS": "Peanuts and products thereof",
+    "SOY": "Soya and products thereof",
+    "MILK": "Milk and products thereof",
+    "NUTS": "Tree nuts and products thereof",
+    "CELERY": "Celery and products thereof",
+    "MUSTARD": "Mustard and products thereof",
+    "SESAME": "Sesame seeds and products thereof",
+    "SULFUR": "Sulphur dioxide and sulphites",
+    "LUPIN": "Lupin and products thereof",
+    "MOLLUSCS": "Molluscs and products thereof"
+  },
+  "ALT": {
+    "ASPRI_LOGO": "Aspri Restaurant Logo",
+    "QR_SYMBOL": "Universal QR Code Symbol",
+    "LIGHT_MODE": "Light Application Theme",
+    "DARK_MODE": "Dark Application Theme"
+  }
+}
