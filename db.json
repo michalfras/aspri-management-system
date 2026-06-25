@@ -1,3 +1,58 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": 1,
+      "nameKey": "MENU.KOTLET_SCHABOWY.NAME",
+      "shortInfoKey": "MENU.KOTLET_SCHABOWY.SHORT",
+      "infoKey": "MENU.KOTLET_SCHABOWY.INFO",
+      "price": 42,
+      "image": "images/food/kotlet-schabowy.webp",
+      "category": "food",
+      "subcategory": "main-dishes",
+      "isPopular": false,
+      "forcePopup": false,
+      "choices": [
+        { "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_A", "price": 42 },
+        { "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_B", "price": 42 },
+        { "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_C", "price": 42 }
+      ]
+    },
+    {
+      "id": 41,
+      "nameKey": "MENU.SOK.NAME",
+      "shortInfoKey": "MENU.SOK.SHORT",
+      "price": 8,
+      "image": "images/drink/sok.webp",
+      "category": "drink",
+      "subcategory": "drinks",
+      "isPopular": true,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "choices": [
+        { "labelKey": "MENU.SOK.CHOICE_A", "price": 8 },
+        { "labelKey": "MENU.SOK.CHOICE_B", "price": 8 },
+        { "labelKey": "MENU.SOK.CHOICE_C", "price": 8 },
+        { "labelKey": "MENU.SOK.CHOICE_D", "price": 8 },
+        { "labelKey": "MENU.SOK.CHOICE_E", "price": 8 },
+        { "labelKey": "MENU.SOK.CHOICE_F", "price": 8 },
+        { "labelKey": "MENU.SOK.CHOICE_G", "price": 14 },
+        { "labelKey": "MENU.SOK.CHOICE_H", "price": 14 },
+        { "labelKey": "MENU.SOK.CHOICE_I", "price": 14 },
+        { "labelKey": "MENU.SOK.CHOICE_J", "price": 14 },
+        { "labelKey": "MENU.SOK.CHOICE_K", "price": 14 },
+        { "labelKey": "MENU.SOK.CHOICE_L", "price": 14 }
+      ]
+    },
+    {
+      "id": 93,
+      "nameKey": "MENU.LECH_FREE.NAME",
+      "shortInfoKey": "MENU.LECH_FREE.SHORT",
+      "price": 14,
+      "category": "alcohol",
+      "subcategory": "bottled-beer",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false
+    }
+  ]
 }

@@ -1,8 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { ThemeToggleComponent } from '../UI-elements/theme-toggle/theme-toggle.component';
-import { routes } from '../../app.routes';
-import { Router } from '@angular/router';
+
 import { TranslateModule } from '@ngx-translate/core';
+
+import { MenuApiService } from '../../core/menu-api.service';
 
 @Component({
   selector: 'app-header',
@@ -10,4 +11,12 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  apiService = inject(MenuApiService);
+
+  getProducts() {
+    this.apiService.getProducts().subscribe((products) => {
+      console.log(products);
+    });
+  }
+}

@@ -1,12 +1,12 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, computed, inject, Input } from '@angular/core';
 import { ProductData } from '../../models/product-model';
-import { menuItems } from '../../data/menu-cards';
 import { ItemCardComponent } from '../UI-elements/item-card/item-card.component';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../core/cart.service';
 import { Router } from '@angular/router';
 import { UiService } from '../../core/ui.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { MenuService } from '../../core/menu.service';
 
 @Component({
   selector: 'app-menu-preview',
@@ -20,21 +20,22 @@ export class MenuPreviewComponent {
   cartService = inject(CartService);
   UiService = inject(UiService);
   router = inject(Router);
+  menuService = inject(MenuService);
 
-  menuItems: ProductData[] = menuItems;
-  popularItems: ProductData[] = [];
+  menuItems = computed<ProductData[]>(() => {
+    return this.menuService.allMenuProducts();
+  });
+  popularItems = computed<ProductData[]>(() => {
+    return this.menuItems().filter(
+      (item) => item.isPopular && item.category === this.categoryName
+    );
+  });
 
   btnLabel: Record<string, string> = {
     food: 'BUTTONS.FOOD-MENU.BUTTON',
     drink: 'BUTTONS.DRINK-MENU.BUTTON',
     alcohol: 'BUTTONS.ALCOHOL-MENU.BUTTON',
   };
-
-  ngOnInit() {
-    this.popularItems = this.menuItems.filter(
-      (item) => item.isPopular && item.category === this.categoryName
-    );
-  }
 
   showMenu(category: string) {
     this.UiService.placeToScroll.set(category);

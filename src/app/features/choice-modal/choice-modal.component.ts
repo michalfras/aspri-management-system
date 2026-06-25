@@ -11,7 +11,6 @@ import { CartService } from '../../core/cart.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { AlertService } from '../../core/alert.service';
 import { UiService } from '../../core/ui.service';
 import { BadgeComponent } from '../../shared/UI-elements/badge/badge.component';
 import { MenuService } from '../../core/menu.service';
@@ -25,10 +24,9 @@ import { ThemeService } from '../../core/theme.service';
 })
 export class ChoiceModalComponent {
   cartService = inject(CartService);
-  alertService = inject(AlertService);
   UiService = inject(UiService);
-  menuService = inject(MenuService);
   themeService = inject(ThemeService);
+  private readonly menuService = inject(MenuService);
 
   product = this.UiService.selectedProductData;
 

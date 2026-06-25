@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AlertComponent } from './shared/UI-elements/alert/alert.component';
 import { AccessService } from './core/access.service';
+import { MenuService } from './core/menu.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,10 @@ import { AccessService } from './core/access.service';
 })
 export class AppComponent {
   accessService = inject(AccessService);
+  menuService = inject(MenuService);
 
   ngOnInit() {
     this.accessService.checkAccess();
+    this.menuService.loadAllMenuProducts();
   }
 }
