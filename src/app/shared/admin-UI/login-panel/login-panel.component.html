@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="loginForm">
+  <input
+    class="input login"
+    type="text"
+    formControlName="username"
+    placeholder="Login"
+    autocomplete="username"
+  />
+  <input
+    class="input password"
+    type="password"
+    formControlName="password"
+    placeholder="Hasło"
+    autocomplete="current-password"
+  />
+  <button class="login-btn" type="submit">Zaloguj się</button>
+</form>

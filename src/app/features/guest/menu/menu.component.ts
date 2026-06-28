@@ -1,16 +1,16 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
-import { UiService } from '../../core/ui.service';
-import { OrderButtonComponent } from '../../shared/UI-elements/order-button/order-button.component';
-import { CartModalComponent } from '../cart-modal/cart-modal.component';
+import { Component, inject } from '@angular/core';
+import { UiService } from '@core/ui.service';
+import { OrderButtonComponent } from '@shared/UI-elements/order-button/order-button.component';
+import { CartModalComponent } from '@features/guest/cart-modal/cart-modal.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { MenuService } from '../../core/menu.service';
+import { MenuService } from '@core/menu.service';
 import { ɵInternalFormsSharedModule } from '@angular/forms';
-import { ItemSectionComponent } from '../../shared/UI-elements/item-section/item-section.component';
-import { ChoiceModalComponent } from '../choice-modal/choice-modal.component';
-import { SearchBarComponent } from '../../shared/UI-elements/search-bar/search-bar.component';
-import { AlergensComponent } from '../../shared/alergens/alergens.component';
+import { ItemSectionComponent } from '@shared/UI-elements/item-section/item-section.component';
+import { ChoiceModalComponent } from '@features/guest/choice-modal/choice-modal.component';
+import { SearchBarComponent } from '@shared/UI-elements/search-bar/search-bar.component';
+import { AlergensComponent } from '@shared/alergens/alergens.component';
 
 @Component({
   selector: 'app-menu',

@@ -13,8 +13,12 @@
   color: white;
 }
 .theme-toggle-wrapper {
-  transform: scale(1);
   position: absolute;
   top: 0;
   right: 0;
+}
+.staff-menu-wrapper {
+  position: absolute;
+  top: 12px;
+  left: 10px;
 }

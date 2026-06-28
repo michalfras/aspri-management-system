@@ -1,0 +1,35 @@
+.form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  color: var(--main-font-color);
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-left: 10px;
+  height: 35px;
+  width: 200px;
+  background-color: var(--main-color);
+  border: 1px solid var(--button-shadow);
+  border-radius: 50px;
+}
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 4px 1px var(--search-shadow);
+}
+.login-btn {
+  color: white;
+  font-size: 12px;
+  margin: 10px auto 0 auto;
+  background-color: var(--accent-color);
+  height: 30px;
+  width: 150px;
+
+  border: 1px solid var(--button-shadow);
+  border-radius: 50px;
+  transition: 0.2s;
+}
+.login-btn:active {
+  transform: scale(0.95);
+}

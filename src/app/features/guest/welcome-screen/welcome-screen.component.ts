@@ -6,12 +6,12 @@ import {
   ViewChild,
 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { LanguageFlagsComponent } from '../../shared/language-flags/language-flags.component';
-import { LanguageService } from '../../core/language.service';
-import { UiService } from '../../core/ui.service';
+import { LanguageFlagsComponent } from '@shared/language-flags/language-flags.component';
+import { LanguageService } from '@core/language.service';
+import { UiService } from '@core/ui.service';
 
 import { Router } from '@angular/router';
-import { ThemeService } from '../../core/theme.service';
+import { ThemeService } from '@core/theme.service';
 
 @Component({
   selector: 'app-welcome-screen',

@@ -1,5 +1,4 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { menuItems } from '../data/menu-cards';
 import { ProductData } from '../models/product-model';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuApiService } from './menu-api.service';
@@ -10,8 +9,6 @@ import { MenuApiService } from './menu-api.service';
 export class MenuService {
   translateService = inject(TranslateService);
   apiService = inject(MenuApiService);
-
-  // private allMenuProducts = signal<ProductData[]>(menuItems);
   allMenuProducts = signal<ProductData[]>([]);
   searchInputValue = signal<string>('');
 

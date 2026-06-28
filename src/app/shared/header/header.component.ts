@@ -4,10 +4,11 @@ import { ThemeToggleComponent } from '../UI-elements/theme-toggle/theme-toggle.c
 import { TranslateModule } from '@ngx-translate/core';
 
 import { MenuApiService } from '../../core/menu-api.service';
+import { StaffMenuComponent } from '../admin-UI/staff-menu/staff-menu.component';
 
 @Component({
   selector: 'app-header',
-  imports: [ThemeToggleComponent, TranslateModule],
+  imports: [ThemeToggleComponent, TranslateModule, StaffMenuComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })

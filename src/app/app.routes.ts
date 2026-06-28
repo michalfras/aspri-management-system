@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { MenuComponent } from './features/menu/menu.component';
-import { HomeComponent } from './features/home/home.component';
+import { MenuComponent } from './features/guest/menu/menu.component';
+import { HomeComponent } from './features/guest/home/home.component';
 import { firstVisitGuard } from './core/guards/first-visit.guard';
-import { WelcomeScreenComponent } from './features/welcome-screen/welcome-screen.component';
-import { AccessComponent } from './features/access/access.component';
+import { WelcomeScreenComponent } from './features/guest/welcome-screen/welcome-screen.component';
+import { AccessComponent } from './features/guest/access/access.component';
 import { accessGuard } from './core/guards/access.guard';
 
 export const routes: Routes = [
