@@ -14,8 +14,10 @@
   }
 </div>
 <div class="account-menu-content" [class.visible]="isAccountMenuOpen">
-  @if(authService.isLoggedIn$ | async){
-  <div class="admin-panel-wrapper"><app-account-menu></app-account-menu></div>
+  @if(user){
+  <div class="admin-panel-wrapper">
+    <app-account-menu [user]="user"></app-account-menu>
+  </div>
   } @else{
   <div class="login-panel-wrapper"><app-login-panel></app-login-panel></div>
   }

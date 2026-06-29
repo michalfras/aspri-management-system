@@ -19,10 +19,10 @@
 }
 .login-btn {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 auto;
   background-color: var(--accent-color);
-  height: 30px;
+  padding: 10px;
   width: 70%;
 
   border: 1px solid var(--button-shadow);

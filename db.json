@@ -1436,17 +1436,25 @@
   "users": [
     {
       "id": 1,
-      "username": "admin123",
-      "password": "admin123",
+      "username": "admin",
+      "password": "admin",
       "name": "Michał",
+      "role": "admin",
+      "isProtected": true
+    },
+    {
+      "id": 2,
+      "username": "admin1",
+      "password": "admin1",
+      "name": "Paulina",
       "role": "admin"
     },
     {
-      "id": 1,
-      "username": "admin1234",
-      "password": "admin1234",
-      "name": "Paulina",
-      "role": "admin"
+      "id": 3,
+      "username": "admin123",
+      "password": "admin123",
+      "name": "Beata",
+      "role": "waiter"
     }
   ]
 }

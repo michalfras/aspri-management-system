@@ -1,0 +1,58 @@
+.admin-menu-wrapper {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  font-size: 16px;
+  color: var(--main-font-color);
+  background-color: var(--main-color);
+  width: 220px;
+  padding: 10px;
+  border: 1px solid var(--button-shadow);
+  border-radius: 50px;
+}
+.btn.logout {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 150px;
+  margin: 10px auto;
+  background-color: var(--accent-color);
+}
+.btn.add-user span {
+  font-weight: bold;
+  color: green;
+}
+.btn.edit-user span {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+ul.visible {
+  max-height: 200px;
+}
+ul {
+  overflow: auto;
+  max-height: 0;
+
+  transition: 0.3s;
+}
+li {
+  border-bottom: 1px solid var(--separator-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 3px 10px;
+}
+li button {
+  margin: 2px 0;
+  color: var(--accent-color);
+  height: 25px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 50px;
+}

@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, ViewChild } from '@angular/core';
 import { UiService } from '../../../core/ui.service';
 import { AuthService } from '../../../core/auth.service';
 import { AsyncPipe } from '@angular/common';
@@ -14,8 +14,9 @@ import { AccountMenuComponent } from '../account-menu/account-menu.component';
 export class StaffMenuComponent {
   uiService = inject(UiService);
   authService = inject(AuthService);
-  user$ = this.authService.user$;
 
+  @ViewChild(LoginPanelComponent) loginPanel!: LoginPanelComponent;
+  user$ = this.authService.user$;
   isAccountMenuOpen = false;
 
   toggleMenu() {
@@ -25,6 +26,7 @@ export class StaffMenuComponent {
     }
     if (!this.isAccountMenuOpen) {
       document.body.classList.remove('no-scroll');
+      this.loginPanel.resetControls();
     }
   }
 }

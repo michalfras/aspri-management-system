@@ -43,4 +43,7 @@ export class LoginPanelComponent {
     });
     this.loginForm.controls.password.reset();
   }
+  resetControls() {
+    this.loginForm.reset();
+  }
 }

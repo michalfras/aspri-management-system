@@ -1,1 +1,23 @@
-<p>account-menu works!</p>
+@if(user.role === "admin"){
+<div class="admin-menu-wrapper">
+  <button class="btn order-history">Historia Zamówień</button>
+  <button class="btn add-user" [routerLink]="['/user', 'add']">
+    Dodaj Użytkownika <span><i class="fa-solid fa-user-plus"></i></span>
+  </button>
+  <button class="btn edit-user" (click)="showUsers()">
+    Edytuj Użytkownika <span><i class="fa-solid fa-user-pen"></i></span>
+  </button>
+
+  <ul [class.visible]="usersVisible">
+    @for (user of (allUsers$ | async); track user.id) { @if (!user.isProtected
+    && user.id !== (authService.user$ | async)?.id) {
+    <li>
+      {{ user.name }}
+      <button><i class="fa-solid fa-user-pen"></i></button>
+    </li>
+    } }
+  </ul>
+
+  <button class="btn logout" (click)="authService.logout()">Wyloguj</button>
+</div>
+}

@@ -8,11 +8,13 @@ export type AuthUser = {
   password: string;
   name: string;
   role: UserRole;
+  isProtected?: boolean;
 };
 export type User = {
   id: number;
   username: string;
   name: string;
   role: UserRole;
+  isProtected?: boolean;
 };
 export type UserRole = 'admin' | 'waiter' | 'chef';

@@ -31,8 +31,8 @@
   color: var(--bgc-color);
 }
 .account-menu-content {
-  height: 400px;
-  width: 250px;
+  /* height: 400px;
+  width: 250px; */
 
   position: fixed;
   top: 0;
@@ -49,6 +49,7 @@
 .account-menu-content.visible {
   transform: translate(0);
 }
-.login-panel-wrapper {
+.login-panel-wrapper,
+.admin-panel-wrapper {
   margin-top: 50px;
 }

@@ -11,10 +11,37 @@ import { AlertService } from './alert.service';
 export class AuthService {
   http = inject(HttpClient);
   alertService = inject(AlertService);
-  private isLoggedInSubject = new BehaviorSubject<boolean>(false);
-  isLoggedIn$ = this.isLoggedInSubject.asObservable();
-  private userSubject = new BehaviorSubject<User | null>(null);
+
+  private userSubject = new BehaviorSubject<User | null>(this.loadUserLS());
   user$ = this.userSubject.asObservable();
+  private allUsersSubject = new BehaviorSubject<User[]>([]);
+  allUser$ = this.allUsersSubject.asObservable();
+
+  loadUserLS() {
+    let user = localStorage.getItem('user');
+    if (user) {
+      return JSON.parse(user) as User;
+    }
+    return null;
+  }
+
+  loadAllUsers() {
+    this.http
+      .get<AuthUser[]>(`${environment.apiUrl}/users`)
+      .subscribe((resp) => {
+        const allUsers: User[] = resp.map((user) => {
+          return {
+            id: user.id,
+            username: user.username,
+            name: user.name,
+            role: user.role,
+            isProtected: user.isProtected,
+          };
+        });
+
+        this.allUsersSubject.next(allUsers);
+      });
+  }
 
   login(loginData: LoginRequest) {
     this.http
@@ -35,12 +62,15 @@ export class AuthService {
             role: userAuth.role,
           };
           this.userSubject.next(user);
-          this.isLoggedInSubject.next(true);
-
+          localStorage.setItem('user', JSON.stringify(user));
           this.alertService.showAlert('Zalogowano', 'green');
           return;
         }
         this.alertService.showAlert('Hasło Niepoprawne', 'red');
       });
+  }
+  logout() {
+    this.userSubject.next(null);
+    localStorage.removeItem('user');
   }
 }
