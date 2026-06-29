@@ -3,18 +3,20 @@ import { UiService } from '../../../core/ui.service';
 import { AuthService } from '../../../core/auth.service';
 import { AsyncPipe } from '@angular/common';
 import { LoginPanelComponent } from '../login-panel/login-panel.component';
+import { AccountMenuComponent } from '../account-menu/account-menu.component';
 
 @Component({
   selector: 'app-staff-menu',
-  imports: [AsyncPipe, LoginPanelComponent],
+  imports: [AsyncPipe, LoginPanelComponent, AccountMenuComponent],
   templateUrl: './staff-menu.component.html',
   styleUrl: './staff-menu.component.css',
 })
 export class StaffMenuComponent {
   uiService = inject(UiService);
   authService = inject(AuthService);
+  user$ = this.authService.user$;
+
   isAccountMenuOpen = false;
-  accountName = '';
 
   toggleMenu() {
     this.isAccountMenuOpen = !this.isAccountMenuOpen;

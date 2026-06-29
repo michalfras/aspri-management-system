@@ -1440,6 +1440,13 @@
       "password": "admin123",
       "name": "Michał",
       "role": "admin"
+    },
+    {
+      "id": 1,
+      "username": "admin1234",
+      "password": "admin1234",
+      "name": "Paulina",
+      "role": "admin"
     }
   ]
 }

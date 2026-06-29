@@ -6,6 +6,9 @@
     placeholder="Login"
     autocomplete="username"
   />
+  <app-validation-message
+    [selectedFormControl]="loginForm.controls.username"
+  ></app-validation-message>
   <input
     class="input password"
     type="password"
@@ -13,5 +16,8 @@
     placeholder="Hasło"
     autocomplete="current-password"
   />
-  <button class="login-btn" type="submit">Zaloguj się</button>
+  <app-validation-message
+    [selectedFormControl]="loginForm.controls.password"
+  ></app-validation-message>
+  <button class="login-btn" type="submit" (click)="login()">Zaloguj się</button>
 </form>

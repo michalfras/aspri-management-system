@@ -1,0 +1,8 @@
+<!-- prettier-ignore -->
+<span class="alert">
+  @if(selectedFormControl.touched)
+  {
+  @if(selectedFormControl.hasError('required')) {* To Pole jest wymagane} 
+  @else if(selectedFormControl.hasError('minlength')) {* Wymagane min 3 znaki} 
+ }
+</span>
