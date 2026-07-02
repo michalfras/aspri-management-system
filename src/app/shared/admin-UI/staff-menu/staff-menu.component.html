@@ -1,19 +1,22 @@
 @let user = (user$ | async);
 <!--  -->
-@if(isAccountMenuOpen){
+@if(uiService.isAccountMenuOpen()){
 <div class="blur-wrapper" (click)="toggleMenu()"></div>
 }
 <div class="account-menu">
-  <div (click)="toggleMenu()"><i class="fa-solid fa-circle-user"></i></div>
-  @if(!isAccountMenuOpen){
-  <span class="role">{{ user ? user.role : "" }}</span
+  @if(!uiService.isAccountMenuOpen()){
+  <span class="role">{{ user && isHome ? user.role : "" }}</span
   >}@else{
   <p class="user-name">
     {{ user ? `Witaj ${user?.name}` : "Zaloguj się" }}
   </p>
   }
+  <div (click)="toggleMenu()"><i class="fa-solid fa-circle-user"></i></div>
 </div>
-<div class="account-menu-content" [class.visible]="isAccountMenuOpen">
+<div
+  class="account-menu-content"
+  [class.visible]="uiService.isAccountMenuOpen()"
+>
   @if(user){
   <div class="admin-panel-wrapper">
     <app-account-menu [user]="user"></app-account-menu>

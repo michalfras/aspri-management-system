@@ -13,11 +13,23 @@
     && user.id !== (authService.user$ | async)?.id) {
     <li>
       {{ user.name }}
-      <button><i class="fa-solid fa-user-pen"></i></button>
+      <button (click)="openEditUser(user.id)">
+        <i class="fa-solid fa-user-pen"></i>
+      </button>
     </li>
     } }
   </ul>
 
   <button class="btn logout" (click)="authService.logout()">Wyloguj</button>
 </div>
-}
+} @if(user.role === "chef"){<button
+  class="btn logout"
+  (click)="authService.logout()"
+>
+  Wyloguj</button
+>} @if(user.role === "waiter"){<button
+  class="btn logout"
+  (click)="authService.logout()"
+>
+  Wyloguj</button
+>}

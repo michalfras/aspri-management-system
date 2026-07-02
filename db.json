@@ -12,9 +12,18 @@
       "isPopular": false,
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_A", "price": 42 },
-        { "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_B", "price": 42 },
-        { "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_C", "price": 42 }
+        {
+          "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_A",
+          "price": 42
+        },
+        {
+          "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_B",
+          "price": 42
+        },
+        {
+          "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_C",
+          "price": 42
+        }
       ]
     },
     {
@@ -30,9 +39,18 @@
       "badge": "favourite",
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.KOTLET_DRWALA.CHOICE_A", "price": 44 },
-        { "labelKey": "MENU.KOTLET_DRWALA.CHOICE_B", "price": 44 },
-        { "labelKey": "MENU.KOTLET_DRWALA.CHOICE_C", "price": 44 }
+        {
+          "labelKey": "MENU.KOTLET_DRWALA.CHOICE_A",
+          "price": 44
+        },
+        {
+          "labelKey": "MENU.KOTLET_DRWALA.CHOICE_B",
+          "price": 44
+        },
+        {
+          "labelKey": "MENU.KOTLET_DRWALA.CHOICE_C",
+          "price": 44
+        }
       ]
     },
     {
@@ -47,9 +65,18 @@
       "isPopular": false,
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_A", "price": 44 },
-        { "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_B", "price": 44 },
-        { "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_C", "price": 44 }
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_A",
+          "price": 44
+        },
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_B",
+          "price": 44
+        },
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_C",
+          "price": 44
+        }
       ]
     },
     {
@@ -64,12 +91,20 @@
       "isPopular": false,
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_A", "price": 46 },
-        { "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_B", "price": 46 },
-        { "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_C", "price": 46 }
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_A",
+          "price": 46
+        },
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_B",
+          "price": 46
+        },
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_C",
+          "price": 46
+        }
       ]
     },
-
     {
       "id": 5,
       "nameKey": "MENU.SCHAB_NA_TRZY.NAME",
@@ -83,9 +118,18 @@
       "badge": "favourite",
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.SCHAB_NA_TRZY.CHOICE_A", "price": 50 },
-        { "labelKey": "MENU.SCHAB_NA_TRZY.CHOICE_B", "price": 50 },
-        { "labelKey": "MENU.SCHAB_NA_TRZY.CHOICE_C", "price": 50 }
+        {
+          "labelKey": "MENU.SCHAB_NA_TRZY.CHOICE_A",
+          "price": 50
+        },
+        {
+          "labelKey": "MENU.SCHAB_NA_TRZY.CHOICE_B",
+          "price": 50
+        },
+        {
+          "labelKey": "MENU.SCHAB_NA_TRZY.CHOICE_C",
+          "price": 50
+        }
       ]
     },
     {
@@ -99,9 +143,18 @@
       "isPopular": true,
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.GRILLOWANY_FILET.CHOICE_A", "price": 44 },
-        { "labelKey": "MENU.GRILLOWANY_FILET.CHOICE_B", "price": 44 },
-        { "labelKey": "MENU.GRILLOWANY_FILET.CHOICE_C", "price": 44 }
+        {
+          "labelKey": "MENU.GRILLOWANY_FILET.CHOICE_A",
+          "price": 44
+        },
+        {
+          "labelKey": "MENU.GRILLOWANY_FILET.CHOICE_B",
+          "price": 44
+        },
+        {
+          "labelKey": "MENU.GRILLOWANY_FILET.CHOICE_C",
+          "price": 44
+        }
       ]
     },
     {
@@ -116,9 +169,18 @@
       "isPopular": false,
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.FILET_ZE_SZPINAKIEM.CHOICE_A", "price": 45 },
-        { "labelKey": "MENU.FILET_ZE_SZPINAKIEM.CHOICE_B", "price": 45 },
-        { "labelKey": "MENU.FILET_ZE_SZPINAKIEM.CHOICE_C", "price": 45 }
+        {
+          "labelKey": "MENU.FILET_ZE_SZPINAKIEM.CHOICE_A",
+          "price": 45
+        },
+        {
+          "labelKey": "MENU.FILET_ZE_SZPINAKIEM.CHOICE_B",
+          "price": 45
+        },
+        {
+          "labelKey": "MENU.FILET_ZE_SZPINAKIEM.CHOICE_C",
+          "price": 45
+        }
       ]
     },
     {
@@ -133,9 +195,18 @@
       "isPopular": false,
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.PIERS_W_SEZAMIE.CHOICE_A", "price": 42 },
-        { "labelKey": "MENU.PIERS_W_SEZAMIE.CHOICE_B", "price": 42 },
-        { "labelKey": "MENU.PIERS_W_SEZAMIE.CHOICE_C", "price": 42 }
+        {
+          "labelKey": "MENU.PIERS_W_SEZAMIE.CHOICE_A",
+          "price": 42
+        },
+        {
+          "labelKey": "MENU.PIERS_W_SEZAMIE.CHOICE_B",
+          "price": 42
+        },
+        {
+          "labelKey": "MENU.PIERS_W_SEZAMIE.CHOICE_C",
+          "price": 42
+        }
       ]
     },
     {
@@ -151,8 +222,14 @@
       "badge": "vegetarian",
       "forcePopup": false,
       "choices": [
-        { "labelKey": "MENU.SER_SMAZONY.CHOICE_A", "price": 35 },
-        { "labelKey": "MENU.SER_SMAZONY.CHOICE_B", "price": 35 }
+        {
+          "labelKey": "MENU.SER_SMAZONY.CHOICE_A",
+          "price": 35
+        },
+        {
+          "labelKey": "MENU.SER_SMAZONY.CHOICE_B",
+          "price": 35
+        }
       ]
     },
     {
@@ -405,11 +482,26 @@
       "forcePopup": false,
       "showInfoInMenu": true,
       "choices": [
-        { "labelKey": "MENU.SOSY.CHOICE_A", "price": 2 },
-        { "labelKey": "MENU.SOSY.CHOICE_B", "price": 2 },
-        { "labelKey": "MENU.SOSY.CHOICE_C", "price": 2 },
-        { "labelKey": "MENU.SOSY.CHOICE_D", "price": 2 },
-        { "labelKey": "MENU.SOSY.CHOICE_E", "price": 2 }
+        {
+          "labelKey": "MENU.SOSY.CHOICE_A",
+          "price": 2
+        },
+        {
+          "labelKey": "MENU.SOSY.CHOICE_B",
+          "price": 2
+        },
+        {
+          "labelKey": "MENU.SOSY.CHOICE_C",
+          "price": 2
+        },
+        {
+          "labelKey": "MENU.SOSY.CHOICE_D",
+          "price": 2
+        },
+        {
+          "labelKey": "MENU.SOSY.CHOICE_E",
+          "price": 2
+        }
       ]
     },
     {
@@ -447,8 +539,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.COLA.CHOICE_A", "price": 9 },
-        { "labelKey": "MENU.COLA.CHOICE_B", "price": 16 }
+        {
+          "labelKey": "MENU.COLA.CHOICE_A",
+          "price": 9
+        },
+        {
+          "labelKey": "MENU.COLA.CHOICE_B",
+          "price": 16
+        }
       ]
     },
     {
@@ -510,8 +608,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.WODA.CHOICE_A", "price": 7 },
-        { "labelKey": "MENU.WODA.CHOICE_B", "price": 12 }
+        {
+          "labelKey": "MENU.WODA.CHOICE_A",
+          "price": 7
+        },
+        {
+          "labelKey": "MENU.WODA.CHOICE_B",
+          "price": 12
+        }
       ]
     },
     {
@@ -538,8 +642,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.LEMONIADA.CHOICE_A", "price": 14 },
-        { "labelKey": "MENU.LEMONIADA.CHOICE_B", "price": 26 }
+        {
+          "labelKey": "MENU.LEMONIADA.CHOICE_A",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.LEMONIADA.CHOICE_B",
+          "price": 26
+        }
       ]
     },
     {
@@ -554,18 +664,54 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.SOK.CHOICE_A", "price": 8 },
-        { "labelKey": "MENU.SOK.CHOICE_B", "price": 8 },
-        { "labelKey": "MENU.SOK.CHOICE_C", "price": 8 },
-        { "labelKey": "MENU.SOK.CHOICE_D", "price": 8 },
-        { "labelKey": "MENU.SOK.CHOICE_E", "price": 8 },
-        { "labelKey": "MENU.SOK.CHOICE_F", "price": 8 },
-        { "labelKey": "MENU.SOK.CHOICE_G", "price": 14 },
-        { "labelKey": "MENU.SOK.CHOICE_H", "price": 14 },
-        { "labelKey": "MENU.SOK.CHOICE_I", "price": 14 },
-        { "labelKey": "MENU.SOK.CHOICE_J", "price": 14 },
-        { "labelKey": "MENU.SOK.CHOICE_K", "price": 14 },
-        { "labelKey": "MENU.SOK.CHOICE_L", "price": 14 }
+        {
+          "labelKey": "MENU.SOK.CHOICE_A",
+          "price": 8
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_B",
+          "price": 8
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_C",
+          "price": 8
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_D",
+          "price": 8
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_E",
+          "price": 8
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_F",
+          "price": 8
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_G",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_H",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_I",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_J",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_K",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.SOK.CHOICE_L",
+          "price": 14
+        }
       ]
     },
     {
@@ -579,8 +725,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.ESPRESSO.CHOICE_A", "price": 10 },
-        { "labelKey": "MENU.ESPRESSO.CHOICE_B", "price": 13 }
+        {
+          "labelKey": "MENU.ESPRESSO.CHOICE_A",
+          "price": 10
+        },
+        {
+          "labelKey": "MENU.ESPRESSO.CHOICE_B",
+          "price": 13
+        }
       ]
     },
     {
@@ -647,9 +799,18 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.HERBATA_OWOCOWA.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.HERBATA_OWOCOWA.CHOICE_B", "price": 16 },
-        { "labelKey": "MENU.HERBATA_OWOCOWA.CHOICE_C", "price": 16 }
+        {
+          "labelKey": "MENU.HERBATA_OWOCOWA.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.HERBATA_OWOCOWA.CHOICE_B",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.HERBATA_OWOCOWA.CHOICE_C",
+          "price": 16
+        }
       ]
     },
     {
@@ -833,8 +994,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.FINLANDIA.CHOICE_A", "price": 11 },
-        { "labelKey": "MENU.FINLANDIA.CHOICE_B", "price": 90 }
+        {
+          "labelKey": "MENU.FINLANDIA.CHOICE_A",
+          "price": 11
+        },
+        {
+          "labelKey": "MENU.FINLANDIA.CHOICE_B",
+          "price": 90
+        }
       ]
     },
     {
@@ -849,8 +1016,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.WYBOROWA.CHOICE_A", "price": 9 },
-        { "labelKey": "MENU.WYBOROWA.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.WYBOROWA.CHOICE_A",
+          "price": 9
+        },
+        {
+          "labelKey": "MENU.WYBOROWA.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -865,8 +1038,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.BIALY_BOCIAN.CHOICE_A", "price": 9 },
-        { "labelKey": "MENU.BIALY_BOCIAN.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.BIALY_BOCIAN.CHOICE_A",
+          "price": 9
+        },
+        {
+          "labelKey": "MENU.BIALY_BOCIAN.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -1084,8 +1263,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.TYSKIE_GRONIE_LANE.CHOICE_A", "price": 9 },
-        { "labelKey": "MENU.TYSKIE_GRONIE_LANE.CHOICE_B", "price": 14 }
+        {
+          "labelKey": "MENU.TYSKIE_GRONIE_LANE.CHOICE_A",
+          "price": 9
+        },
+        {
+          "labelKey": "MENU.TYSKIE_GRONIE_LANE.CHOICE_B",
+          "price": 14
+        }
       ]
     },
     {
@@ -1099,8 +1284,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.KSIAZECE_PSZENICZNE_LANE.CHOICE_A", "price": 11 },
-        { "labelKey": "MENU.KSIAZECE_PSZENICZNE_LANE.CHOICE_B", "price": 15 }
+        {
+          "labelKey": "MENU.KSIAZECE_PSZENICZNE_LANE.CHOICE_A",
+          "price": 11
+        },
+        {
+          "labelKey": "MENU.KSIAZECE_PSZENICZNE_LANE.CHOICE_B",
+          "price": 15
+        }
       ]
     },
     {
@@ -1114,12 +1305,20 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.PIWO_KSIAZECE.CHOICE_A", "price": 14 },
-        { "labelKey": "MENU.PIWO_KSIAZECE.CHOICE_B", "price": 14 },
-        { "labelKey": "MENU.PIWO_KSIAZECE.CHOICE_C", "price": 14 }
+        {
+          "labelKey": "MENU.PIWO_KSIAZECE.CHOICE_A",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.PIWO_KSIAZECE.CHOICE_B",
+          "price": 14
+        },
+        {
+          "labelKey": "MENU.PIWO_KSIAZECE.CHOICE_C",
+          "price": 14
+        }
       ]
     },
-
     {
       "id": 89,
       "nameKey": "MENU.LECH_PREMIUM.NAME",
@@ -1209,8 +1408,14 @@
       "forcePopup": false,
       "showInfoInMenu": true,
       "choices": [
-        { "labelKey": "MENU.KOKO.CHOICE_A", "price": 10 },
-        { "labelKey": "MENU.KOKO.CHOICE_B", "price": 14 }
+        {
+          "labelKey": "MENU.KOKO.CHOICE_A",
+          "price": 10
+        },
+        {
+          "labelKey": "MENU.KOKO.CHOICE_B",
+          "price": 14
+        }
       ]
     },
     {
@@ -1224,8 +1429,14 @@
       "forcePopup": false,
       "showInfoInMenu": true,
       "choices": [
-        { "labelKey": "MENU.KIBA.CHOICE_A", "price": 10 },
-        { "labelKey": "MENU.KIBA.CHOICE_B", "price": 14 }
+        {
+          "labelKey": "MENU.KIBA.CHOICE_A",
+          "price": 10
+        },
+        {
+          "labelKey": "MENU.KIBA.CHOICE_B",
+          "price": 14
+        }
       ]
     },
     {
@@ -1239,8 +1450,14 @@
       "forcePopup": false,
       "showInfoInMenu": true,
       "choices": [
-        { "labelKey": "MENU.LAGUNA.CHOICE_A", "price": 10 },
-        { "labelKey": "MENU.LAGUNA.CHOICE_B", "price": 14 }
+        {
+          "labelKey": "MENU.LAGUNA.CHOICE_A",
+          "price": 10
+        },
+        {
+          "labelKey": "MENU.LAGUNA.CHOICE_B",
+          "price": 14
+        }
       ]
     },
     {
@@ -1254,8 +1471,14 @@
       "forcePopup": false,
       "showInfoInMenu": true,
       "choices": [
-        { "labelKey": "MENU.ANANASOWE.CHOICE_A", "price": 10 },
-        { "labelKey": "MENU.ANANASOWE.CHOICE_B", "price": 14 }
+        {
+          "labelKey": "MENU.ANANASOWE.CHOICE_A",
+          "price": 10
+        },
+        {
+          "labelKey": "MENU.ANANASOWE.CHOICE_B",
+          "price": 14
+        }
       ]
     },
     {
@@ -1269,8 +1492,14 @@
       "forcePopup": false,
       "showInfoInMenu": true,
       "choices": [
-        { "labelKey": "MENU.SPRITE_PIWO_INACZEJ.CHOICE_A", "price": 10 },
-        { "labelKey": "MENU.SPRITE_PIWO_INACZEJ.CHOICE_B", "price": 14 }
+        {
+          "labelKey": "MENU.SPRITE_PIWO_INACZEJ.CHOICE_A",
+          "price": 10
+        },
+        {
+          "labelKey": "MENU.SPRITE_PIWO_INACZEJ.CHOICE_B",
+          "price": 14
+        }
       ]
     },
     {
@@ -1298,8 +1527,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.PAPARUDA_NEGRA.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.PAPARUDA_NEGRA.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.PAPARUDA_NEGRA.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.PAPARUDA_NEGRA.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -1315,8 +1550,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.PAPARUDA_MERLOT.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.PAPARUDA_MERLOT.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.PAPARUDA_MERLOT.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.PAPARUDA_MERLOT.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -1332,8 +1573,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.DORNFELDER.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.DORNFELDER.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.DORNFELDER.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.DORNFELDER.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -1349,8 +1596,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.SCHWARZE_MADCHENTRAUBE.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.SCHWARZE_MADCHENTRAUBE.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.SCHWARZE_MADCHENTRAUBE.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.SCHWARZE_MADCHENTRAUBE.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -1379,8 +1632,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.PAPARUDA_CHARDONNAY.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.PAPARUDA_CHARDONNAY.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.PAPARUDA_CHARDONNAY.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.PAPARUDA_CHARDONNAY.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -1396,11 +1655,16 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.PAPARUDA_FETEASCA_REGALA.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.PAPARUDA_FETEASCA_REGALA.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.PAPARUDA_FETEASCA_REGALA.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.PAPARUDA_FETEASCA_REGALA.CHOICE_B",
+          "price": 75
+        }
       ]
     },
-
     {
       "id": 109,
       "nameKey": "MENU.SANTA_CRUZ_WHITE_VERDEJO.NAME",
@@ -1414,8 +1678,14 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "choices": [
-        { "labelKey": "MENU.SANTA_CRUZ_WHITE_VERDEJO.CHOICE_A", "price": 16 },
-        { "labelKey": "MENU.SANTA_CRUZ_WHITE_VERDEJO.CHOICE_B", "price": 75 }
+        {
+          "labelKey": "MENU.SANTA_CRUZ_WHITE_VERDEJO.CHOICE_A",
+          "price": 16
+        },
+        {
+          "labelKey": "MENU.SANTA_CRUZ_WHITE_VERDEJO.CHOICE_B",
+          "price": 75
+        }
       ]
     },
     {
@@ -1432,7 +1702,6 @@
       "showInfoInMenu": false
     }
   ],
-
   "users": [
     {
       "id": 1,
@@ -1444,16 +1713,30 @@
     },
     {
       "id": 2,
-      "username": "admin1",
+      "username": "admin11",
       "password": "admin1",
-      "name": "Paulina",
-      "role": "admin"
+      "name": "Paulinaaa",
+      "role": "chef"
     },
     {
       "id": 3,
       "username": "admin123",
       "password": "admin123",
       "name": "Beata",
+      "role": "waiter"
+    },
+    {
+      "id": 5,
+      "username": "admin123",
+      "password": "admin123",
+      "name": "Test2",
+      "role": "waiter"
+    },
+    {
+      "id": 9,
+      "username": "admin123",
+      "password": "admin123",
+      "name": "Test9",
       "role": "waiter"
     }
   ]

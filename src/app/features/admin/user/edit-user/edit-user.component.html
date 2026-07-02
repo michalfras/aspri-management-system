@@ -1,0 +1,44 @@
+<div class="app-staff-menu-container">
+  <app-staff-menu></app-staff-menu>
+</div>
+<button class="back-btn" (click)="goBack()">
+  <i class="fa-solid fa-angle-left"></i>
+</button>
+
+<h2>Edytuj Użytkownika</h2>
+
+<form class="edit-form" [formGroup]="editForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Imię</mat-label>
+    <input class="input" matInput formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Login</mat-label>
+    <input matInput formControlName="username" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Stanowisko</mat-label>
+    <mat-select formControlName="role">
+      <mat-option value="admin">Admin</mat-option>
+      <mat-option value="waiter">Kelner</mat-option>
+      <mat-option value="chef">Chef</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="form-buttons">
+    <button mat-stroked-button type="button" (click)="cancel()">Anuluj</button>
+    <button mat-flat-button type="submit" class="accept-btn" (click)="save()">
+      Zapisz
+    </button>
+    <button
+      mat-flat-button
+      type="button"
+      class="delete-btn"
+      (click)="deleteUser()"
+    >
+      Usuń Użytkownika
+    </button>
+  </div>
+</form>

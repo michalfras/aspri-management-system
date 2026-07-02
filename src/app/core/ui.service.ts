@@ -16,6 +16,7 @@ export class UiService {
   isChoiceModalOpen = signal<boolean>(false);
   isQtyPopupOpen = signal<boolean>(false);
   isSearchBarOpen = signal<boolean>(false);
+  isAccountMenuOpen = signal<boolean>(false);
 
   isRemoveAllConfirmationVisible = signal<boolean>(false);
   isRemoveConfirmationVisible = signal<boolean>(false);

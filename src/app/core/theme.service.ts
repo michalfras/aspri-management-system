@@ -15,7 +15,6 @@ export class ThemeService {
   });
 
   constructor() {
-    this.loadTheme();
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', (event) => {
@@ -35,7 +34,8 @@ export class ThemeService {
       return true;
     } else return false;
   }
-  private loadTheme() {
+
+  loadTheme() {
     const userTheme = localStorage.getItem('theme');
     if (userTheme === 'dark' || userTheme === 'light' || userTheme === 'auto')
       this.setTheme(userTheme);
@@ -59,5 +59,8 @@ export class ThemeService {
       if (userPrefers) document.body.classList.add('dark');
       else document.body.classList.remove('dark');
     }
+  }
+  forceLightTheme() {
+    document.body.classList.remove('dark');
   }
 }

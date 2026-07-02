@@ -1,4 +1,4 @@
-import { Component, inject, signal, ViewChild } from '@angular/core';
+import { Component, inject, Input, signal, ViewChild } from '@angular/core';
 import { UiService } from '../../../core/ui.service';
 import { AuthService } from '../../../core/auth.service';
 import { AsyncPipe } from '@angular/common';
@@ -15,18 +15,19 @@ export class StaffMenuComponent {
   uiService = inject(UiService);
   authService = inject(AuthService);
 
+  @Input() isHome!: boolean;
   @ViewChild(LoginPanelComponent) loginPanel!: LoginPanelComponent;
   user$ = this.authService.user$;
-  isAccountMenuOpen = false;
+  // isAccountMenuOpen = false;
 
   toggleMenu() {
-    this.isAccountMenuOpen = !this.isAccountMenuOpen;
-    if (this.isAccountMenuOpen) {
+    this.uiService.isAccountMenuOpen.set(!this.uiService.isAccountMenuOpen());
+    if (this.uiService.isAccountMenuOpen()) {
       document.body.classList.add('no-scroll');
     }
-    if (!this.isAccountMenuOpen) {
+    if (!this.uiService.isAccountMenuOpen()) {
       document.body.classList.remove('no-scroll');
-      this.loginPanel.resetControls();
+      this.loginPanel?.resetControls();
     }
   }
 }

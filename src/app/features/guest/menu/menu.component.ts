@@ -30,11 +30,9 @@ import { AlergensComponent } from '@shared/alergens/alergens.component';
   styleUrl: './menu.component.css',
 })
 export class MenuComponent {
-  navigateService = inject(UiService);
   UiService = inject(UiService);
   menuService = inject(MenuService);
-
-  scrollHere = this.navigateService.placeToScroll();
+  scrollHere = this.UiService.placeToScroll();
 
   ngAfterViewInit() {
     if (!this.scrollHere) return;
@@ -43,7 +41,7 @@ export class MenuComponent {
       behavior: 'smooth',
     });
 
-    this.navigateService.placeToScroll.set('');
+    this.UiService.placeToScroll.set('');
   }
   ngOnDestroy() {
     this.UiService.isChoiceModalOpen.set(false);

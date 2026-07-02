@@ -4,6 +4,8 @@ import { AuthUser, LoginRequest, User } from '@models/auth-models';
 import { environment } from 'environments/environment';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { AlertService } from './alert.service';
+import { UiService } from './ui.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -11,11 +13,11 @@ import { AlertService } from './alert.service';
 export class AuthService {
   http = inject(HttpClient);
   alertService = inject(AlertService);
+  UiService = inject(UiService);
+  router = inject(Router);
 
   private userSubject = new BehaviorSubject<User | null>(this.loadUserLS());
   user$ = this.userSubject.asObservable();
-  private allUsersSubject = new BehaviorSubject<User[]>([]);
-  allUser$ = this.allUsersSubject.asObservable();
 
   loadUserLS() {
     let user = localStorage.getItem('user');
@@ -23,24 +25,6 @@ export class AuthService {
       return JSON.parse(user) as User;
     }
     return null;
-  }
-
-  loadAllUsers() {
-    this.http
-      .get<AuthUser[]>(`${environment.apiUrl}/users`)
-      .subscribe((resp) => {
-        const allUsers: User[] = resp.map((user) => {
-          return {
-            id: user.id,
-            username: user.username,
-            name: user.name,
-            role: user.role,
-            isProtected: user.isProtected,
-          };
-        });
-
-        this.allUsersSubject.next(allUsers);
-      });
   }
 
   login(loginData: LoginRequest) {
@@ -72,5 +56,7 @@ export class AuthService {
   logout() {
     this.userSubject.next(null);
     localStorage.removeItem('user');
+    this.UiService.isAccountMenuOpen.set(false);
+    this.router.navigate(['/home']);
   }
 }

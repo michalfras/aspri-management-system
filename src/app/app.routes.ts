@@ -5,6 +5,8 @@ import { firstVisitGuard } from './core/guards/first-visit.guard';
 import { WelcomeScreenComponent } from './features/guest/welcome-screen/welcome-screen.component';
 import { AccessComponent } from './features/guest/access/access.component';
 import { accessGuard } from './core/guards/access.guard';
+import { EditUserComponent } from '@features/admin/user/edit-user/edit-user.component';
+import { AddUserComponent } from '@features/admin/user/add-user/add-user.component';
 
 export const routes: Routes = [
   {
@@ -28,4 +30,6 @@ export const routes: Routes = [
     component: WelcomeScreenComponent,
   },
   { path: 'access', component: AccessComponent },
+  { path: 'user/:id/edit', component: EditUserComponent },
+  { path: 'user/add', component: AddUserComponent },
 ];

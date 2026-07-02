@@ -1,26 +1,34 @@
 import { Component, inject, Input } from '@angular/core';
 import { AuthService } from '@core/auth.service';
 import { User } from '@models/auth-models';
-import { ɵInternalFormsSharedModule } from '@angular/forms';
-import { AsyncPipe, NgFor } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { AsyncPipe } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from '@core/user.service';
+import { UiService } from '@core/ui.service';
 
 @Component({
   selector: 'app-account-menu',
-  imports: [NgFor, AsyncPipe, RouterLink],
+  imports: [AsyncPipe, RouterLink],
   templateUrl: './account-menu.component.html',
   styleUrl: './account-menu.component.css',
 })
 export class AccountMenuComponent {
   authService = inject(AuthService);
+  userService = inject(UserService);
+  UiService = inject(UiService);
+  router = inject(Router);
 
   @Input() user!: User;
-  allUsers$ = this.authService.allUser$;
+  allUsers$ = this.userService.allUser$;
 
   usersVisible = false;
 
   showUsers() {
-    this.authService.loadAllUsers();
+    this.userService.loadAllUsers();
     this.usersVisible = !this.usersVisible;
+  }
+  openEditUser(userId: number) {
+    this.UiService.isAccountMenuOpen.set(false);
+    this.router.navigate(['/user', userId, 'edit']);
   }
 }
