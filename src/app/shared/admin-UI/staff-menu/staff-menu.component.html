@@ -3,9 +3,9 @@
 @if(uiService.isAccountMenuOpen()){
 <div class="blur-wrapper" (click)="toggleMenu()"></div>
 }
-<div class="account-menu">
+<div class="account-menu-icon">
   @if(!uiService.isAccountMenuOpen()){
-  <span class="role">{{ user && isHome ? user.role : "" }}</span
+  <span class="role" [class.home]="!isHome">{{ user ? user.role : "" }}</span
   >}@else{
   <p class="user-name">
     {{ user ? `Witaj ${user?.name}` : "Zaloguj się" }}

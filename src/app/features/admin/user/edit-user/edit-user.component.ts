@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { StaffMenuComponent } from '@shared/admin-UI/staff-menu/staff-menu.component';
 import { Location } from '@angular/common';
 import { UserService } from '@core/admin-services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -25,7 +24,6 @@ import { AdminNotificationService } from '@core/admin-services/admin-notificatio
 @Component({
   selector: 'app-edit-user',
   imports: [
-    StaffMenuComponent,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -45,6 +43,8 @@ export class EditUserComponent {
   location = inject(Location);
   route = inject(ActivatedRoute);
   router = inject(Router);
+
+  readonly dialog = inject(MatDialog);
 
   editedUserId!: number;
 
@@ -72,7 +72,6 @@ export class EditUserComponent {
   });
 
   ngOnInit() {
-    this.themeService.forceLightTheme();
     this.route.paramMap
       .pipe(
         map((params) => Number(params.get('id'))),
@@ -155,8 +154,6 @@ export class EditUserComponent {
     this.location.back();
   }
 
-  readonly dialog = inject(MatDialog);
-
   cancel() {
     if (this.editForm.pristine) {
       this.router.navigate(['/home']);
@@ -182,9 +179,5 @@ export class EditUserComponent {
           this.notificationService.openSnackBar('Anulowano Edycję', 'X');
         }
       });
-  }
-
-  ngOnDestroy() {
-    this.themeService.loadTheme();
   }
 }

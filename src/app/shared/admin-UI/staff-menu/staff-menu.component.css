@@ -7,7 +7,7 @@
   z-index: 12;
 }
 
-.account-menu {
+.account-menu-icon {
   position: relative;
   display: flex;
   color: white;
@@ -18,6 +18,10 @@
   font-size: 0.9em;
   margin-right: 4px;
   text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+.home {
+  color: black;
+  text-shadow: none;
 }
 .user-name {
   color: var(--main-font-color);

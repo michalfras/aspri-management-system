@@ -1,7 +1,7 @@
 @if(user.role === "admin"){
 <div class="admin-menu-wrapper">
   <button class="btn order-history">Historia Zamówień</button>
-  <button class="btn add-user" [routerLink]="['/user', 'add']">
+  <button class="btn add-user" (click)="goToAddUserPanel()">
     Dodaj Użytkownika <span><i class="fa-solid fa-user-plus"></i></span>
   </button>
   <button class="btn edit-user" (click)="showUsers()">

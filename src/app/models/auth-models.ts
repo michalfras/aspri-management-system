@@ -9,6 +9,7 @@ export type AuthUser = {
   name: string;
   role: UserRole;
   isProtected?: boolean;
+  mustChangePassword: boolean;
 };
 export type User = {
   id: number;

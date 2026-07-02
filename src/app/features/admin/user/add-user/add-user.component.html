@@ -1,1 +1,43 @@
-<p>add-user works!</p>
+<h2>Dodaj Użytkownika</h2>
+
+<form class="add-form" [formGroup]="addForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Imię</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Login</mat-label>
+    <input matInput formControlName="login" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Hasło Tymczasowe</mat-label>
+    <input readonly matInput formControlName="password" />
+    <button
+      type="button"
+      matSuffix
+      mat-button
+      aria-label="generate password icon"
+      (click)="generatePassword()"
+    >
+      <i class="fa-solid fa-arrow-rotate-right"></i>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Stanowisko</mat-label>
+    <mat-select formControlName="role">
+      <mat-option value="admin">Admin</mat-option>
+      <mat-option value="waiter">Kelner</mat-option>
+      <mat-option value="chef">Chef</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="form-buttons">
+    <button mat-stroked-button type="button" (click)="cancel()">Anuluj</button>
+    <button mat-flat-button type="button" class="accept-btn" (click)="save()">
+      Zapisz
+    </button>
+  </div>
+</form>

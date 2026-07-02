@@ -1709,28 +1709,68 @@
       "password": "admin",
       "name": "Michał",
       "role": "admin",
-      "isProtected": true
+      "isProtected": true,
+      "mustChangePassword": false
     },
     {
       "id": 2,
       "username": "admin11",
       "password": "admin1",
       "name": "Paulinaaa",
-      "role": "chef"
+      "role": "chef",
+      "mustChangePassword": true
     },
     {
       "id": 3,
       "username": "admin123",
       "password": "admin123",
       "name": "Beata",
-      "role": "waiter"
+      "role": "chef",
+      "mustChangePassword": true
     },
     {
       "id": 9,
       "username": "admin123",
       "password": "admin123",
-      "name": "Test9",
-      "role": "waiter"
+      "name": "Test9997",
+      "role": "waiter",
+      "mustChangePassword": true
+    },
+    {
+      "name": "Halinka",
+      "username": "Lisia",
+      "role": "waiter",
+      "password": "LzfZBM",
+      "isProtected": false,
+      "mustChangePassword": true,
+      "id": 10
+    },
+    {
+      "name": "Marek",
+      "username": "Marek",
+      "role": "waiter",
+      "password": "Bp8hoC",
+      "isProtected": false,
+      "mustChangePassword": true,
+      "id": 11
+    },
+    {
+      "name": "test",
+      "username": "test",
+      "role": "chef",
+      "password": "urpBUj",
+      "isProtected": false,
+      "mustChangePassword": true,
+      "id": 12
+    },
+    {
+      "name": "fq",
+      "username": "fwq",
+      "role": "waiter",
+      "password": "GTYnpm",
+      "isProtected": false,
+      "mustChangePassword": true,
+      "id": 14
     }
   ]
 }

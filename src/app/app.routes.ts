@@ -7,6 +7,8 @@ import { AccessComponent } from './features/guest/access/access.component';
 import { accessGuard } from './core/guards/access.guard';
 import { EditUserComponent } from '@features/admin/user/edit-user/edit-user.component';
 import { AddUserComponent } from '@features/admin/user/add-user/add-user.component';
+import { AdminComponent } from '@features/admin/admin.component';
+import { OrderHistoryComponent } from '@features/admin/order-history/order-history.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +32,13 @@ export const routes: Routes = [
     component: WelcomeScreenComponent,
   },
   { path: 'access', component: AccessComponent },
-  { path: 'user/:id/edit', component: EditUserComponent },
-  { path: 'user/add', component: AddUserComponent },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      { path: 'user/:id/edit', component: EditUserComponent },
+      { path: 'user/add', component: AddUserComponent },
+      { path: 'order_history', component: OrderHistoryComponent },
+    ],
+  },
 ];

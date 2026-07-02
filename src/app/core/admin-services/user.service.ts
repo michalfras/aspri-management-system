@@ -26,6 +26,14 @@ export class UserService {
       );
   }
 
+  addUser(user: Omit<AuthUser, 'id' | 'mustChangePassword'>) {
+    const authUser = {
+      ...user,
+      mustChangePassword: true,
+    };
+    return this.http.post<AuthUser>(`${environment.apiUrl}/users`, authUser);
+  }
+
   updateUser(user: User) {
     return this.http.patch<AuthUser>(`${environment.apiUrl}/users/${user.id}`, {
       name: user.name,

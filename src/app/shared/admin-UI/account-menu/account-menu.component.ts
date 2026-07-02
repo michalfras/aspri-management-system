@@ -2,13 +2,13 @@ import { Component, inject, Input } from '@angular/core';
 import { AuthService } from '@core/admin-services/auth.service';
 import { User } from '@models/auth-models';
 import { AsyncPipe } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { UserService } from '@core/admin-services/user.service';
 import { UiService } from '@core/shared-services/ui.service';
 
 @Component({
   selector: 'app-account-menu',
-  imports: [AsyncPipe, RouterLink],
+  imports: [AsyncPipe],
   templateUrl: './account-menu.component.html',
   styleUrl: './account-menu.component.css',
 })
@@ -29,6 +29,10 @@ export class AccountMenuComponent {
   }
   openEditUser(userId: number) {
     this.UiService.isAccountMenuOpen.set(false);
-    this.router.navigate(['/user', userId, 'edit']);
+    this.router.navigate(['/admin/user', userId, 'edit']);
+  }
+  goToAddUserPanel() {
+    this.UiService.isAccountMenuOpen.set(false);
+    this.router.navigate(['/admin/user', 'add']);
   }
 }

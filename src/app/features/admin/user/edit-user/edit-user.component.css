@@ -1,27 +1,7 @@
-.edit-panel-container {
-  min-height: 100vh;
-  background-color: rgb(246, 242, 235);
-}
-.app-staff-menu-container {
-  position: absolute;
-  top: 12px;
-  right: 10px;
-}
-.back-btn {
-  color: var(--main-font-color);
-  font-size: 1.3em;
-  height: 36px;
-  aspect-ratio: 1/1;
-  border: 1px solid var(--button-shadow);
-  border-radius: 50px;
-  background-color: var(--main-color);
-  margin: 10px;
-  box-shadow: 0 0 2px 1px white;
-}
 h2 {
   font-weight: normal;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 .edit-form {
   display: flex;
