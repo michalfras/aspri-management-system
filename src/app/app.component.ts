@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AlertComponent } from './shared/UI-elements/alert/alert.component';
-import { AccessService } from './core/access.service';
-import { MenuService } from './core/menu.service';
-import { ThemeService } from '@core/theme.service';
+import { AccessService } from './core/guest-services/access.service';
+import { MenuService } from './core/guest-services/menu.service';
+import { ThemeService } from '@core/shared-services/theme.service';
 
 @Component({
   selector: 'app-root',

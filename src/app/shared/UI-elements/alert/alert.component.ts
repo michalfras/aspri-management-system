@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { AlertService } from '../../../core/alert.service';
+import { AlertService } from '../../../core/guest-services/alert.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

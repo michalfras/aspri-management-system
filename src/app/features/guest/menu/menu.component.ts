@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { UiService } from '@core/ui.service';
+import { UiService } from '@core/shared-services/ui.service';
 import { OrderButtonComponent } from '@shared/UI-elements/order-button/order-button.component';
 import { CartModalComponent } from '@features/guest/cart-modal/cart-modal.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { MenuService } from '@core/menu.service';
+import { MenuService } from '@core/guest-services/menu.service';
 import { ɵInternalFormsSharedModule } from '@angular/forms';
 import { ItemSectionComponent } from '@shared/UI-elements/item-section/item-section.component';
 import { ChoiceModalComponent } from '@features/guest/choice-modal/choice-modal.component';

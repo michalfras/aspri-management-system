@@ -5,8 +5,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { AlertService } from '@core/alert.service';
-import { AuthService } from '@core/auth.service';
+import { AlertService } from '@core/guest-services/alert.service';
+import { AuthService } from '@core/admin-services/auth.service';
 import { ValidationMessageComponent } from '@shared/UI-elements/validation-message/validation-message.component';
 
 @Component({

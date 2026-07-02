@@ -3,8 +3,8 @@ import { inject, Injectable, signal } from '@angular/core';
 import { AuthUser, LoginRequest, User } from '@models/auth-models';
 import { environment } from 'environments/environment';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { AlertService } from './alert.service';
-import { UiService } from './ui.service';
+import { AlertService } from '../guest-services/alert.service';
+import { UiService } from '../shared-services/ui.service';
 import { Router } from '@angular/router';
 
 @Injectable({

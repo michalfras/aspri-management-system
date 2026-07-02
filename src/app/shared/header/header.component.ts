@@ -3,7 +3,7 @@ import { ThemeToggleComponent } from '../UI-elements/theme-toggle/theme-toggle.c
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { MenuApiService } from '../../core/menu-api.service';
+import { MenuApiService } from '../../core/guest-services/menu-api.service';
 import { StaffMenuComponent } from '../admin-UI/staff-menu/staff-menu.component';
 
 @Component({

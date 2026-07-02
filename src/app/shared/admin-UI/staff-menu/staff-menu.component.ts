@@ -1,6 +1,6 @@
 import { Component, inject, Input, signal, ViewChild } from '@angular/core';
-import { UiService } from '../../../core/ui.service';
-import { AuthService } from '../../../core/auth.service';
+import { UiService } from '../../../core/shared-services/ui.service';
+import { AuthService } from '../../../core/admin-services/auth.service';
 import { AsyncPipe } from '@angular/common';
 import { LoginPanelComponent } from '../login-panel/login-panel.component';
 import { AccountMenuComponent } from '../account-menu/account-menu.component';

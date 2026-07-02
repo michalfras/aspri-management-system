@@ -1,10 +1,10 @@
 import { Component, inject, Input } from '@angular/core';
-import { AuthService } from '@core/auth.service';
+import { AuthService } from '@core/admin-services/auth.service';
 import { User } from '@models/auth-models';
 import { AsyncPipe } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-import { UserService } from '@core/user.service';
-import { UiService } from '@core/ui.service';
+import { UserService } from '@core/admin-services/user.service';
+import { UiService } from '@core/shared-services/ui.service';
 
 @Component({
   selector: 'app-account-menu',

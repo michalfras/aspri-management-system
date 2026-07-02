@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { UiService } from '../../../core/ui.service';
+import { UiService } from '../../../core/shared-services/ui.service';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { MenuService } from '../../../core/menu.service';
+import { MenuService } from '../../../core/guest-services/menu.service';
 import { debounceTime, distinctUntilChanged, Subscription } from 'rxjs';
 import { TranslateDirective, TranslateModule } from '@ngx-translate/core';
 

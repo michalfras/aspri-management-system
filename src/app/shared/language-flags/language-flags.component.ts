@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { LanguageService } from '../../core/language.service';
-import { UiService } from '../../core/ui.service';
+import { LanguageService } from '../../core/guest-services/language.service';
+import { UiService } from '../../core/shared-services/ui.service';
 
 @Component({
   selector: 'app-language-flags',

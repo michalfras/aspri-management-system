@@ -4,11 +4,11 @@ import { OrderButtonComponent } from '@shared/UI-elements/order-button/order-but
 import { MenuPreviewComponent } from '@shared/menu-preview/menu-preview.component';
 
 import { LanguageFlagsComponent } from '@shared/language-flags/language-flags.component';
-import { CartService } from '@core/cart.service';
+import { CartService } from '@core/guest-services/cart.service';
 import { CartModalComponent } from '@features/guest/cart-modal/cart-modal.component';
 import { ChoiceModalComponent } from '@features/guest/choice-modal/choice-modal.component';
 
-import { UiService } from '@core/ui.service';
+import { UiService } from '@core/shared-services/ui.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { AlergensComponent } from '@shared/alergens/alergens.component';

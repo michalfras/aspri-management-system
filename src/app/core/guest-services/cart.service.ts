@@ -1,7 +1,11 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { CartItem, ProductChoice, ProductData } from '../models/product-model';
+import {
+  CartItem,
+  ProductChoice,
+  ProductData,
+} from '../../models/product-model';
 import { AlertService } from './alert.service';
-import { UiService } from './ui.service';
+import { UiService } from '../shared-services/ui.service';
 
 @Injectable({
   providedIn: 'root',

@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { StaffMenuComponent } from '@shared/admin-UI/staff-menu/staff-menu.component';
 import { Location } from '@angular/common';
-import { UserService } from '@core/user.service';
+import { UserService } from '@core/admin-services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map, switchMap } from 'rxjs';
 import {
@@ -16,10 +16,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
-import { ThemeService } from '@core/theme.service';
+import { ThemeService } from '@core/shared-services/theme.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '@shared/admin-UI/confirm-dialog/confirm-dialog.component';
 import { User, UserRole } from '@models/auth-models';
+import { AdminNotificationService } from '@core/admin-services/admin-notification.service';
 
 @Component({
   selector: 'app-edit-user',
@@ -39,6 +40,7 @@ import { User, UserRole } from '@models/auth-models';
 export class EditUserComponent {
   themeService = inject(ThemeService);
   userService = inject(UserService);
+  notificationService = inject(AdminNotificationService);
 
   location = inject(Location);
   route = inject(ActivatedRoute);
@@ -118,7 +120,7 @@ export class EditUserComponent {
         })
       )
       .subscribe(() => {
-        alert('zapisano - popraw to na material');
+        this.notificationService.openSnackBar('Zapisano zmiany', 'X');
         this.router.navigate(['/home']);
       });
   }
@@ -144,7 +146,7 @@ export class EditUserComponent {
         })
       )
       .subscribe(() => {
-        alert('usunięto użytkownika - popraw to na Material');
+        this.notificationService.openSnackBar('Użytkownik Usunięty', 'X');
         this.router.navigate(['/home']);
       });
   }
@@ -177,6 +179,7 @@ export class EditUserComponent {
       .subscribe((confirmed) => {
         if (confirmed) {
           this.router.navigate(['/home']);
+          this.notificationService.openSnackBar('Anulowano Edycję', 'X');
         }
       });
   }

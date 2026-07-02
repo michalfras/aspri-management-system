@@ -1,5 +1,5 @@
 import { CanActivateFn, Router } from '@angular/router';
-import { AccessService } from '../access.service';
+import { AccessService } from '../guest-services/access.service';
 import { inject } from '@angular/core';
 
 export const accessGuard: CanActivateFn = () => {

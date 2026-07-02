@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { UiService } from '../../../core/ui.service';
-import { ThemeService } from '../../../core/theme.service';
+import { UiService } from '../../../core/shared-services/ui.service';
+import { ThemeService } from '../../../core/shared-services/theme.service';
 
 @Component({
   selector: 'app-theme-toggle',

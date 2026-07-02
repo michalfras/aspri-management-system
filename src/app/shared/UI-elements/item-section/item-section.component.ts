@@ -1,10 +1,10 @@
 import { Component, inject, Input } from '@angular/core';
-import { MenuService } from '../../../core/menu.service';
+import { MenuService } from '../../../core/guest-services/menu.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { CartService } from '../../../core/cart.service';
+import { CartService } from '../../../core/guest-services/cart.service';
 
-import { UiService } from '../../../core/ui.service';
+import { UiService } from '../../../core/shared-services/ui.service';
 import { BadgeComponent } from '../badge/badge.component';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
-import { CartService } from '../../core/cart.service';
+import { CartService } from '../../core/guest-services/cart.service';
 import { DecimalPipe } from '@angular/common';
-import { UiService } from '../../core/ui.service';
+import { UiService } from '../../core/shared-services/ui.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

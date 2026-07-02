@@ -2,11 +2,11 @@ import { Component, computed, inject, Input } from '@angular/core';
 import { ProductData } from '../../models/product-model';
 import { ItemCardComponent } from '../UI-elements/item-card/item-card.component';
 import { CommonModule } from '@angular/common';
-import { CartService } from '../../core/cart.service';
+import { CartService } from '../../core/guest-services/cart.service';
 import { Router } from '@angular/router';
-import { UiService } from '../../core/ui.service';
+import { UiService } from '../../core/shared-services/ui.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { MenuService } from '../../core/menu.service';
+import { MenuService } from '../../core/guest-services/menu.service';
 
 @Component({
   selector: 'app-menu-preview',

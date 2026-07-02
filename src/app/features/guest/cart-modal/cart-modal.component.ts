@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { CartService } from '@core/cart.service';
+import { CartService } from '@core/guest-services/cart.service';
 
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { QtyPopupComponent } from '@shared/qty-popup/qty-popup.component';
 import { CartItem } from '@models/product-model';
 import { OrderButtonComponent } from '@shared/UI-elements/order-button/order-button.component';
-import { UiService } from '@core/ui.service';
-import { LanguageService } from '@core/language.service';
+import { UiService } from '@core/shared-services/ui.service';
+import { LanguageService } from '@core/guest-services/language.service';
 
 @Component({
   selector: 'app-cart-modal',
