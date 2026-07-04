@@ -8,9 +8,11 @@
     (click)="$event.stopPropagation()"
     [class.active]="UiService.isQtyPopupOpen()"
   >
+    @if(cartService.selectedItem(); as item){
     <h1 class="product-name">
-      {{ cartService.selectedItem()?.product?.nameKey | translate }}
+      {{ languageService.getTranslatedName(item.product) }}
     </h1>
+    }
     <p>{{ "GENERAL.QUANTITY" | translate }}:</p>
     <div class="qty-button">
       <button

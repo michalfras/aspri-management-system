@@ -35,6 +35,7 @@ body {
   --separator-text: rgb(224, 224, 224);
   --search-shadow: rgb(82, 82, 82);
   --choice-add-button: rgb(241, 235, 227);
+  --admin-button-color: rgb(0, 32, 146);
 }
 .dark {
   --main-font-color: white;
@@ -52,4 +53,5 @@ body {
   --separator-text: rgba(95, 95, 95, 0.466);
   --search-shadow: white;
   --choice-add-button: rgb(47, 47, 47);
+  --admin-button-color: rgb(150, 173, 255);
 }

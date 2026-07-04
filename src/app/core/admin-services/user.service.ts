@@ -1,8 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import {
+  AbstractControl,
+  AsyncValidatorFn,
+  ValidationErrors,
+} from '@angular/forms';
 import { AuthUser, User } from '@models/auth-models';
 import { environment } from 'environments/environment';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable, take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -32,6 +37,19 @@ export class UserService {
       mustChangePassword: true,
     };
     return this.http.post<AuthUser>(`${environment.apiUrl}/users`, authUser);
+  }
+
+  isUsernameTaken(userId?: number) {
+    return (control: AbstractControl): Observable<ValidationErrors | null> => {
+      return this.http.get<AuthUser[]>(`${environment.apiUrl}/users`).pipe(
+        map((userArr) => {
+          const userNameTaken = userArr.find((user) => {
+            return user.username === control.value && user.id !== userId;
+          });
+          return userNameTaken ? { usernameTaken: true } : null;
+        })
+      );
+    };
   }
 
   updateUser(user: User) {

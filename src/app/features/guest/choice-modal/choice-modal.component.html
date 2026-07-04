@@ -47,16 +47,21 @@
         "
       >
         @if(UiService.isChoiceModalOpen() && product.image){
-        <img [src]="product.image" [alt]="product.nameKey | translate" />}
+        <img
+          [src]="product.image"
+          [alt]="languageService.getTranslatedName(product)"
+        />}
       </div>
 
       <div class="scrolled-content" #scrolledContent>
-        <p class="pdt-name">{{ product.nameKey | translate }}</p>
+        <p class="pdt-name">{{ languageService.getTranslatedName(product) }}</p>
         <p class="pdt-price">
           {{ cartService.checkIfMultiplePrices(product) }}
         </p>
-        <p class="pdt-info">{{ product.infoKey | translate }}</p>
-        <p class="pdt-short-info">{{ product.shortInfoKey | translate }}</p>
+        <p class="pdt-info">{{ languageService.getTranslatedInfo(product) }}</p>
+        <p class="pdt-short-info">
+          {{ languageService.getTranslatedShortInfo(product) }}
+        </p>
         <div class="scroll-maker"></div>
         <div class="options-wrapper" *ngIf="product.choices">
           <label
@@ -64,7 +69,9 @@
             *ngFor="let choice of product.choices"
             [class.selected]="oneChoice.value === choice"
           >
-            <span class="option-name">{{ choice.labelKey | translate }}</span>
+            <span class="option-name">{{
+              languageService.getTranslatedChoice(choice)
+            }}</span>
             <span class="option-price">{{ choice.price }},-</span
             ><input
               class="ch-btn-input"

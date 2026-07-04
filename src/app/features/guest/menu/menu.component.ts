@@ -6,7 +6,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MenuService } from '@core/guest-services/menu.service';
-import { ɵInternalFormsSharedModule } from '@angular/forms';
 import { ItemSectionComponent } from '@shared/UI-elements/item-section/item-section.component';
 import { ChoiceModalComponent } from '@features/guest/choice-modal/choice-modal.component';
 import { SearchBarComponent } from '@shared/UI-elements/search-bar/search-bar.component';
@@ -20,7 +19,6 @@ import { AlergensComponent } from '@shared/alergens/alergens.component';
     CartModalComponent,
     TranslateModule,
     RouterLink,
-    ɵInternalFormsSharedModule,
     ItemSectionComponent,
     ChoiceModalComponent,
     SearchBarComponent,

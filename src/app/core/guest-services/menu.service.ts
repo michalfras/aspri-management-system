@@ -2,12 +2,14 @@ import { computed, inject, Injectable, signal } from '@angular/core';
 import { ProductData } from '../../models/product-model';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuApiService } from './menu-api.service';
+import { LanguageService } from '@core/shared-services/language.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MenuService {
   translateService = inject(TranslateService);
+  languageService = inject(LanguageService);
   apiService = inject(MenuApiService);
   allMenuProducts = signal<ProductData[]>([]);
   searchInputValue = signal<string>('');
@@ -16,12 +18,11 @@ export class MenuService {
     const searchQuery = this.searchInputValue().toLowerCase().trim();
     if (!searchQuery) return this.allMenuProducts();
     return this.allMenuProducts().filter((product) => {
-      const productName = this.translateService
-        .instant(product.nameKey)
+      const productName = this.languageService
+        .getTranslatedName(product)
         .toLowerCase();
-      const productInfo = product.infoKey
-        ? this.translateService.instant(product.infoKey).toLowerCase()
-        : '';
+      let productInfo =
+        this.languageService.getTranslatedInfo(product)?.toLowerCase() ?? '';
       return (
         productName.includes(searchQuery) || productInfo.includes(searchQuery)
       );

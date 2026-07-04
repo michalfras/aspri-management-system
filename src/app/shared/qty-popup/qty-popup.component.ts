@@ -3,6 +3,7 @@ import { CartService } from '../../core/guest-services/cart.service';
 import { DecimalPipe } from '@angular/common';
 import { UiService } from '../../core/shared-services/ui.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '@core/shared-services/language.service';
 
 @Component({
   selector: 'app-qty-popup',
@@ -13,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class QtyPopupComponent {
   cartService = inject(CartService);
   UiService = inject(UiService);
+  readonly languageService = inject(LanguageService);
 
   clickedPlus = false;
   clickedMinus = false;

@@ -5,6 +5,11 @@ export type ProductData = {
   nameKey: string;
   shortInfoKey?: string;
   infoKey?: string;
+
+  adminName?: AdminTranslation;
+  adminInfo?: AdminTranslation;
+  adminShortInfo?: AdminTranslation;
+
   category: 'food' | 'drink' | 'alcohol';
   subcategory: Subcategories;
   badge?: 'favourite' | 'hot' | 'kids' | 'vegetarian' | 'beer';
@@ -16,6 +21,7 @@ export type ProductData = {
 
 export type ProductChoice = {
   labelKey: string;
+  adminLabel?: AdminTranslation;
   price: number;
 };
 
@@ -56,3 +62,11 @@ export const SUBCATEGORIES = [
   'red-wine',
   'white-wine',
 ] as const;
+
+export type AdminTranslation = {
+  pl: string;
+  en?: string;
+  ger?: string;
+  ukr?: string;
+  jpn?: string;
+};

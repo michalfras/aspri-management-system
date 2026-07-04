@@ -63,6 +63,7 @@ export class EditUserComponent {
         Validators.minLength(3),
         Validators.maxLength(15),
       ],
+      asyncValidators: [this.userService.isUsernameTaken(this.editedUserId)],
       nonNullable: true,
     }),
     role: new FormControl('', {

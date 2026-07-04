@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageFlagsComponent } from '@shared/language-flags/language-flags.component';
-import { LanguageService } from '@core/guest-services/language.service';
+import { LanguageService } from '@core/shared-services/language.service';
 import { UiService } from '@core/shared-services/ui.service';
 
 import { Router } from '@angular/router';

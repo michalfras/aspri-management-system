@@ -1,21 +1,32 @@
 <div class="content-container">
   @for (subcategory of menuService.groupedMenuProducts()[category] | keyvalue :
   keepOriginalOrder; track subcategory.key) {
-  <h3 class="subcategory-name">
-    {{ `CATEGORY.${subcategory.key.toUpperCase()}` | translate }}
-  </h3>
+  <div class="subcategory-name-wrapper">
+    <h3 class="subcategory-name">
+      {{ `CATEGORY.${subcategory.key.toUpperCase()}` | translate }}
+    </h3>
+    @if((authService.user$ |async)?.role === "admin"){
+    <button
+      class="admin-button add"
+      [routerLink]="['/admin', 'product', 'add']"
+    >
+      <i class="fa-solid fa-file-circle-plus"></i></button
+    >}
+  </div>
   @for (product of subcategory.value; track product.id) {
   <div class="product" (click)="UiService.forcePopup(product)">
     <div class="product-label">
       <div class="product-name">
-        <p>{{ product.nameKey | translate }}</p>
+        <p>{{ languageService.getTranslatedName(product) }}</p>
       </div>
       @if (product.showInfoInMenu){
-      <div class="product-info">( {{ product.infoKey | translate }} )</div>
+      <div class="product-info">
+        ( {{ languageService.getTranslatedInfo(product) }} )
+      </div>
       }
       <p>
         <span class="product-short">{{
-          product.shortInfoKey | translate
+          languageService.getTranslatedShortInfo(product)
         }}</span>
       </p>
       <p class="product-price">
@@ -25,6 +36,13 @@
       </p>
     </div>
     <div class="price-section">
+      @if((authService.user$ |async)?.role === "admin"){
+      <button
+        class="admin-button edit"
+        [routerLink]="['/admin', 'product', 'edit', product.id]"
+      >
+        <i class="fa-solid fa-pen-to-square"></i></button
+      >}
       <button
         class="add-button"
         (click)="this.cartService.addToOrder(product); $event.stopPropagation()"
@@ -35,4 +53,3 @@
   </div>
   }}
 </div>
-<!-- XXXX XXXX XXXX -->

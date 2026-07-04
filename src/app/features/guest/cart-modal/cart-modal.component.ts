@@ -7,7 +7,7 @@ import { QtyPopupComponent } from '@shared/qty-popup/qty-popup.component';
 import { CartItem } from '@models/product-model';
 import { OrderButtonComponent } from '@shared/UI-elements/order-button/order-button.component';
 import { UiService } from '@core/shared-services/ui.service';
-import { LanguageService } from '@core/guest-services/language.service';
+import { LanguageService } from '@core/shared-services/language.service';
 
 @Component({
   selector: 'app-cart-modal',
@@ -31,7 +31,8 @@ export class CartModalComponent {
     this.UiService.isQtyPopupOpen.set(true);
     this.cartService.selectedCartItemKeys.set({
       productId: item.product.id,
-      productChoices: item.selectedChoice?.labelKey,
+      productChoices:
+        item.selectedChoice?.adminLabel?.pl ?? item.selectedChoice?.labelKey,
     });
   }
   showPlTranslation() {

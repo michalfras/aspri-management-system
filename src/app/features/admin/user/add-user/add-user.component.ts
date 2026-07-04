@@ -46,6 +46,7 @@ export class AddUserComponent {
     }),
     login: new FormControl('', {
       validators: [Validators.required],
+      asyncValidators: [this.userService.isUsernameTaken()],
       nonNullable: true,
     }),
     password: new FormControl('', {

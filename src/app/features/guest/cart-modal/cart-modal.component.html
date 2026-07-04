@@ -95,10 +95,12 @@
         (click)="openQtyPopup(item); $event.stopPropagation()"
       >
         <div>
-          <p class="product-name">{{ item.product.nameKey | translate }}</p>
+          <p class="product-name">
+            {{ translateService.getTranslatedName(item.product) }}
+          </p>
           <p *ngIf="item.selectedChoice" class="product-choice">
             {{ "GENERAL.SELECTED" | translate }}:
-            {{ item.selectedChoice.labelKey | translate }}
+            {{ translateService.getTranslatedChoice(item.selectedChoice) }}
           </p>
         </div>
 
@@ -120,11 +122,17 @@
           [class.visible]="UiService.isPolishTranslationVisible()"
         >
           <p class="product-name">
-            {{ translateService.getPolishText(item.product.nameKey) }}
+            {{
+              item.product.adminName?.pl ??
+                translateService.getPolishText(item.product.nameKey)
+            }}
           </p>
           <p *ngIf="item.selectedChoice" class="product-choice">
             * {{ translateService.getPolishText("GENERAL.SELECTED") }}:
-            {{ translateService.getPolishText(item.selectedChoice.labelKey) }}
+            {{
+              item.selectedChoice.adminLabel?.pl ??
+                translateService.getPolishText(item.selectedChoice.labelKey)
+            }}
           </p>
         </div>
       </li>

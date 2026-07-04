@@ -76,3 +76,26 @@
   border: 3px, solid, white;
   color: var(--main-font-color);
 }
+
+.subcategory-name-wrapper {
+  position: relative;
+}
+.admin-button {
+  color: var(--admin-button-color);
+  font-size: 0.9em;
+  height: 30px;
+  width: 30px;
+  border: 2px solid var(--admin-button-color);
+  border-radius: 5px;
+  background-color: transparent;
+}
+.admin-button.add {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 20px;
+}
+.admin-button.edit {
+  margin-left: 5px;
+}

@@ -2,7 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CartService } from '../../../core/guest-services/cart.service';
-import { LanguageService } from '../../../core/guest-services/language.service';
+import { LanguageService } from '../../../core/shared-services/language.service';
 import { UiService } from '../../../core/shared-services/ui.service';
 
 @Component({

@@ -1,5 +1,6 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 import {
+  AdminTranslation,
   CartItem,
   ProductChoice,
   ProductData,
@@ -20,6 +21,10 @@ export class CartService {
     productChoices?: string;
   } | null>(null);
 
+  private getChoiceKey(choice?: ProductChoice) {
+    return choice?.adminLabel?.pl ?? choice?.labelKey;
+  }
+
   selectedItem = computed<CartItem | null>(() => {
     const productFindKeys = this.selectedCartItemKeys();
     if (productFindKeys === null) return null;
@@ -28,7 +33,7 @@ export class CartService {
       this.cartItems().find(
         (i) =>
           i.product.id === productFindKeys.productId &&
-          i.selectedChoice?.labelKey === productFindKeys.productChoices
+          this.getChoiceKey(i.selectedChoice) === productFindKeys.productChoices
       ) ?? null
     );
   });
@@ -75,14 +80,16 @@ export class CartService {
       const isInCart = items.find((item) => {
         return (
           item.product.id === product.id &&
-          item.selectedChoice?.labelKey === selectedOneChoice?.labelKey
+          this.getChoiceKey(item.selectedChoice) ===
+            this.getChoiceKey(selectedOneChoice)
         );
       });
 
       if (isInCart) {
         return items.map((item) =>
           item.product.id === product.id &&
-          item.selectedChoice?.labelKey === selectedOneChoice?.labelKey
+          this.getChoiceKey(item.selectedChoice) ===
+            this.getChoiceKey(selectedOneChoice)
             ? {
                 ...item,
                 quantity: item.quantity + 1,
@@ -90,6 +97,7 @@ export class CartService {
             : item
         );
       }
+
       return [
         ...items,
         { product, quantity: 1, selectedChoice: selectedOneChoice },
@@ -105,15 +113,17 @@ export class CartService {
       products.filter((item) => {
         return !(
           item.product.id === this.selectedItem()?.product.id &&
-          item.selectedChoice?.labelKey ===
-            this.selectedItem()?.selectedChoice?.labelKey
+          this.getChoiceKey(item.selectedChoice) ===
+            this.getChoiceKey(this.selectedItem()?.selectedChoice)
         );
       })
     );
+
     this.UiService.closeQtyPopup();
     localStorage.setItem('aspri-cart', JSON.stringify(this.cartItems()));
     this.alertService.showAlert('GENERAL.DELETED', 'red');
   }
+
   removeAllFromCart() {
     this.cartItems.set([]);
     this.UiService.isRemoveAllConfirmationVisible.set(false);
@@ -128,11 +138,12 @@ export class CartService {
     this.cartItems.update((items) =>
       items.map((i) =>
         i.product.id === selected.productId &&
-        i.selectedChoice?.labelKey === selected.productChoices
+        this.getChoiceKey(i.selectedChoice) === selected.productChoices
           ? { ...i, quantity: i.quantity + 1 }
           : i
       )
     );
+
     localStorage.setItem('aspri-cart', JSON.stringify(this.cartItems()));
   }
 
@@ -140,16 +151,18 @@ export class CartService {
     const selectedItem = this.selectedItem();
     if (!selectedItem) return;
 
-    if (selectedItem?.quantity <= 1) return;
+    if (selectedItem.quantity <= 1) return;
 
     this.cartItems.update((items) =>
       items.map((i) =>
         i.product.id === selectedItem.product.id &&
-        i.selectedChoice?.labelKey === selectedItem.selectedChoice?.labelKey
+        this.getChoiceKey(i.selectedChoice) ===
+          this.getChoiceKey(selectedItem.selectedChoice)
           ? { ...i, quantity: i.quantity - 1 }
           : i
       )
     );
+
     localStorage.setItem('aspri-cart', JSON.stringify(this.cartItems()));
   }
 
@@ -157,8 +170,8 @@ export class CartService {
     if (!item) return 0;
 
     let price: number;
-    if (item?.selectedChoice) {
-      price = item?.selectedChoice.price;
+    if (item.selectedChoice) {
+      price = item.selectedChoice.price;
     } else {
       price = item.product.price;
     }

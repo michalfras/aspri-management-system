@@ -6,6 +6,7 @@ import { CartService } from '../../../core/guest-services/cart.service';
 import { UiService } from '../../../core/shared-services/ui.service';
 import { BadgeComponent } from '../badge/badge.component';
 import { ThemeService } from '../../../core/shared-services/theme.service';
+import { LanguageService } from '@core/shared-services/language.service';
 
 @Component({
   selector: 'app-item-card',
@@ -18,4 +19,5 @@ export class ItemCardComponent {
   cartService = inject(CartService);
   UiService = inject(UiService);
   themeService = inject(ThemeService);
+  readonly languageService = inject(LanguageService);
 }

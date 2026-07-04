@@ -9,6 +9,8 @@ import { EditUserComponent } from '@features/admin/user/edit-user/edit-user.comp
 import { AddUserComponent } from '@features/admin/user/add-user/add-user.component';
 import { AdminComponent } from '@features/admin/admin.component';
 import { OrderHistoryComponent } from '@features/admin/order-history/order-history.component';
+import { EditProductComponent } from '@features/admin/product/edit-product/edit-product.component';
+import { AddProductComponent } from '@features/admin/product/add-product/add-product.component';
 
 export const routes: Routes = [
   {
@@ -39,6 +41,8 @@ export const routes: Routes = [
       { path: 'user/:id/edit', component: EditUserComponent },
       { path: 'user/add', component: AddUserComponent },
       { path: 'order_history', component: OrderHistoryComponent },
+      { path: 'product/edit/:id', component: EditProductComponent },
+      { path: 'product/add', component: AddProductComponent },
     ],
   },
 ];

@@ -27,10 +27,10 @@
   <div class="product-info">
     <span class="price">{{ product.price | number : "1.0-2" }},-</span>
 
-    <h3 class="name">{{ product.nameKey | translate }}</h3>
+    <h3 class="name">{{ languageService.getTranslatedName(product) }}</h3>
 
-    <p class="info" *ngIf="product.infoKey">
-      {{ product.shortInfoKey | translate }}
+    <p class="info" *ngIf="product.shortInfoKey || product.adminShortInfo">
+      {{ languageService.getTranslatedShortInfo(product) }}
     </p>
   </div>
 </div>

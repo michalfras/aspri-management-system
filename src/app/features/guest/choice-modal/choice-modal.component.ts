@@ -15,6 +15,7 @@ import { UiService } from '@core/shared-services/ui.service';
 import { BadgeComponent } from '@shared/UI-elements/badge/badge.component';
 import { MenuService } from '@core/guest-services/menu.service';
 import { ThemeService } from '@core/shared-services/theme.service';
+import { LanguageService } from '@core/shared-services/language.service';
 
 @Component({
   selector: 'app-choice-modal',
@@ -23,10 +24,11 @@ import { ThemeService } from '@core/shared-services/theme.service';
   styleUrl: './choice-modal.component.css',
 })
 export class ChoiceModalComponent {
-  cartService = inject(CartService);
-  UiService = inject(UiService);
-  themeService = inject(ThemeService);
+  readonly cartService = inject(CartService);
+  readonly UiService = inject(UiService);
+  readonly themeService = inject(ThemeService);
   private readonly menuService = inject(MenuService);
+  readonly languageService = inject(LanguageService);
 
   product = this.UiService.selectedProductData;
 
