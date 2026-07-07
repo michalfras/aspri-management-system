@@ -9,6 +9,7 @@
     <button
       class="admin-button add"
       [routerLink]="['/admin', 'product', 'add']"
+      [queryParams]="{ category: category, subcategory: subcategory.key }"
     >
       <i class="fa-solid fa-file-circle-plus"></i></button
     >}

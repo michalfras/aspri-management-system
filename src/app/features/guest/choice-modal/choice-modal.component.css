@@ -14,7 +14,7 @@
   backdrop-filter: blur(2px);
 
   transition: 0.1s;
-  z-index: 1;
+  z-index: 100;
 }
 
 .blur-choice-mdl-wrapper.active {

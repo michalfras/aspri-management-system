@@ -1,0 +1,48 @@
+.price-input {
+  text-align: right;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+.single-option-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border-bottom: 5px solid var(--separator-text);
+}
+.choice-text {
+  width: 100%;
+}
+.price {
+  width: 35%;
+}
+.choice-price-section-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.choice-price-section-wrapper button {
+  color: red;
+  border: 1px solid red;
+}
+.add-choice-button {
+  margin: 20px;
+}
+.badge-container {
+  display: flex;
+  flex-direction: column;
+}
+.badge-container span {
+  font-size: 0.7em;
+}
+.badge-input {
+  margin-top: 20px;
+}

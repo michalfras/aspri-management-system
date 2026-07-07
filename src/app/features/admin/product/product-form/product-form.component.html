@@ -1,0 +1,135 @@
+<form class="form-container" [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Nazwa</mat-label>
+    <input [formControlName]="'name'" matInput placeholder="Placeholder" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Krótkie informacje</mat-label>
+    <input [formControlName]="'shortInfo'" matInput placeholder="Placeholder" />
+    <mat-hint>Np. alergeny lub pojemności (ml, g etc.)</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Opis</mat-label>
+    <input [formControlName]="'info'" matInput placeholder="Placeholder" />
+  </mat-form-field>
+
+  <mat-form-field class="price" appearance="outline" floatLabel="always">
+    <mat-label>Cena</mat-label>
+    <input
+      class="price-input"
+      [formControlName]="'price'"
+      matInput
+      type="number"
+      placeholder="0"
+    />
+    <span matTextPrefix>zł</span>
+    <span matTextSuffix>.00</span>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Kategoria</mat-label>
+    <mat-select [formControlName]="'category'">
+      <mat-option value="menu">Jedzenie</mat-option>
+      <mat-option value="drink">Napoje</mat-option>
+      <mat-option value="alcohol">Alkohole</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Podkategoria</mat-label>
+    <mat-select [formControlName]="'subcategory'">
+      @for(subcategory of subcategoryAdmin; track subcategory.value){
+      <mat-option [value]="subcategory.value">{{
+        subcategory.label
+      }}</mat-option
+      >}
+    </mat-select>
+  </mat-form-field>
+
+  <mat-checkbox [formControlName]="'hasOptions'"
+    >Dodatkowe opcje do wyboru?</mat-checkbox
+  >
+  @if(form.controls.hasOptions.value){
+  <div class="options-container" formArrayName="optionsContainer">
+    @for(option of choicesArr.controls; let i = $index; track option){
+    <form class="single-option-container" [formGroupName]="i">
+      <mat-form-field appearance="outline">
+        <mat-label>Opcja {{ i + 1 }}</mat-label>
+        <input formControlName="optionText" matInput type="text" />
+        @if (option.get('optionText')?.value) {
+        <button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="option.get('optionText')?.setValue('')"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+        }
+      </mat-form-field>
+
+      <div class="choice-price-section-wrapper">
+        <mat-form-field class="price" appearance="outline" floatLabel="always">
+          <mat-label>Cena</mat-label>
+          <input
+            class="price-input"
+            formControlName="price"
+            matInput
+            type="number"
+            placeholder="0"
+          />
+          <span matTextPrefix>zł</span>
+          <span matTextSuffix>.00</span>
+        </mat-form-field>
+        @if(i > 1){
+        <button
+          mat-stroked-button
+          type="button"
+          (click)="deleteChoiceInput(i)"
+          aria-label="Usuń opcje"
+        >
+          <mat-icon>delete</mat-icon>Usuń</button
+        >}
+      </div>
+    </form>
+    }
+  </div>
+
+  <button
+    class="add-choice-button"
+    mat-stroked-button
+    type="button"
+    (click)="addChoiceInput()"
+    aria-label="Dodaj opcję"
+  >
+    <mat-icon>add</mat-icon>Dodaj kolejny wybór</button
+  >}
+
+  <div class="badge-container">
+    <mat-checkbox formControlName="hasBadge"
+      >Plakietka? <span>(np. "Polecane", "Pikantne")</span></mat-checkbox
+    >
+
+    @if(form.controls.hasBadge.value){
+    <mat-form-field class="badge-input" appearance="outline">
+      <mat-label>Wyróżnienie</mat-label>
+      <mat-select formControlName="selectedBadge">
+        @for(badge of badgeOptions; track badge.value){
+        <mat-option [value]="badge.value">{{ badge.label }}</mat-option
+        >}
+      </mat-select> </mat-form-field
+    >}
+  </div>
+
+  <mat-checkbox formControlName="isPopular"
+    >Widoczny na Głownej stronie</mat-checkbox
+  >
+  <mat-checkbox formControlName="forcePopup"
+    >Pokaż okno wyboru, przed dodaniem do zamówienia</mat-checkbox
+  >
+  <mat-checkbox formControlName="showInfoInMenu"
+    >Pokazuj opis w karcie Menu</mat-checkbox
+  >
+</form>
