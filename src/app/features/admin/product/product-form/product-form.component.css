@@ -46,3 +46,18 @@
 .badge-input {
   margin-top: 20px;
 }
+
+.form-buttons {
+  margin-top: 10px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--separator-text);
+}
+.form-buttons button {
+  margin: 5px auto;
+  width: 80vw;
+}
+.delete-btn {
+  background-color: rgb(211, 47, 47) !important;
+}

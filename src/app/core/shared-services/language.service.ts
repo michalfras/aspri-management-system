@@ -24,13 +24,14 @@ export class LanguageService {
     this.translate.setFallbackLang('en');
     const userLang = localStorage.getItem('aspri-app-lang');
     if (userLang) {
-      this.translate.use(userLang);
-      document.documentElement.lang = userLang;
-      this.lang.set(userLang);
+      this.translate.use(userLang).subscribe(() => {
+        document.documentElement.lang = userLang;
+        this.lang.set(userLang);
+      });
     } else {
       this.translate.use('pl');
       document.documentElement.lang = 'pl';
-      this.lang.set('');
+      this.lang.set('pl');
     }
   }
   setLang(lang: string) {
@@ -53,32 +54,53 @@ export class LanguageService {
     }
   }
 
-  getTranslatedName(product: ProductData) {
+  getTranslatedName(product: Pick<ProductData, 'nameKey' | 'adminName'>) {
     if (product.adminName) {
-      return this.getAdminTranslation(product.adminName);
+      const translatedAdminName = this.getAdminTranslation(product.adminName);
+      if (translatedAdminName) return translatedAdminName;
     }
-    return this.translate.instant(product.nameKey);
+    if (product.nameKey) {
+      const translatedNameKey = this.translate.instant(product.nameKey);
+      if (translatedNameKey !== product.nameKey) return translatedNameKey;
+    }
+    return product.adminName?.pl ?? product.nameKey;
   }
-  getTranslatedInfo(product: ProductData) {
+  getTranslatedInfo(product: Pick<ProductData, 'adminInfo' | 'infoKey'>) {
     if (product.adminInfo) {
-      return this.getAdminTranslation(product.adminInfo);
+      const translatedAdminName = this.getAdminTranslation(product.adminInfo);
+      if (translatedAdminName) return translatedAdminName;
     }
-    if (!product.infoKey) return;
-    return this.translate.instant(product.infoKey);
+    if (product.infoKey) {
+      const translatedNameKey = this.translate.instant(product.infoKey);
+      if (translatedNameKey !== product.infoKey) return translatedNameKey;
+    }
+    return product.adminInfo?.pl ?? product.infoKey;
   }
-  getTranslatedShortInfo(product: ProductData) {
+  getTranslatedShortInfo(
+    product: Pick<ProductData, 'adminShortInfo' | 'shortInfoKey'>
+  ) {
     if (product.adminShortInfo) {
-      return this.getAdminTranslation(product.adminShortInfo);
+      const translatedAdminName = this.getAdminTranslation(
+        product.adminShortInfo
+      );
+      if (translatedAdminName) return translatedAdminName;
     }
-    if (!product.shortInfoKey) return;
-    return this.translate.instant(product.shortInfoKey);
+    if (product.shortInfoKey) {
+      const translatedNameKey = this.translate.instant(product.shortInfoKey);
+      if (translatedNameKey !== product.shortInfoKey) return translatedNameKey;
+    }
+    return product.adminShortInfo?.pl ?? product.shortInfoKey;
   }
-  getTranslatedChoice(choice: ProductChoice) {
+  getTranslatedChoice(choice: Pick<ProductChoice, 'adminLabel' | 'labelKey'>) {
     if (choice.adminLabel) {
-      return this.getAdminTranslation(choice.adminLabel);
+      const translatedAdminName = this.getAdminTranslation(choice.adminLabel);
+      if (translatedAdminName) return translatedAdminName;
     }
-    if (!choice.labelKey) return;
-    return this.translate.instant(choice.labelKey);
+    if (choice.labelKey) {
+      const translatedNameKey = this.translate.instant(choice.labelKey);
+      if (translatedNameKey !== choice.labelKey) return translatedNameKey;
+    }
+    return choice.adminLabel?.pl ?? choice.labelKey;
   }
 
   private getAdminTranslation(text: AdminTranslation) {
@@ -87,16 +109,16 @@ export class LanguageService {
       return text.pl;
     }
     if (lang === 'en') {
-      return text.en ? text.en : text.pl;
+      return text.en;
     }
     if (lang === 'ger') {
-      return text.ger ? text.ger : text.pl;
+      return text.ger;
     }
     if (lang === 'jpn') {
-      return text.jpn ? text.jpn : text.pl;
+      return text.jpn;
     }
     if (lang === 'ukr') {
-      return text.ukr ? text.ukr : text.pl;
+      return text.ukr;
     }
     return;
   }

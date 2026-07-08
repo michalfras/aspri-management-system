@@ -1,1 +1,15 @@
-<p>edit-product works!</p>
+<h2>
+  Edytuj Produkt:
+  <p>
+    {{
+      productFormData ? languageService.getTranslatedName(productFormData) : ""
+    }}
+  </p>
+</h2>
+
+@if(productFormData){
+<app-product-form
+  [product]="productFormData"
+  [mode]="'editMode'"
+></app-product-form
+>}

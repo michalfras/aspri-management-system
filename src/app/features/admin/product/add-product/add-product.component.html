@@ -1,3 +1,7 @@
 <h2>Dodaj Produkt:</h2>
 @if(productFormData){
-<app-product-form [product]="productFormData"></app-product-form>}
+<app-product-form
+  [product]="productFormData"
+  [mode]="'addMode'"
+></app-product-form
+>}

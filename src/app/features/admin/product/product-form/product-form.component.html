@@ -31,7 +31,7 @@
   <mat-form-field appearance="outline">
     <mat-label>Kategoria</mat-label>
     <mat-select [formControlName]="'category'">
-      <mat-option value="menu">Jedzenie</mat-option>
+      <mat-option value="food">Jedzenie</mat-option>
       <mat-option value="drink">Napoje</mat-option>
       <mat-option value="alcohol">Alkohole</mat-option>
     </mat-select>
@@ -133,3 +133,11 @@
     >Pokazuj opis w karcie Menu</mat-checkbox
   >
 </form>
+
+<div class="form-buttons">
+  <button mat-stroked-button type="button">Anuluj</button>
+  <button mat-flat-button type="button" class="accept-btn">Zapisz</button>
+  @if(mode === 'editMode'){
+  <button mat-flat-button type="button" class="delete-btn">Usuń Produkt</button
+  >}
+</div>
