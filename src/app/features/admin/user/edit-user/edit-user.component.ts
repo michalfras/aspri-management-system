@@ -151,10 +151,6 @@ export class EditUserComponent {
       });
   }
 
-  goBack() {
-    this.location.back();
-  }
-
   cancel() {
     if (this.editForm.pristine) {
       this.router.navigate(['/home']);
@@ -180,5 +176,9 @@ export class EditUserComponent {
           this.notificationService.openSnackBar('Anulowano Edycję', 'X');
         }
       });
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

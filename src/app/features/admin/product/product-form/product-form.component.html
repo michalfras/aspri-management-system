@@ -1,19 +1,135 @@
 <form class="form-container" [formGroup]="form">
-  <mat-form-field appearance="outline">
-    <mat-label>Nazwa</mat-label>
-    <input [formControlName]="'name'" matInput placeholder="Placeholder" />
-  </mat-form-field>
+  <p class="lang-selectors-title">Pokaż tłumaczenia:</p>
+  <div class="lang-selectors">
+    <mat-checkbox formControlName="enableAllLang">Wszystkie</mat-checkbox>
+    <mat-checkbox formControlName="enableEnLang">Angielski</mat-checkbox>
+    <mat-checkbox formControlName="enableGerLang">Niemiecki</mat-checkbox>
+    <mat-checkbox formControlName="enableJpnLang">Japoński</mat-checkbox>
+    <mat-checkbox formControlName="enableUkrLang">Ukraiński</mat-checkbox>
+  </div>
 
   <mat-form-field appearance="outline">
-    <mat-label>Krótkie informacje</mat-label>
-    <input [formControlName]="'shortInfo'" matInput placeholder="Placeholder" />
-    <mat-hint>Np. alergeny lub pojemności (ml, g etc.)</mat-hint>
+    <mat-label>Nazwa polska</mat-label>
+    <input [formControlName]="'plName'" matInput placeholder="Placeholder" />
+    <mat-hint>*To pole jest wymagane</mat-hint>
   </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Opis</mat-label>
-    <input [formControlName]="'info'" matInput placeholder="Placeholder" />
-  </mat-form-field>
+  <div class="sector">
+    @if(form.controls.enableEnLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Nazwa angielska</mat-label>
+      <input [formControlName]="'enName'" matInput placeholder="Placeholder" />
+    </mat-form-field>
+    } @if(form.controls.enableGerLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Nazwa niemiecka</mat-label>
+      <input [formControlName]="'gerName'" matInput placeholder="Placeholder" />
+    </mat-form-field>
+    } @if(form.controls.enableJpnLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Nazwa japońska</mat-label>
+      <input [formControlName]="'jpnName'" matInput placeholder="Placeholder" />
+    </mat-form-field>
+    } @if(form.controls.enableUkrLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label>Nazwa ukraińska</mat-label>
+      <input
+        [formControlName]="'ukrName'"
+        matInput
+        placeholder="Placeholder"
+      /> </mat-form-field
+    >}
+  </div>
+
+  <div class="sector">
+    <mat-form-field appearance="outline">
+      <mat-label>Opis po polsku</mat-label>
+      <textarea
+        [formControlName]="'plInfo'"
+        matInput
+        placeholder="Placeholder"
+      ></textarea>
+    </mat-form-field>
+
+    @if(form.controls.enableEnLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Opis po angielsku</mat-label>
+      <textarea
+        [formControlName]="'enInfo'"
+        matInput
+        placeholder="Placeholder"
+      ></textarea></mat-form-field
+    >} @if(form.controls.enableGerLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Opis po niemiecku</mat-label>
+      <textarea
+        [formControlName]="'gerInfo'"
+        matInput
+        placeholder="Placeholder"
+      ></textarea></mat-form-field
+    >} @if(form.controls.enableJpnLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Opis po japońsku</mat-label>
+      <textarea
+        [formControlName]="'jpnInfo'"
+        matInput
+        placeholder="Placeholder"
+      ></textarea></mat-form-field
+    >} @if(form.controls.enableUkrLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label>Opis po ukraińsku</mat-label>
+      <textarea
+        [formControlName]="'ukrInfo'"
+        matInput
+        placeholder="Placeholder"
+      ></textarea></mat-form-field
+    >}
+  </div>
+
+  <div class="sector">
+    <mat-form-field appearance="outline">
+      <mat-label>Krótka informacja po polsku</mat-label>
+      <input
+        [formControlName]="'plShortInfo'"
+        matInput
+        placeholder="Np. alergeny lub pojemności (ml, g etc.)"
+      />
+    </mat-form-field>
+
+    @if(form.controls.enableEnLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Krótka informacja po angielsku</mat-label>
+      <input
+        [formControlName]="'enShortInfo'"
+        matInput
+        placeholder="Placeholder"
+      /> </mat-form-field
+    >} @if(form.controls.enableGerLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Krótka informacja po niemiecku </mat-label>
+      <input
+        [formControlName]="'gerShortInfo'"
+        matInput
+        placeholder="Placeholder"
+      /> </mat-form-field
+    >} @if(form.controls.enableJpnLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label> Krótka informacja po japońsku</mat-label>
+      <input
+        [formControlName]="'jpnShortInfo'"
+        matInput
+        placeholder="Placeholder"
+      /> </mat-form-field
+    >} @if(form.controls.enableUkrLang.value){
+    <mat-form-field appearance="outline">
+      <mat-label>Krótka informacja po ukraińsku </mat-label>
+      <input
+        [formControlName]="'ukrShortInfo'"
+        matInput
+        placeholder="Placeholder"
+      /> </mat-form-field
+    >}
+  </div>
 
   <mat-form-field class="price" appearance="outline" floatLabel="always">
     <mat-label>Cena</mat-label>
@@ -52,23 +168,89 @@
     >Dodatkowe opcje do wyboru?</mat-checkbox
   >
   @if(form.controls.hasOptions.value){
+  <span></span>
+
   <div class="options-container" formArrayName="optionsContainer">
     @for(option of choicesArr.controls; let i = $index; track option){
     <form class="single-option-container" [formGroupName]="i">
-      <mat-form-field appearance="outline">
-        <mat-label>Opcja {{ i + 1 }}</mat-label>
-        <input formControlName="optionText" matInput type="text" />
-        @if (option.get('optionText')?.value) {
+      <mat-form-field class="spacer" appearance="outline">
+        <mat-label>Opcja {{ i + 1 }} po polsku</mat-label>
+        <mat-hint>*To pole jest wymagane</mat-hint>
+        <input formControlName="optionTextPl" matInput type="text" />
+        @if (option.get('optionTextPl')?.value) {
         <button
           matSuffix
           mat-icon-button
           aria-label="Clear"
-          (click)="option.get('optionText')?.setValue('')"
+          type="button"
+          (click)="option.get('optionTextPl')?.setValue('')"
         >
           <mat-icon>close</mat-icon>
         </button>
         }
       </mat-form-field>
+
+      @if(form.controls.enableEnLang.value){
+      <mat-form-field appearance="outline">
+        <mat-label>Opcja {{ i + 1 }} po angielsku</mat-label>
+        <input formControlName="optionTextEn" matInput type="text" />
+        @if (option.get('optionTextEn')?.value) {
+        <button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          type="button"
+          (click)="option.get('optionTextEn')?.setValue('')"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+        } </mat-form-field
+      >} @if(form.controls.enableGerLang.value){
+      <mat-form-field appearance="outline">
+        <mat-label>Opcja {{ i + 1 }} po niemiecku</mat-label>
+        <input formControlName="optionTextGer" matInput type="text" />
+        @if (option.get('optionTextGer')?.value) {
+        <button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          type="button"
+          (click)="option.get('optionTextGer')?.setValue('')"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+        } </mat-form-field
+      >} @if(form.controls.enableJpnLang.value){
+      <mat-form-field appearance="outline">
+        <mat-label>Opcja {{ i + 1 }} po japońsku</mat-label>
+        <input formControlName="optionTextJpn" matInput type="text" />
+        @if (option.get('optionTextJpn')?.value) {
+        <button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          type="button"
+          (click)="option.get('optionTextJpn')?.setValue('')"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+        } </mat-form-field
+      >} @if(form.controls.enableUkrLang.value){
+      <mat-form-field appearance="outline">
+        <mat-label>Opcja {{ i + 1 }} po ukraińsku</mat-label>
+        <input formControlName="optionTextUkr" matInput type="text" />
+        @if (option.get('optionTextUkr')?.value) {
+        <button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          type="button"
+          (click)="option.get('optionTextUkr')?.setValue('')"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+        } </mat-form-field
+      >}
 
       <div class="choice-price-section-wrapper">
         <mat-form-field class="price" appearance="outline" floatLabel="always">
@@ -124,7 +306,7 @@
   </div>
 
   <mat-checkbox formControlName="isPopular"
-    >Widoczny na Głownej stronie</mat-checkbox
+    >Widoczny na Głównej stronie</mat-checkbox
   >
   <mat-checkbox formControlName="forcePopup"
     >Pokaż okno wyboru, przed dodaniem do zamówienia</mat-checkbox
@@ -135,9 +317,32 @@
 </form>
 
 <div class="form-buttons">
-  <button mat-stroked-button type="button">Anuluj</button>
-  <button mat-flat-button type="button" class="accept-btn">Zapisz</button>
-  @if(mode === 'editMode'){
-  <button mat-flat-button type="button" class="delete-btn">Usuń Produkt</button
+  <button mat-stroked-button type="button" (click)="cancelEditing()">
+    Anuluj
+  </button>
+  @if(mode === "addMode"){
+  <button
+    mat-flat-button
+    type="button"
+    class="accept-btn"
+    (click)="addProduct()"
+  >
+    Dodaj</button
+  >} @if(mode === "editMode"){
+  <button
+    mat-flat-button
+    type="button"
+    class="accept-btn"
+    (click)="updateProduct()"
+  >
+    Zapisz</button
+  >} @if(mode === 'editMode'){
+  <button
+    mat-flat-button
+    type="button"
+    class="delete-btn"
+    (click)="deleteProduct()"
+  >
+    Usuń Produkt</button
   >}
 </div>

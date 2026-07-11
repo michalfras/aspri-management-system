@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { ProductData } from '@models/product-model';
+import { ProductData, ProductFormData } from '@models/product-model';
 import { environment } from 'environments/environment';
 
 @Injectable({
@@ -11,5 +11,22 @@ export class ProductService {
 
   getProductById(id: string) {
     return this.http.get<ProductData>(`${environment.apiUrl}/products/${id}`);
+  }
+
+  addProduct(product: ProductFormData) {
+    return this.http.post<ProductData>(
+      `${environment.apiUrl}/products`,
+      product
+    );
+  }
+  updateProduct(product: ProductFormData, id: number) {
+    console.log(id);
+    return this.http.patch<ProductData>(
+      `${environment.apiUrl}/products/${id}`,
+      product
+    );
+  }
+  deleteProduct(id: number) {
+    return this.http.delete<void>(`${environment.apiUrl}/products/${id}`);
   }
 }

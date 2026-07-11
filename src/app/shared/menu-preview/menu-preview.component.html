@@ -22,7 +22,7 @@
 <div class="menu-scroll">
   <app-item-card *ngFor="let item of popularItems()" [product]="item">
   </app-item-card>
-  @if (popularItems.length> 0){
+  @if (popularItems().length> 0){
   <div class="last-card" (click)="showMenu(categoryName)">
     <div class="text-wrapper">
       <p>{{ "GENERAL.SHOW-MORE" | translate }}</p>

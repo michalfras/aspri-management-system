@@ -1700,6 +1700,318 @@
       "isPopular": true,
       "forcePopup": true,
       "showInfoInMenu": false
+    },
+    {
+      "id": 111,
+      "nameKey": "MENU.KOTLET_SCHABOWY.NAME",
+      "shortInfoKey": "MENU.KOTLET_SCHABOWY.SHORT",
+      "adminName": {
+        "pl": "Testowy Schabowy po Polsku",
+        "en": "Testowy Schabowy po angielsku bez ukr i jpn",
+        "ger": "zostal nameKey poprawny"
+      },
+      "adminInfo": {
+        "pl": "opis polski, ale usunalem calkiem infoKey",
+        "en": "opis eng, ger pusty string i calkiem brak jpn",
+        "ger": "",
+        "ukr": "opis ukr"
+      },
+      "adminShortInfo": {
+        "pl": "krotki opis polski, nie usunalem  shortinfoKey"
+      },
+      "price": 42,
+      "image": "images/food/kotlet-schabowy.webp",
+      "category": "food",
+      "subcategory": "main-dishes",
+      "isPopular": true,
+      "forcePopup": false,
+      "choices": [
+        {
+          "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_A",
+          "price": 42
+        },
+        {
+          "labelKey": "MENU.KOTLET_SCHABOWY.CHOICE_B",
+          "adminLabel": {
+            "pl": "Adminowy Wybór, został labelKey poprawny",
+            "en": "Adminowy po Angielsku",
+            "jpn": "Nie przetłumaczyłem po niemiecku wyboru",
+            "ukr": "cos tu po ukrainsku "
+          },
+          "price": 42
+        },
+        {
+          "labelKey": "MENU.KOTLET_SCHAaBOWY.CHOICE_C",
+          "adminLabel": {
+            "pl": "Adminowy Wybór, labelKey jest ale nie poprawny",
+            "en": "Adminowy po Angielsku jakis inny niz poprzedni",
+            "jpn": "Nie przetłumaczyłem po niemiecku i ukr "
+          },
+          "price": 42
+        }
+      ],
+      "badge": "beer"
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "test 3",
+        "en": "zmiana na test 3 ang",
+        "ger": "test 3",
+        "jpn": "test 3",
+        "ukr": "test 3"
+      },
+      "adminInfo": {
+        "pl": "opis tylko po polsku dodany",
+        "en": "daje ang",
+        "ger": "daje ger",
+        "jpn": "opis tylko po polsku dodany",
+        "ukr": "opis tylko po polsku dodany"
+      },
+      "adminShortInfo": {
+        "pl": "edit pl ",
+        "en": "edit ang",
+        "ger": "edit  ger",
+        "jpn": "edit pl ",
+        "ukr": "edit pl "
+      },
+      "category": "food",
+      "subcategory": "main-dishes",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "choices": [],
+      "id": 114
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "test4",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "food",
+      "subcategory": "main-dishes",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "choices": [],
+      "id": 115
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "test 5",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "food",
+      "subcategory": "main-dishes",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "choices": [],
+      "id": 116
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "test 5",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "food",
+      "subcategory": "main-dishes",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "choices": [],
+      "id": 117
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "test 7",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "food",
+      "subcategory": "main-dishes",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "choices": [],
+      "id": 118
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "test 9",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "food",
+      "subcategory": "main-dishes",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "id": 119
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "test 11",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "food",
+      "subcategory": "main-dishes",
+      "badge": "",
+      "isPopular": true,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "id": 120
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "drink testowy 1",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "alcohol",
+      "subcategory": "cocktails",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "id": 121
     }
   ],
   "users": [

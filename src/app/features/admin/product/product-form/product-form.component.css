@@ -1,6 +1,9 @@
 .price-input {
   text-align: right;
 }
+.spacer {
+  margin-bottom: 20px;
+}
 
 .form-container {
   display: flex;
@@ -49,6 +52,7 @@
 
 .form-buttons {
   margin-top: 10px;
+  margin-bottom: 20px;
   padding-top: 15px;
   display: flex;
   flex-direction: column;
@@ -60,4 +64,24 @@
 }
 .delete-btn {
   background-color: rgb(211, 47, 47) !important;
+}
+
+.lang-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: column; */
+  transform: translateY(-10px);
+}
+.lang-selectors-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.sector mat-form-field {
+  width: 100%;
+}
+.sector {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 5px solid var(--separator-text);
 }

@@ -26,9 +26,9 @@ export class MenuPreviewComponent {
     return this.menuService.allMenuProducts();
   });
   popularItems = computed<ProductData[]>(() => {
-    return this.menuItems().filter(
-      (item) => item.isPopular && item.category === this.categoryName
-    );
+    return this.menuService
+      .allMenuProducts()
+      .filter((item) => item.isPopular && item.category === this.categoryName);
   });
 
   btnLabel: Record<string, string> = {
