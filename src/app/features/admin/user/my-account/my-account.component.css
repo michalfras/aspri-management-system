@@ -1,9 +1,13 @@
 h2 {
-  font-weight: normal;
+  font-size: 1.4em;
   text-align: center;
-  margin-top: 20px;
+  font-weight: normal;
 }
-.add-form {
+h2 span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.account-form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -20,4 +24,9 @@ h2 {
 }
 .spacer {
   margin-bottom: 15px;
+}
+.password-title {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 25px;
 }

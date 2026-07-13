@@ -1,0 +1,136 @@
+@if(user){
+<h2>
+  Witaj <span>{{ user.name }}</span>
+</h2>
+<form class="account-form" [formGroup]="accountForm">
+  <mat-form-field appearance="outline" class="spacer">
+    <mat-label>Imię</mat-label>
+    <input matInput formControlName="name" />
+
+    @if (accountForm.controls.name.hasError('required') &&
+    !accountForm.controls.name.hasError('minlength')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    }@if (accountForm.controls.name.hasError('maxlength')) {
+    <mat-error>Maxymalnie 15 znaków</mat-error>} @if
+    (accountForm.controls.name.hasError('minlength')) {
+    <mat-error>Wymagane min 3 znaki</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="spacer">
+    <mat-label>Login</mat-label>
+    <input matInput formControlName="login" />
+
+    @if (accountForm.controls.login.hasError('required')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    } @if (accountForm.controls.login.hasError('maxlength')) {
+    <mat-error>Maxymalnie 15 znaków</mat-error>
+    }@if (accountForm.controls.login.hasError('minlength') &&
+    !accountForm.controls.login.hasError('required')) {
+    <mat-error>Wymagane min 3 znaki</mat-error>} @if
+    (accountForm.controls.login.hasError('usernameTaken') &&
+    !accountForm.controls.login.hasError('required') &&
+    !accountForm.controls.login.hasError('minlength') &&
+    !accountForm.controls.login.hasError('maxlength')) {
+    <mat-error>Ten login jest zajęty</mat-error>}
+  </mat-form-field>
+
+  <p class="password-title">
+    <button
+      mat-stroked-button
+      type="button"
+      aria-label="Password"
+      (click)="showChangePassword()"
+    >
+      Zmiana Hasła @if(accountForm.controls.oldPassword.disabled){
+      <mat-icon>lock</mat-icon>}@else {<mat-icon>lock_open</mat-icon>}
+    </button>
+  </p>
+
+  <mat-form-field appearance="outline" class="spacer">
+    <mat-label>Obecne Hasło</mat-label>
+    <input
+      matInput
+      [type]="hideOldPassword ? 'password' : 'text'"
+      formControlName="oldPassword"
+    />
+    <button
+      type="button"
+      [disabled]="accountForm.controls.oldPassword.disabled"
+      mat-icon-button
+      matSuffix
+      (click)="hideOld()"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hideOldPassword"
+    >
+      <mat-icon>{{
+        hideOldPassword ? "visibility_off" : "visibility"
+      }}</mat-icon>
+    </button>
+
+    @if (accountForm.controls.oldPassword.hasError('required')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    }
+  </mat-form-field>
+
+  @if(!accountForm.controls.oldPassword.disabled){
+  <mat-form-field appearance="outline">
+    <mat-label>Nowe Hasło</mat-label>
+    <input
+      matInput
+      [type]="hideNewPassword ? 'password' : 'text'"
+      formControlName="newPassword"
+    />
+    <button
+      type="button"
+      [disabled]="accountForm.controls.newPassword.disabled"
+      mat-icon-button
+      matSuffix
+      (click)="hideNew()"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hideNewPassword"
+    >
+      <mat-icon>{{
+        hideNewPassword ? "visibility_off" : "visibility"
+      }}</mat-icon>
+    </button>
+
+    @if (accountForm.controls.oldPassword.hasError('required')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Powtórz nowe Hasło</mat-label>
+    <input
+      matInput
+      [type]="hideRepeatNewPassword ? 'password' : 'text'"
+      formControlName="repeatedPassword"
+    />
+    <button
+      type="button"
+      [disabled]="accountForm.controls.repeatedPassword.disabled"
+      mat-icon-button
+      matSuffix
+      (click)="hideReapeat()"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hideRepeatNewPassword"
+    >
+      <mat-icon>{{
+        hideRepeatNewPassword ? "visibility_off" : "visibility"
+      }}</mat-icon>
+    </button>
+    @if (accountForm.controls.repeatedPassword.hasError('required')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    }
+  </mat-form-field>
+  }
+
+  <div class="form-buttons">
+    <button mat-stroked-button type="button" (click)="cancel()">Anuluj</button>
+    <button mat-flat-button type="button" class="accept-btn" (click)="save()">
+      Zapisz
+    </button>
+  </div>
+</form>
+}

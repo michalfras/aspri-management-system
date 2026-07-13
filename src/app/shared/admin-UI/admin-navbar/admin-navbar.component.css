@@ -1,6 +1,11 @@
 .navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: var(--main-color);
   border-bottom: 1px solid var(--separator-text);
+  z-index: 1;
 }
 
 .app-staff-menu-container {

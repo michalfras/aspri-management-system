@@ -12,7 +12,13 @@
     <mat-label>Nazwa polska</mat-label>
     <input [formControlName]="'plName'" matInput placeholder="Placeholder" />
     <mat-hint>*To pole jest wymagane</mat-hint>
-  </mat-form-field>
+    @if (form.controls.plName.hasError('required') &&
+    !form.controls.plName.hasError('minlength')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    } @if (form.controls.plName.hasError('minlength')) {
+    <mat-error>Wymagane min 3 znaki</mat-error>
+    }</mat-form-field
+  >
 
   <div class="sector">
     @if(form.controls.enableEnLang.value){
@@ -175,9 +181,15 @@
     <form class="single-option-container" [formGroupName]="i">
       <mat-form-field class="spacer" appearance="outline">
         <mat-label>Opcja {{ i + 1 }} po polsku</mat-label>
-        <mat-hint>*To pole jest wymagane</mat-hint>
+
         <input formControlName="optionTextPl" matInput type="text" />
-        @if (option.get('optionTextPl')?.value) {
+        <mat-hint>*To pole jest wymagane</mat-hint>
+        @if ( option.get('optionTextPl')?.hasError('required') &&
+        !option.get('optionTextPl')?.hasError('minlength') ) {
+        <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+        }@if (option.get('optionTextPl')?.hasError('minlength')) {
+        <mat-error>Wymagane min 3 znaki</mat-error>
+        } @if (option.get('optionTextPl')?.value) {
         <button
           matSuffix
           mat-icon-button

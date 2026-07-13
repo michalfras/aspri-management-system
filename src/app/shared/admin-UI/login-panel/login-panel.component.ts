@@ -31,15 +31,13 @@ export class LoginPanelComponent {
   });
 
   login() {
-    const { username, password } = this.loginForm.getRawValue();
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched();
-
       return;
     }
     this.authService.login({
-      username: username,
-      password: password,
+      username: this.loginForm.controls.username.value,
+      password: this.loginForm.controls.password.value,
     });
     this.loginForm.controls.password.reset();
   }

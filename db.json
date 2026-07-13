@@ -2012,6 +2012,108 @@
       "forcePopup": false,
       "showInfoInMenu": false,
       "id": 121
+    },
+    {
+      "id": 122,
+      "nameKey": "MENU.ROLADKA_SCHABOWA.NAME",
+      "shortInfoKey": "MENU.ROLADKA_SCHABOWA.SHORT",
+      "infoKey": "MENU.ROLADKA_SCHABOWA.INFO",
+      "price": 44,
+      "image": "images/food/roladka-schabowa.webp",
+      "category": "food",
+      "subcategory": "main-dishes",
+      "isPopular": true,
+      "forcePopup": false,
+      "choices": [
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_A",
+          "adminLabel": {
+            "pl": "Frytki",
+            "en": "French fries",
+            "ger": "zmiana",
+            "jpn": "フライドポテト",
+            "ukr": "Картопля фрі"
+          },
+          "price": 47
+        },
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_B",
+          "adminLabel": {
+            "pl": "Ziemniaczki ze skórką",
+            "en": "Skin-on potatoes",
+            "ger": "Kartoffeln mit Schale",
+            "jpn": "皮付きポテト",
+            "ukr": "Картопля в шкірці"
+          },
+          "price": 47
+        },
+        {
+          "labelKey": "MENU.ROLADKA_SCHABOWA.CHOICE_C",
+          "adminLabel": {
+            "pl": "Ziemniaki gotowane",
+            "en": "Boiled potatoes",
+            "ger": "Salzkartoffeln",
+            "jpn": "茹でじゃがいも",
+            "ukr": "Варена картопля"
+          },
+          "price": 54
+        }
+      ],
+      "adminName": {
+        "pl": "Roladka Schabowa",
+        "en": "Pork Loin Roll",
+        "ger": "zmiana",
+        "jpn": "豚ロースロール",
+        "ukr": "Рулет зі свинячої корейки"
+      },
+      "adminInfo": {
+        "pl": "Roladka schabowa z pieczarkami i cebulą. Do wyboru frytki lub ziemniaczki ze skórką, podawana z bukietem surówek.",
+        "en": "Pork loin roll stuffed with mushrooms and onion. Served with a choice of French fries or skin-on potatoes, accompanied by a selection of fresh salads.",
+        "ger": "zmiana",
+        "jpn": "マッシュルームと玉ねぎを包んだ豚ロースロール。フライドポテトまたは皮付きポテトからお選びいただけます。サラダの盛り合わせ付き。",
+        "ukr": "Рулет зі свинячої корейки з печерицями та цибулею. Подається на вибір із картоплею фрі або картоплею в шкірці та асорті зі свіжих салатів."
+      },
+      "adminShortInfo": {
+        "pl": "( 1,3 )",
+        "en": "( 1,3 )",
+        "ger": "zmiana",
+        "jpn": "( 1,3 )",
+        "ukr": "( 1,3 )"
+      },
+      "badge": "hot",
+      "showInfoInMenu": false
+    },
+    {
+      "nameKey": "ADMIN_DATA",
+      "price": 0,
+      "adminName": {
+        "pl": "Drink Pauliny",
+        "en": "Drink Pauliny",
+        "ger": "Drink Pauliny",
+        "jpn": "Drink Pauliny",
+        "ukr": "Drink Pauliny"
+      },
+      "adminInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "adminShortInfo": {
+        "pl": "",
+        "en": "",
+        "ger": "",
+        "jpn": "",
+        "ukr": ""
+      },
+      "category": "alcohol",
+      "subcategory": "mocktails",
+      "badge": "",
+      "isPopular": false,
+      "forcePopup": false,
+      "showInfoInMenu": false,
+      "id": 123
     }
   ],
   "users": [
@@ -2041,14 +2143,6 @@
       "mustChangePassword": true
     },
     {
-      "id": 9,
-      "username": "admin123",
-      "password": "admin123",
-      "name": "Test9997",
-      "role": "waiter",
-      "mustChangePassword": true
-    },
-    {
       "name": "Halinka",
       "username": "Lisia",
       "role": "waiter",
@@ -2058,16 +2152,7 @@
       "id": 10
     },
     {
-      "name": "test",
-      "username": "testttt",
-      "role": "chef",
-      "password": "urpBUj",
-      "isProtected": false,
-      "mustChangePassword": true,
-      "id": 12
-    },
-    {
-      "name": "test",
+      "name": "testt",
       "username": "test",
       "role": "waiter",
       "password": "GTYnpm",
@@ -2076,8 +2161,8 @@
       "id": 14
     },
     {
-      "name": "gddc",
-      "username": "dfggt",
+      "name": "GdDcDd",
+      "username": "jjhh",
       "role": "chef",
       "password": "ZiEQgU",
       "isProtected": false,
@@ -2095,7 +2180,7 @@
     },
     {
       "name": "test",
-      "username": "test",
+      "username": "testtt",
       "role": "waiter",
       "password": "Ur6MQR",
       "isProtected": false,
@@ -2110,6 +2195,15 @@
       "isProtected": false,
       "mustChangePassword": true,
       "id": 18
+    },
+    {
+      "name": "lisie",
+      "username": "lisia",
+      "role": "admin",
+      "password": "iLHkPW",
+      "isProtected": false,
+      "mustChangePassword": true,
+      "id": 19
     }
   ]
 }

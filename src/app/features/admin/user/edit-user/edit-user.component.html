@@ -1,14 +1,35 @@
 <h2>Edytuj Użytkownika</h2>
 
 <form class="edit-form" [formGroup]="editForm">
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" class="spacer">
     <mat-label>Imię</mat-label>
     <input class="input" matInput formControlName="name" />
+
+    @if (editForm.controls.name.hasError('required')) {
+    <mat-error>To pole niemoże być puste</mat-error>
+    } @if (editForm.controls.name.hasError('maxlength')) {
+    <mat-error>Maxymalnie 15 znaków</mat-error>
+    }@if (editForm.controls.name.hasError('minlength') &&
+    !editForm.controls.name.hasError('required')) {
+    <mat-error>Wymagane min 3 znaki</mat-error>}
   </mat-form-field>
 
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" class="spacer">
     <mat-label>Login</mat-label>
     <input matInput formControlName="username" />
+
+    @if (editForm.controls.username.hasError('required')) {
+    <mat-error>To pole niemoże być puste</mat-error>
+    } @if (editForm.controls.username.hasError('maxlength')) {
+    <mat-error>Maxymalnie 15 znaków</mat-error>
+    }@if (editForm.controls.username.hasError('minlength') &&
+    !editForm.controls.username.hasError('required')) {
+    <mat-error>Wymagane min 3 znaki</mat-error>} @if
+    (editForm.controls.username.hasError('usernameTaken') &&
+    !editForm.controls.username.hasError('required') &&
+    !editForm.controls.username.hasError('minlength') &&
+    !editForm.controls.username.hasError('maxlength')) {
+    <mat-error>Ten login jest zajęty</mat-error>}
   </mat-form-field>
 
   <mat-form-field appearance="outline">

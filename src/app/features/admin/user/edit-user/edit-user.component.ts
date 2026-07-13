@@ -63,7 +63,6 @@ export class EditUserComponent {
         Validators.minLength(3),
         Validators.maxLength(15),
       ],
-      asyncValidators: [this.userService.isUsernameTaken(this.editedUserId)],
       nonNullable: true,
     }),
     role: new FormControl('', {
@@ -87,11 +86,20 @@ export class EditUserComponent {
           username: user.username,
           role: user.role,
         });
+        this.editForm.controls.username.setAsyncValidators(
+          this.userService.isUsernameTaken(this.editedUserId)
+        );
       });
   }
   save() {
-    if (this.editForm.invalid) return;
-    if (this.editForm.pristine) return;
+    if (this.editForm.invalid) {
+      this.editForm.markAllAsTouched();
+      return;
+    }
+    if (this.editForm.pristine) {
+      this.editForm.markAllAsTouched();
+      return;
+    }
 
     this.dialog
       .open(ConfirmDialogComponent, {

@@ -41,11 +41,19 @@ export class AddUserComponent {
 
   addForm = new FormGroup({
     name: new FormControl('', {
-      validators: [Validators.required],
+      validators: [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(15),
+      ],
       nonNullable: true,
     }),
     login: new FormControl('', {
-      validators: [Validators.required],
+      validators: [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(15),
+      ],
       asyncValidators: [this.userService.isUsernameTaken()],
       nonNullable: true,
     }),

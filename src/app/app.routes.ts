@@ -11,6 +11,7 @@ import { AdminComponent } from '@features/admin/admin.component';
 import { OrderHistoryComponent } from '@features/admin/order-history/order-history.component';
 import { EditProductComponent } from '@features/admin/product/edit-product/edit-product.component';
 import { AddProductComponent } from '@features/admin/product/add-product/add-product.component';
+import { MyAccountComponent } from '@features/admin/user/my-account/my-account.component';
 
 export const routes: Routes = [
   {
@@ -40,6 +41,7 @@ export const routes: Routes = [
     children: [
       { path: 'user/:id/edit', component: EditUserComponent },
       { path: 'user/add', component: AddUserComponent },
+      { path: 'user/my-account/:id', component: MyAccountComponent },
       { path: 'order_history', component: OrderHistoryComponent },
       { path: 'product/edit/:id', component: EditProductComponent },
       { path: 'product/add', component: AddProductComponent },

@@ -1,10 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import {
-  AbstractControl,
-  AsyncValidatorFn,
-  ValidationErrors,
-} from '@angular/forms';
+import { AbstractControl, ValidationErrors } from '@angular/forms';
 import { AuthUser, User } from '@models/auth-models';
 import { environment } from 'environments/environment';
 import { BehaviorSubject, map, Observable, take } from 'rxjs';
@@ -57,6 +53,14 @@ export class UserService {
       name: user.name,
       username: user.username,
       role: user.role,
+    });
+  }
+  updateAuthUser(user: AuthUser) {
+    return this.http.patch<AuthUser>(`${environment.apiUrl}/users/${user.id}`, {
+      name: user.name,
+      username: user.username,
+      password: user.password,
+      mustChangePassword: user.mustChangePassword,
     });
   }
 

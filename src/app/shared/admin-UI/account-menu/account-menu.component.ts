@@ -31,6 +31,11 @@ export class AccountMenuComponent {
     this.UiService.isAccountMenuOpen.set(false);
     this.router.navigate(['/admin/user', userId, 'edit']);
   }
+  goToMyAccountPanel() {
+    this.UiService.isAccountMenuOpen.set(false);
+    this.router.navigate(['/admin/user', 'my-account', this.user.id]);
+  }
+
   goToAddUserPanel() {
     this.UiService.isAccountMenuOpen.set(false);
     this.router.navigate(['/admin/user', 'add']);

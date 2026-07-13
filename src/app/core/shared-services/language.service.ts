@@ -5,7 +5,7 @@ import {
   ProductData,
 } from '@models/product-model';
 import { TranslateService } from '@ngx-translate/core';
-import { firstValueFrom, map, Observable, of, switchMap } from 'rxjs';
+import { firstValueFrom, map, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',

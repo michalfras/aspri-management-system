@@ -21,3 +21,6 @@ h2 {
 .delete-btn {
   background-color: rgb(211, 47, 47) !important;
 }
+.spacer {
+  margin-bottom: 15px;
+}

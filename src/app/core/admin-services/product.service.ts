@@ -20,7 +20,6 @@ export class ProductService {
     );
   }
   updateProduct(product: ProductFormData, id: number) {
-    console.log(id);
     return this.http.patch<ProductData>(
       `${environment.apiUrl}/products/${id}`,
       product

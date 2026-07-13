@@ -8,7 +8,7 @@
   <span class="role" [class.home]="!isHome">{{ user ? user.role : "" }}</span
   >}@else{
   <p class="user-name">
-    {{ user ? `Witaj ${user?.name}` : "Zaloguj się" }}
+    {{ user ? user.name : "Zaloguj się" }}
   </p>
   }
   <div (click)="toggleMenu()"><i class="fa-solid fa-circle-user"></i></div>

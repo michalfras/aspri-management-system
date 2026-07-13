@@ -1,5 +1,4 @@
-import { DialogModule } from '@angular/cdk/dialog';
-import { Component, Inject, inject, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import {
   FormGroup,
   FormArray,
@@ -30,6 +29,7 @@ import {
 } from '@models/product-model';
 import { ConfirmDialogComponent } from '@shared/admin-UI/confirm-dialog/confirm-dialog.component';
 import { filter, Subscription, switchMap } from 'rxjs';
+
 @Component({
   selector: 'app-product-form',
   imports: [
@@ -71,7 +71,7 @@ export class ProductFormComponent {
 
     plName: new FormControl<string>('', {
       nonNullable: true,
-      validators: [Validators.required],
+      validators: [Validators.required, Validators.minLength(3)],
     }),
     enName: new FormControl<string>('', { nonNullable: true }),
     gerName: new FormControl<string>('', { nonNullable: true }),
@@ -105,6 +105,10 @@ export class ProductFormComponent {
   });
 
   ngOnInit() {
+    this.form.controls.plName.valueChanges.subscribe(() => {
+      console.log(this.form.controls.plName);
+    });
+
     this.init();
   }
 
@@ -272,7 +276,9 @@ export class ProductFormComponent {
   addChoiceInput() {
     const choice = new FormGroup({
       optionLabelKey: new FormControl(''),
-      optionTextPl: new FormControl('', { validators: [Validators.required] }),
+      optionTextPl: new FormControl('', {
+        validators: [Validators.required, Validators.minLength(3)],
+      }),
       optionTextEn: new FormControl(''),
       optionTextGer: new FormControl(''),
       optionTextJpn: new FormControl(''),

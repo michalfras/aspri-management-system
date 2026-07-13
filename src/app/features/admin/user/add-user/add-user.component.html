@@ -1,14 +1,36 @@
 <h2>Dodaj Użytkownika</h2>
 
 <form class="add-form" [formGroup]="addForm">
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" class="spacer">
     <mat-label>Imię</mat-label>
     <input matInput formControlName="name" />
+
+    @if (addForm.controls.name.hasError('required') &&
+    !addForm.controls.name.hasError('minlength')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    }@if (addForm.controls.name.hasError('maxlength')) {
+    <mat-error>Maxymalnie 15 znaków</mat-error>} @if
+    (addForm.controls.name.hasError('minlength')) {
+    <mat-error>Wymagane min 3 znaki</mat-error>
+    }
   </mat-form-field>
 
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" class="spacer">
     <mat-label>Login</mat-label>
     <input matInput formControlName="login" />
+
+    @if (addForm.controls.login.hasError('required')) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    } @if (addForm.controls.login.hasError('maxlength')) {
+    <mat-error>Maxymalnie 15 znaków</mat-error>
+    }@if (addForm.controls.login.hasError('minlength') &&
+    !addForm.controls.login.hasError('required')) {
+    <mat-error>Wymagane min 3 znaki</mat-error>} @if
+    (addForm.controls.login.hasError('usernameTaken') &&
+    !addForm.controls.login.hasError('required') &&
+    !addForm.controls.login.hasError('minlength') &&
+    !addForm.controls.login.hasError('maxlength')) {
+    <mat-error>Ten login jest zajęty</mat-error>}
   </mat-form-field>
 
   <mat-form-field appearance="outline">
@@ -25,13 +47,16 @@
     </button>
   </mat-form-field>
 
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" class="spacer">
     <mat-label>Stanowisko</mat-label>
     <mat-select formControlName="role">
       <mat-option value="admin">Admin</mat-option>
       <mat-option value="waiter">Kelner</mat-option>
       <mat-option value="chef">Chef</mat-option>
     </mat-select>
+    @if (addForm.controls.role.hasError('required') ) {
+    <mat-error>To pole jest <strong>wymagane</strong></mat-error>
+    }
   </mat-form-field>
 
   <div class="form-buttons">

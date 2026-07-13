@@ -1,4 +1,4 @@
-.admin-menu-wrapper {
+.menu-wrapper {
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
@@ -6,29 +6,45 @@
 }
 
 .btn {
+  position: relative;
   font-size: 16px;
   color: var(--main-font-color);
   background-color: var(--main-color);
-  width: 220px;
+  width: 230px;
   padding: 10px;
   border: 1px solid var(--button-shadow);
   border-radius: 50px;
 }
-.btn.logout {
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  width: 150px;
-  margin: 10px auto;
-  background-color: var(--accent-color);
-}
+
 .btn.add-user span {
-  font-weight: bold;
+  margin-left: 10px;
+  padding-right: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-right: 1px solid var(--separator-text);
   color: green;
 }
 .btn.edit-user span {
-  font-weight: bold;
+  margin-left: 10px;
+  padding-right: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-right: 1px solid var(--separator-text);
   color: var(--accent-color);
+}
+.btn.my-account span {
+  margin-left: 10px;
+  padding-right: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-right: 1px solid var(--separator-text);
+  color: var(--admin-button-color);
 }
 ul.visible {
   max-height: 200px;
@@ -55,4 +71,15 @@ li button {
   background-color: transparent;
   border: 1px solid var(--accent-color);
   border-radius: 50px;
+}
+.btn.logout {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 150px;
+  margin-bottom: 30px;
+  background-color: var(--accent-color);
+}
+.btn-logout-wrapper {
+  text-align: center;
 }
