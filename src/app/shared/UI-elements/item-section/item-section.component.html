@@ -38,12 +38,26 @@
     </div>
     <div class="price-section">
       @if((authService.user$ |async)?.role === "admin"){
-      <button
-        class="admin-button edit"
-        [routerLink]="['/admin', 'product', 'edit', product.id]"
-      >
-        <i class="fa-solid fa-pen-to-square"></i></button
-      >}
+      <div class="admin-buttons-wrapper">
+        <button
+          class="admin-button edit"
+          [routerLink]="['/admin', 'product', 'edit', product.id]"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button
+          class="admin-button"
+          [class.hidden]="product.isHidden"
+          (click)="setVisibility(product); $event.stopPropagation()"
+        >
+          @if(product.isHidden){
+          <i class="fa-solid fa-eye-slash"></i>}@else{<i
+            class="fa-solid fa-eye"
+          ></i
+          >}
+        </button>
+      </div>
+      }
       <button
         class="add-button"
         (click)="this.cartService.addToOrder(product); $event.stopPropagation()"
@@ -51,6 +65,9 @@
         <span> <i class="fa-solid fa-plus"></i> </span>
       </button>
     </div>
+    @if(product.isHidden){
+    <div class="hide-product"></div>
+    }
   </div>
   }}
 </div>

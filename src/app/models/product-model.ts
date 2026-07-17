@@ -16,6 +16,7 @@ export type ProductData = {
   isPopular: boolean;
   forcePopup: boolean;
   showInfoInMenu?: boolean;
+  isHidden?: boolean;
   choices?: ProductChoice[];
 };
 

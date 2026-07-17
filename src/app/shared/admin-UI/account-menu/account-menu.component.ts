@@ -40,4 +40,8 @@ export class AccountMenuComponent {
     this.UiService.isAccountMenuOpen.set(false);
     this.router.navigate(['/admin/user', 'add']);
   }
+  goToMenu() {
+    this.UiService.isAccountMenuOpen.set(false);
+    this.router.navigate(['/menu']);
+  }
 }

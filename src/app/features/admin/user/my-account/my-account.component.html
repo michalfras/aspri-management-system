@@ -40,12 +40,16 @@
       mat-stroked-button
       type="button"
       aria-label="Password"
+      [disabled]="forceToChangePassword"
       (click)="showChangePassword()"
     >
       Zmiana Hasła @if(accountForm.controls.oldPassword.disabled){
       <mat-icon>lock</mat-icon>}@else {<mat-icon>lock_open</mat-icon>}
     </button>
   </p>
+  @if(forceToChangePassword){
+  <p class="change-password-warning">Wymagana zmiana hasła !</p>
+  }
 
   <mat-form-field appearance="outline" class="spacer">
     <mat-label>Obecne Hasło</mat-label>

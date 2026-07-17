@@ -36,6 +36,7 @@ import { AuthService } from '@core/admin-services/auth.service';
 })
 export class MyAccountComponent {
   user?: User;
+  forceToChangePassword = false;
 
   userService = inject(UserService);
   authService = inject(AuthService);
@@ -111,6 +112,13 @@ export class MyAccountComponent {
         );
         this.accountForm.patchValue({ name: user.name, login: user.username });
       });
+
+    this.route.queryParamMap.subscribe((param) => {
+      if (param.has('ftcp') === true) {
+        this.forceToChangePassword = true;
+        this.showChangePassword();
+      }
+    });
   }
 
   showChangePassword() {

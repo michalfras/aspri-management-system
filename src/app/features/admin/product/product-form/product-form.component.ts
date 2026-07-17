@@ -102,12 +102,11 @@ export class ProductFormComponent {
     isPopular: new FormControl<boolean>(false, { nonNullable: true }),
     forcePopup: new FormControl<boolean>(false, { nonNullable: true }),
     showInfoInMenu: new FormControl<boolean>(false, { nonNullable: true }),
+    isHidden: new FormControl<boolean>(false, { nonNullable: true }),
   });
 
   ngOnInit() {
-    this.form.controls.plName.valueChanges.subscribe(() => {
-      console.log(this.form.controls.plName);
-    });
+    this.form.controls.plName.valueChanges.subscribe(() => {});
 
     this.init();
   }
@@ -228,6 +227,7 @@ export class ProductFormComponent {
       isPopular: !!this.product.isPopular,
       forcePopup: !!this.product.forcePopup,
       showInfoInMenu: !!this.product.showInfoInMenu,
+      isHidden: !!this.product.isHidden,
     });
 
     if (!this.product.choices) return;
@@ -332,11 +332,6 @@ export class ProductFormComponent {
         filter(Boolean),
         switchMap(() => {
           const product: ProductFormData = this.createProductFromForm();
-          console.log(
-            product.choices?.length,
-            'DLUGOSC TABLICY po zrobieniu produktu'
-          );
-          console.log(product, 'DANE RODUKTU po zrobieniu produktu ');
           return this.productService.addProduct(product);
         })
       )
@@ -483,6 +478,8 @@ export class ProductFormComponent {
       isPopular: this.form.controls.isPopular.value,
       forcePopup: this.form.controls.forcePopup.value,
       showInfoInMenu: this.form.controls.showInfoInMenu.value,
+      isHidden: this.form.controls.isHidden.value,
+
       ...(this.choicesArr.length > 0 && {
         choices: this.choicesArr.value.map((choice) => {
           return {
@@ -500,59 +497,6 @@ export class ProductFormComponent {
       }),
     };
   }
-
-  // deleteUser() {
-  //   this.dialog
-  //     .open(ConfirmDialogComponent, {
-  //       width: '300px',
-  //       enterAnimationDuration: '250ms',
-  //       exitAnimationDuration: '150ms',
-  //       data: {
-  //         title: 'Usunąć użytkownika?',
-  //         message: 'Nastąpi trwałe usunięcie profilu.',
-  //         confirmText: 'Usuń',
-  //         cancelText: 'Anuluj',
-  //       },
-  //     })
-  //     .afterClosed()
-  //     .pipe(
-  //       filter(Boolean),
-  //       switchMap(() => {
-  //         return this.userService.deleteUser(this.editedUserId);
-  //       })
-  //     )
-  //     .subscribe(() => {
-  //       this.notificationService.openSnackBar('Użytkownik Usunięty', 'X');
-  //       this.router.navigate(['/home']);
-  //     });
-  // }
-
-  // cancel() {
-  //   if (this.editForm.pristine) {
-  //     this.router.navigate(['/home']);
-  //     return;
-  //   }
-
-  //   this.dialog
-  //     .open(ConfirmDialogComponent, {
-  //       width: '300px',
-  //       enterAnimationDuration: '250ms',
-  //       exitAnimationDuration: '150ms',
-  //       data: {
-  //         title: 'Anulować edycję?',
-  //         message: 'Wprowadzone zmiany nie zostaną zapisane.',
-  //         confirmText: 'Anuluj i cofnij',
-  //         cancelText: 'Kontynuuj edycję',
-  //       },
-  //     })
-  //     .afterClosed()
-  //     .subscribe((confirmed) => {
-  //       if (confirmed) {
-  //         this.router.navigate(['/home']);
-  //         this.notificationService.openSnackBar('Anulowano Edycję', 'X');
-  //       }
-  //     });
-  // }
 
   ngOnDestroy() {
     this.sub?.unsubscribe();

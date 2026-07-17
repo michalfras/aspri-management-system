@@ -3,7 +3,7 @@
   <button
     class="back-btn"
     [class.search-active]="UiService.isSearchBarOpen()"
-    routerLink="/"
+    (click)="backToHome()"
   >
     <svg viewBox="0 0 24 24" stroke="currentColor" class="arrow-icon">
       <path

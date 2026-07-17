@@ -6,6 +6,8 @@ import { BehaviorSubject, map, Subject } from 'rxjs';
 import { AlertService } from '../guest-services/alert.service';
 import { UiService } from '../shared-services/ui.service';
 import { Router } from '@angular/router';
+import { query } from '@angular/animations';
+import { MenuService } from '@core/guest-services/menu.service';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +21,10 @@ export class AuthService {
   private userSubject = new BehaviorSubject<User | null>(this.loadUserLS());
   user$ = this.userSubject.asObservable();
 
+  get currentUser() {
+    return this.userSubject.value;
+  }
+
   loadUserLS() {
     let user = localStorage.getItem('user');
     if (user) {
@@ -28,7 +34,7 @@ export class AuthService {
   }
 
   login(loginData: LoginRequest) {
-    this.http
+    return this.http
       .get<AuthUser[]>(
         `${environment.apiUrl}/users?username=${loginData.username}`
       )
@@ -48,16 +54,26 @@ export class AuthService {
           this.userSubject.next(user);
           localStorage.setItem('user', JSON.stringify(user));
           this.alertService.showAlert('Zalogowano', 'green');
+          if (userAuth.mustChangePassword) {
+            this.router.navigate([`/admin/user/my-account/${userAuth.id}`], {
+              queryParams: {
+                ftcp: true,
+              },
+            });
+            this.UiService.isAccountMenuOpen.set(false);
+          }
           return;
         }
         this.alertService.showAlert('Hasło Niepoprawne', 'red');
       });
   }
+
   logout() {
     this.userSubject.next(null);
     localStorage.removeItem('user');
     this.UiService.isAccountMenuOpen.set(false);
     this.router.navigate(['/home']);
+    this.alertService.showAlert('Wylogowano');
   }
 
   checkOldPassword(id: number, password: string) {

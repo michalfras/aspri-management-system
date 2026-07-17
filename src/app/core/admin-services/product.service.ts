@@ -28,4 +28,10 @@ export class ProductService {
   deleteProduct(id: number) {
     return this.http.delete<void>(`${environment.apiUrl}/products/${id}`);
   }
+  hideProduct(id: number, isHidden: boolean) {
+    return this.http.patch<ProductData>(
+      `${environment.apiUrl}/products/${id}`,
+      { isHidden: isHidden }
+    );
+  }
 }

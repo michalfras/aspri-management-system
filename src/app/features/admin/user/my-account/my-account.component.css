@@ -30,3 +30,9 @@ h2 span {
   text-align: center;
   margin-bottom: 25px;
 }
+.change-password-warning {
+  font-size: 20px;
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
+}

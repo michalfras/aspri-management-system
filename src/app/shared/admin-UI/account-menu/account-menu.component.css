@@ -36,6 +36,16 @@
   border-right: 1px solid var(--separator-text);
   color: var(--accent-color);
 }
+.btn.edit-product span {
+  margin-left: 10px;
+  padding-right: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-right: 1px solid var(--separator-text);
+  color: rgb(77, 0, 90);
+}
 .btn.my-account span {
   margin-left: 10px;
   padding-right: 5px;
